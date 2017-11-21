@@ -34,6 +34,14 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+    // ----------------------------
+
     var parentBLock;
     var dropdownAttr;
     var dropdownBlock;
@@ -48,6 +56,10 @@ $(document).ready(function() {
 
 
     $(window).resize(function() {
+
+        bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+        // -------------------------
 
         $("#fullH").css({
             "height" : "auto"
@@ -68,6 +80,20 @@ $(document).ready(function() {
         $(".blue-bg").css({
             "width" : $("#sidebar").offset().left + "px"
         });
+
+        if( bodyWidth > 1000 ){
+
+            $("#sidebar").css({
+                "left" : 0 + "%"
+            });
+
+        } else if(!$("#sidebar").hasClass("active") ) {
+
+            $("#sidebar").css({
+                "left" : -100 + "%"
+            });
+
+        }
 
         // -------------------------
 
@@ -136,6 +162,16 @@ $(document).ready(function() {
                     }
                     
                 });
+
+                if( $("#sidebar").hasClass("active") && bodyWidth <= 1000) {
+
+                    $("#sidebar").animate({
+                        "left" : -100 + "%"
+                    }, 200);
+
+                    $("#sidebar").removeClass("active")
+
+                }
 
             }
 
@@ -230,19 +266,23 @@ $(document).ready(function() {
 
         $(".respmenubtn").click(function() {
 
-            $("#sidebar").toggleClass("active");
+            if( bodyWidth <= 1000) {
 
-            if( $("#sidebar").hasClass("active") ) {
+                $("#sidebar").toggleClass("active");
 
-                $("#sidebar").animate({
-                    "left" : 0 + "%"
-                }, 200);
+                if( $("#sidebar").hasClass("active") ) {
 
-            } else {
+                    $("#sidebar").animate({
+                        "left" : 0 + "%"
+                    }, 200);
 
-                $("#sidebar").animate({
-                    "left" : -100 + "%"
-                }, 200);
+                } else {
+
+                    $("#sidebar").animate({
+                        "left" : -100 + "%"
+                    }, 200);
+
+                }
 
             }
 

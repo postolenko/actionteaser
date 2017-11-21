@@ -9,11 +9,11 @@
 	}
 
 	.header-site .col-2 .inner-col-3 {
-	    width: 47%;
+	    width: 48%;
 	}
 
 	.header-site .col-2 .inner-col-4 {
-	    /*width: 47%;*/
+	    width: 21%;
 	}
 
 	.main-nav li {
@@ -51,8 +51,8 @@
 
 @media only screen and (min-width: 1001px) {
 
-	.two-cols-templ .col-1.sidebar {
+/*	.two-cols-templ .col-1.sidebar {
 		left: 0 !important;
-	}
+	}*/
 
 }
