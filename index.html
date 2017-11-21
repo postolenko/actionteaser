@@ -43,8 +43,10 @@
 				<div class="row clearfix">
 					<div class="col col-1 left">
 						
-						<a href="#" class="logo" id="fullH">
-							<img src="img/logo.png" alt="" />
+						<a href="#" class="logo">
+							<span>
+								<img src="img/logo.png" alt="" />
+							</span>
 						</a>
 
 					</div>
@@ -60,14 +62,16 @@
 						<div class="inner-col inner-col-2 left">
 							<div class="dropdown-block-wrapp">
 								<div class="dropdown-header">
-									<p><i class="user"></i><span class="title">Ваш менеджер:</span><a href="#" class="dropdown-link" data-dropdown-link = "1">Константин</a></p>
+									<p><i class="user"></i><span class="title">Ваш менеджер:</span><a href="#" class="dropdown-link">Константин</a></p>
 								</div>
-								<div class="dropdown-block" data-dropdown-block = "1">
-									<ul class="dropdown-list">
-										<li><p><i class="skype"></i></p><p>skype: <a href="skype:sitesup_actionteaser">sitesup_actionteaser</a></p></li>
-										<li><p><i class="telegram"></i></p><p>telegram: <a href="telegram:@actionteaser">@actionteaser</a></p></li>
-										<li><p><i class="mail"></i></p><p><a href="mailto:sitesup@actionteaser.ru">sitesup@actionteaser.ru</a></p></li>
-									</ul>
+								<div class="dropdown-block">
+									<div class="inner">
+										<ul class="dropdown-list">
+											<li><p><i class="skype"></i></p><p>skype: <a href="skype:sitesup_actionteaser">sitesup_actionteaser</a></p></li>
+											<li><p><i class="telegram"></i></p><p>telegram: <a href="telegram:@actionteaser">@actionteaser</a></p></li>
+											<li><p><i class="mail"></i></p><p><a href="mailto:sitesup@actionteaser.ru">sitesup@actionteaser.ru</a></p></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -77,26 +81,28 @@
 								<li><p><i class="bell"></i><span class="count red">2</span></p><p><a href="#">Уведомления</a></p></li>
 								<li><p><i class="doc"></i><span class="count orange">23</span></p><p><a href="#">Тикеты</a></p></li>
 							</ul>
-						</div>
-						<div class="inner-col inner-col-4 left">
+						<!-- </div>
+						<div class="inner-col inner-col-4 left"> -->
 							<div class="dropdown-block-wrapp">
 								<div class="dropdown-header">
-									<a class="user-acc dropdown-link" href="#" data-dropdown-link = "2">
+									<a class="user-acc dropdown-link" href="#">
 										<div class="us-photo">
 											<div class="img-box">
-												<img src="img/photo.jpg" alt="" />									
+												<img src="img/photo.jpg" alt="" />		
 											</div>
 											<i class="pro"></i>
 										</div>
 										<p>Святослав</p>
 									</a>
 								</div>
-								<div class="dropdown-block" data-dropdown-block = "2">
-									<ul class="user-list">
-										<li><a href="#"><i class="user-small"></i>Профиль</a></li>
-										<li><a href="#"><i class="many"></i>Журнал</a></li>
-										<li><a href="#"><i class="out"></i>Выход</a></li>
-									</ul>
+								<div class="dropdown-block">
+									<div class="inner">
+										<ul class="user-list">
+											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+											<li><a href="#"><i class="many"></i>Журнал</a></li>
+											<li><a href="#"><i class="out"></i>Выход</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -116,62 +122,68 @@
 				<div class="two-cols-templ">
 
 					<div class="row clearfix">
-						<div class="blue-bg"></div>
-						<div class="col col-1 sidebar left scroll" id="sidebar">
-								
-							<div class="sidebar-item menu-dropdown-item">
-								<a href="#" class="menu-item-header">Вебмастер</a>
-								<div class="sidebar-item-menu menu-dropdown">
+
+						<div class="resp-tooltip">Мои кампании</div>
+
+						<div class="col col-1 sidebar left scroll">
+							
+							<div class="inner-wrapp">
+
+								<div class="sidebar-item menu-dropdown-item tooltips">
+									<a href="#" class="menu-item-header"><i class="user-green"></i><span class="link-txt">Вебмастер</span></a>
+									<div class="sidebar-item-menu menu-dropdown">
+										<ul class="sidebar-menu-list">
+											<li><a href="#"><span class="icon-block"><i class="icon-1"></i></span><span class="link-txt">Мои кампании</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-2"></i></span><span class="link-txt">Подбор площадок</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-3"></i></span><span class="link-txt">Статистика</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-4"></i></span><span class="link-txt">Список сайтов</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-5"></i></span><span class="link-txt">Рефералы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-6"></i></span><span class="link-txt">Бонусы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-7"></i></span><span class="link-txt">Мои настройки</span></a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sidebar-item menu-dropdown-item tooltips active">
+									<a href="#" class="menu-item-header"><i class="plain"></i><span class="link-txt">Рекламодатель</span></a>
+									<div class="sidebar-item-menu menu-dropdown">
+										<ul class="sidebar-menu-list">
+											<li><a href="#"><span class="icon-block"><i class="icon-1"></i></span><span class="link-txt">Мои кампании</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-2"></i></span><span class="link-txt">Подбор площадок</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-3"></i></span><span class="link-txt">Статистика</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-4"></i></span><span class="link-txt">Список сайтов</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-5"></i></span><span class="link-txt">Рефералы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-6"></i></span><span class="link-txt">Бонусы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-7"></i></span><span class="link-txt">Мои настройки</span></a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sidebar-item balance-item resp-none">
+									<div class="balance-block">
+										<p>На балансе: 100 000 Р</p>
+										<a href="#" class="green-plus"></a>
+									</div>
+									<p>Ваша скидка: 10%</p>
+								</div>
+
+								<div class="sidebar-item-menu tooltips single">
+
 									<ul class="sidebar-menu-list">
-										<li><span class="icon-block"><i class="icon-1"></i></span><a href="#">Мои кампании</a></li>
-										<li><span class="icon-block"><i class="icon-2"></i></span><a href="#">Подбор площадок</a></li>
-										<li><span class="icon-block"><i class="icon-3"></i></span><a href="#">Статистика</a></li>
-										<li><span class="icon-block"><i class="icon-4"></i></span><a href="#">Список сайтов</a></li>
-										<li><span class="icon-block"><i class="icon-5"></i></span><a href="#">Рефералы</a></li>
-										<li><span class="icon-block"><i class="icon-6"></i></span><a href="#">Бонусы</a></li>
-										<li><span class="icon-block"><i class="icon-7"></i></span><a href="#">Мои настройки</a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-8"></i></span><span class="link-txt">Новости</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-9"></i></span><span class="link-txt">Блоги</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-10"></i></span><span class="link-txt">Частые вопросы</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-11"></i></span><span class="link-txt">Правила</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-12"></i></span><span class="link-txt">API</span></a></li>
 									</ul>
+
 								</div>
-							</div>
-
-							<div class="sidebar-item menu-dropdown-item active">
-								<a href="#" class="menu-item-header">Рекламодатель</a>
-								<div class="sidebar-item-menu menu-dropdown">
-									<ul class="sidebar-menu-list">
-										<li><span class="icon-block"><i class="icon-1"></i></span><a href="#">Мои кампании</a></li>
-										<li><span class="icon-block"><i class="icon-2"></i></span><a href="#">Подбор площадок</a></li>
-										<li><span class="icon-block"><i class="icon-3"></i></span><a href="#">Статистика</a></li>
-										<li><span class="icon-block"><i class="icon-4"></i></span><a href="#">Список сайтов</a></li>
-										<li><span class="icon-block"><i class="icon-5"></i></span><a href="#">Рефералы</a></li>
-										<li><span class="icon-block"><i class="icon-6"></i></span><a href="#">Бонусы</a></li>
-										<li><span class="icon-block"><i class="icon-7"></i></span><a href="#">Мои настройки</a></li>
-									</ul>
-								</div>
-							</div>
-
-							<div class="sidebar-item balance-item">
-								<div class="balance-block">
-									<p>На балансе: 100 000 Р</p>
-									<a href="#" class="green-plus"></a>
-								</div>
-								<p>Ваша скидка: 10%</p>
-							</div>
-
-							<div class="sidebar-item-menu single">
-
-								<ul class="sidebar-menu-list">
-									<li><span class="icon-block"><i class="icon-8"></i></span><a href="#">Новости</a></li>
-									<li><span class="icon-block"><i class="icon-9"></i></span><a href="#">Блоги</a></li>
-									<li><span class="icon-block"><i class="icon-10"></i></span><a href="#">Частые вопросы</a></li>
-									<li><span class="icon-block"><i class="icon-11"></i></span><a href="#">Правила</a></li>
-									<li><span class="icon-block"><i class="icon-12"></i></span><a href="#">API</a></li>
-								</ul>
 
 							</div>
 
 						</div>
 
-						<div class="col col-2 right">
+						<div class="col col-2 right main_content">
 							
 							<div class="white-block">
 								<div class="white-block-header clearfix">

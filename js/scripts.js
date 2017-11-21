@@ -20,12 +20,8 @@ $(window).load(function() {
 
     });
 
-    $("#sidebar").css({
+    $(".sidebar").css({
         "min-height" : $(".content").height() + "px"
-    });
-
-    $(".blue-bg").css({
-        "width" : $("#sidebar").offset().left + "px"
     });
 
     // ----------------------------
@@ -48,12 +44,9 @@ $(document).ready(function() {
     var rightDropdownCoord;
     var wrapperRightCoord;
 
-    var TOP_DROPDOWNMENU_COORD = 50;
-
     // ----------------------------
 
-    getColHeight();
-
+    getRespParams();
 
     $(window).resize(function() {
 
@@ -65,8 +58,6 @@ $(document).ready(function() {
             "height" : "auto"
         });
 
-        getColHeight();
-
         // -------------------------
 
         $("#sidebar").css({
@@ -76,24 +67,6 @@ $(document).ready(function() {
         $("#sidebar").css({
             "min-height" : $(".content").height() + "px"
         });
-
-        $(".blue-bg").css({
-            "width" : $("#sidebar").offset().left + "px"
-        });
-
-        if( bodyWidth > 1000 ){
-
-            $("#sidebar").css({
-                "left" : 0 + "%"
-            });
-
-        } else if(!$("#sidebar").hasClass("active") ) {
-
-            $("#sidebar").css({
-                "left" : -100 + "%"
-            });
-
-        }
 
         // -------------------------
 
@@ -112,39 +85,55 @@ $(document).ready(function() {
 
             e.preventDefault();
 
-            parentBLock = $(this).closest(".dropdown-block-wrapp");
+            // parentBLock = $(this).closest(".dropdown-block-wrapp");
 
-            dropdownAttr = $(this).attr("data-dropdown-link");
+            // dropdownAttr = $(this).attr("data-dropdown-link");
 
-            dropdownBlock = parentBLock.find(".dropdown-block[data-dropdown-block = '"+ dropdownAttr +"']");
+            // dropdownBlock = parentBLock.find(".dropdown-block[data-dropdown-block = '"+ dropdownAttr +"']");
 
-            if(dropdownBlock.is(":visible")) {
+            // if(dropdownBlock.is(":visible")) {
 
-                dropdownBlock.fadeOut(200);
+            //     dropdownBlock.fadeOut(200);
 
-                $(this).removeClass("active");
+            //     $(this).removeClass("active");
 
-            } else {
+            // } else {
 
-                dropdownBlock.fadeIn(200);
+            //     dropdownBlock.fadeIn(200);
 
-                dropdownBlock.css({"top" : TOP_DROPDOWNMENU_COORD + "px"});
+            //     $(this).addClass("active");
 
-                $(this).addClass("active");
+            //     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
 
-                rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+            //     wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
 
-                wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+            //     if( rightDropdownCoord > wrapperRightCoord) {
 
-                if( rightDropdownCoord > wrapperRightCoord) {
+            //         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
 
-                    dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+            //     }
 
-                }
+            // }
+
+        });
+
+
+        $(".dropdown-block-wrapp").hover(function() {
+
+            dropdownBlock = $(this).find(".dropdown-block");
+
+            rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+
+            wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+
+            if( rightDropdownCoord > wrapperRightCoord) {
+
+                dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
 
             }
 
         });
+
 
         $(this).keydown(function(eventObject){
 
@@ -228,10 +217,6 @@ $(document).ready(function() {
                         "min-height" : $(".content").height() + "px"
                     });
 
-                    $(".blue-bg").css({
-                        "width" : $("#sidebar").offset().left + "px"
-                    });
-
                 });
 
                 parentBLock.removeClass("active");
@@ -248,10 +233,6 @@ $(document).ready(function() {
                         "min-height" : $(".content").height() + "px"
                     });
 
-                    $(".blue-bg").css({
-                        "width" : $("#sidebar").offset().left + "px"
-                    });
-
                 });
 
                 parentBLock.addClass("active");
@@ -266,35 +247,53 @@ $(document).ready(function() {
 
         $(".respmenubtn").click(function() {
 
-            if( bodyWidth <= 1000) {
-
-                $("#sidebar").toggleClass("active");
-
-                if( $("#sidebar").hasClass("active") ) {
-
-                    $("#sidebar").animate({
-                        "left" : 0 + "%"
-                    }, 200);
-
-                } else {
-
-                    $("#sidebar").animate({
-                        "left" : -100 + "%"
-                    }, 200);
-
-                }
-
-            }
+            $(".sidebar").toggleClass("hidden");
+            $(".main_content").toggleClass("fullwidth");
+            $(".header-site").toggleClass("resp-width");
 
         });
 
     });
 
-    function getColHeight() {
+    var linkTxt;
+    var respTooltip = $(".resp-tooltip");
 
-        $("#fullH").css({
-            "height" : $("#fullH").closest(".header-site").height() + "px"
-        });
+    $( ".tooltips a" ).bind({
+        mouseenter: function() {
+            if( $(".sidebar").hasClass("hidden") ) {
+
+                linkTxt = $( this ).find(".link-txt").text();
+
+                respTooltip.attr("style", "opacity: 1");
+
+                respTooltip.text(linkTxt);
+
+                respTooltip.offset({top: $( this ).offset().top + ( $( this ).outerHeight() - respTooltip.outerHeight() ) / 2 , left : $(".sidebar").offset().left + $(".sidebar").width()});
+
+            }
+
+        },
+        mouseleave: function() {
+
+            if( $(".sidebar").hasClass("hidden") ) {
+            
+                respTooltip.attr("style", "opacity: 0");
+
+            }
+
+        }
+    });
+
+
+    function getRespParams() {
+
+        if(bodyWidth <= 1200) {
+
+            $(".sidebar").addClass("hidden");
+            $(".main_content").addClass("fullwidth");
+            $(".header-site").addClass("resp-width");
+
+        }
 
     }
 
