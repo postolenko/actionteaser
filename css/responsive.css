@@ -1,26 +1,58 @@
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1350px) {
 
+	.row {
+		padding: 0 1%;
+	}
 
+	.header-site .col-2 .inner-col-2 {
+	    width: 22%;
+	}
+
+	.header-site .col-2 .inner-col-3 {
+	    width: 47%;
+	}
+
+	.header-site .col-2 .inner-col-4 {
+	    /*width: 47%;*/
+	}
+
+	.main-nav li {
+	    padding: 10px 3% 10px 0;
+	}
 
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1000px) {
 
+	.two-cols-templ .col-1.sidebar {
+		width: 320px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		-webkit-box-shadow: 10px 0px 15px 3px rgba(0,0,0,0.3);
+		-moz-box-shadow: 10px 0px 15px 3px rgba(0,0,0,0.3);
+		box-shadow: 10px 0px 15px 3px rgba(0,0,0,0.3);
+	}
+
+	.blue-bg {
+		display: none;
+	}
+
+	.two-cols-templ .col-2 {
+		width: 100%;
+		padding: 20px 0;
+		float: none;
+	}
 
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1001px) {
 
-
-
-}
-
-
-
-@media only screen and (max-width: 480px) {
-
-
+	.two-cols-templ .col-1.sidebar {
+		left: 0 !important;
+	}
 
 }

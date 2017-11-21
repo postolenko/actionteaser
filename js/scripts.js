@@ -34,44 +34,20 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
-
-    var setFooterPositionInterval;
-    var contentCoor;
-    var footerCoor;
-
-    // ----------------------------
-
     var parentBLock;
     var dropdownAttr;
     var dropdownBlock;
+    var rightDropdownCoord;
+    var wrapperRightCoord;
 
     var TOP_DROPDOWNMENU_COORD = 50;
 
     // ----------------------------
 
-    // getFooterPosition();
-
     getColHeight();
 
-    // ----------------------------
-
-    // $("#sidebar").css({
-    //     "height" : $(".content").height() + "px"
-    // });
-
-    // ----------------------------
 
     $(window).resize(function() {
-
-        // $(".wrapper").css({"min-height" : $(window).height() + "px"});
-
-        // if($(".footer").length > 0) {
-
-        //     $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
-
-        // }
-
-        // -------------------------
 
         $("#fullH").css({
             "height" : "auto"
@@ -129,6 +105,16 @@ $(document).ready(function() {
                 dropdownBlock.css({"top" : TOP_DROPDOWNMENU_COORD + "px"});
 
                 $(this).addClass("active");
+
+                rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+
+                wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+
+                if( rightDropdownCoord > wrapperRightCoord) {
+
+                    dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+
+                }
 
             }
 
@@ -240,35 +226,29 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
 
-    function getFooterPosition() {
+        $(".respmenubtn").click(function() {
 
-        $(".wrapper").css({"min-height" : $(window).height() + "px"});
+            $("#sidebar").toggleClass("active");
 
-        if($(".footer").length > 0) {
+            if( $("#sidebar").hasClass("active") ) {
 
-            $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
+                $("#sidebar").animate({
+                    "left" : 0 + "%"
+                }, 200);
 
-            setFooterPositionInterval = setInterval(function() {
+            } else {
 
-                contentCoor = $(".content").offset().top + $(".content").height();
-                footerCoor = $(".footer").offset().top;
+                $("#sidebar").animate({
+                    "left" : -100 + "%"
+                }, 200);
 
-                if( contentCoor != footerCoor ) {
+            }
 
-                    $(".wrapper").css({"min-height" : $(window).height() + "px"});
+        });
 
-                    $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
-
-                    clearInterval(setFooterPositionInterval);
-
-                }
-
-            }, 35);
-
-        }
-
-    }
+    });
 
     function getColHeight() {
 
