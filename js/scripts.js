@@ -214,7 +214,7 @@ $(document).ready(function() {
 
                     if( $(this).hasClass("active") ) {
 
-                        $(this).find(".menu-dropdown").slideUp(600);
+                        $(this).find(".menu-dropdown").slideUp(400);
 
                         $(this).removeClass("active");
 
@@ -222,7 +222,7 @@ $(document).ready(function() {
 
                 });
 
-                dropdownBlock.slideDown(600, function() {
+                dropdownBlock.slideDown(400, function() {
 
                     $("#sidebar").css({
                         "min-height" : "auto"
@@ -238,7 +238,7 @@ $(document).ready(function() {
 
             } else if(dropdownBlock.is(":visible")) {
 
-                dropdownBlock.slideUp(600, function() {
+                dropdownBlock.slideUp(400, function() {
 
                     $("#sidebar").css({
                         "min-height" : "auto"
