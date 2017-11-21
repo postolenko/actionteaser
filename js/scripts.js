@@ -251,24 +251,6 @@ $(document).ready(function() {
 
             }
 
-            //  else {
-
-            //     dropdownBlock.slideDown(200, function() {
-
-            //         $("#sidebar").css({
-            //             "min-height" : "auto"
-            //         });
-
-            //         $("#sidebar").css({
-            //             "min-height" : $(".content").height() + "px"
-            //         });
-
-            //     });
-
-            //     parentBLock.addClass("active");
-
-            // }
-
         });
 
     });
