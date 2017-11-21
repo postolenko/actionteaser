@@ -205,23 +205,19 @@ $(document).ready(function() {
 
             dropdownBlock = parentBLock.find(".menu-dropdown");
 
-            if(dropdownBlock.is(":visible")) {
+            if( dropdownBlock.is(":hidden") ) {
 
-                dropdownBlock.slideUp(200, function() {
+                $(".menu-dropdown-item").each(function() {
 
-                    $("#sidebar").css({
-                        "min-height" : "auto"
-                    });
+                    if( $(this).hasClass("active") ) {
 
-                    $("#sidebar").css({
-                        "min-height" : $(".content").height() + "px"
-                    });
+                        $(this).find(".menu-dropdown").slideUp(200);
+
+                        $(this).removeClass("active");
+
+                    }
 
                 });
-
-                parentBLock.removeClass("active");
-
-            } else {
 
                 dropdownBlock.slideDown(200, function() {
 
@@ -237,7 +233,41 @@ $(document).ready(function() {
 
                 parentBLock.addClass("active");
 
+            } else if(dropdownBlock.is(":visible")) {
+
+                dropdownBlock.slideUp(200, function() {
+
+                    $("#sidebar").css({
+                        "min-height" : "auto"
+                    });
+
+                    $("#sidebar").css({
+                        "min-height" : $(".content").height() + "px"
+                    });
+
+                });
+
+                parentBLock.removeClass("active");
+
             }
+
+            //  else {
+
+            //     dropdownBlock.slideDown(200, function() {
+
+            //         $("#sidebar").css({
+            //             "min-height" : "auto"
+            //         });
+
+            //         $("#sidebar").css({
+            //             "min-height" : $(".content").height() + "px"
+            //         });
+
+            //     });
+
+            //     parentBLock.addClass("active");
+
+            // }
 
         });
 
