@@ -43,6 +43,7 @@ $(document).ready(function() {
     var dropdownBlock;
     var rightDropdownCoord;
     var wrapperRightCoord;
+    var TOP_DROPDOWNMENU_COORD = 48;
 
     // ----------------------------
 
@@ -85,54 +86,56 @@ $(document).ready(function() {
 
             e.preventDefault();
 
-            // parentBLock = $(this).closest(".dropdown-block-wrapp");
+            parentBLock = $(this).closest(".dropdown-block-wrapp");
 
-            // dropdownAttr = $(this).attr("data-dropdown-link");
+            dropdownAttr = $(this).attr("data-dropdown-link");
 
-            // dropdownBlock = parentBLock.find(".dropdown-block[data-dropdown-block = '"+ dropdownAttr +"']");
+            dropdownBlock = parentBLock.find(".dropdown-block[data-dropdown-block = '"+ dropdownAttr +"']");
 
-            // if(dropdownBlock.is(":visible")) {
+            if(dropdownBlock.is(":visible")) {
 
-            //     dropdownBlock.fadeOut(200);
+                dropdownBlock.fadeOut(200);
 
-            //     $(this).removeClass("active");
+                parentBLock.removeClass("active");
 
-            // } else {
+            } else {
 
-            //     dropdownBlock.fadeIn(200);
+                dropdownBlock.fadeIn(200);
 
-            //     $(this).addClass("active");
+                dropdownBlock.css({ "top" : TOP_DROPDOWNMENU_COORD + "px"});
 
-            //     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+                parentBLock.addClass("active");
 
-            //     wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+                rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
 
-            //     if( rightDropdownCoord > wrapperRightCoord) {
+                wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
 
-            //         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+                if( rightDropdownCoord > wrapperRightCoord) {
 
-            //     }
+                    dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
 
-            // }
-
-        });
-
-
-        $(".dropdown-block-wrapp").hover(function() {
-
-            dropdownBlock = $(this).find(".dropdown-block");
-
-            rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
-
-            wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
-
-            if( rightDropdownCoord > wrapperRightCoord) {
-
-                dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+                }
 
             }
 
         });
+
+
+        // $(".dropdown-block-wrapp").hover(function() {
+
+        //     dropdownBlock = $(this).find(".dropdown-block");
+
+        //     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+
+        //     wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+
+        //     if( rightDropdownCoord > wrapperRightCoord) {
+
+        //         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+
+        //     }
+
+        // });
 
 
         $(this).keydown(function(eventObject){
@@ -211,7 +214,7 @@ $(document).ready(function() {
 
                     if( $(this).hasClass("active") ) {
 
-                        $(this).find(".menu-dropdown").slideUp(200);
+                        $(this).find(".menu-dropdown").slideUp(600);
 
                         $(this).removeClass("active");
 
@@ -219,7 +222,7 @@ $(document).ready(function() {
 
                 });
 
-                dropdownBlock.slideDown(200, function() {
+                dropdownBlock.slideDown(600, function() {
 
                     $("#sidebar").css({
                         "min-height" : "auto"
@@ -235,7 +238,7 @@ $(document).ready(function() {
 
             } else if(dropdownBlock.is(":visible")) {
 
-                dropdownBlock.slideUp(200, function() {
+                dropdownBlock.slideUp(600, function() {
 
                     $("#sidebar").css({
                         "min-height" : "auto"
