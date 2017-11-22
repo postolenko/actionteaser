@@ -43,11 +43,34 @@ $(document).ready(function() {
     var dropdownBlock;
     var rightDropdownCoord;
     var wrapperRightCoord;
-    var TOP_DROPDOWNMENU_COORD = 48;
+    var TOP_DROPDOWNMENU_COORD = 43;
 
     // ----------------------------
 
+    var linkTxt;
+    var respTooltip = $(".resp-tooltip");
+
+    // ----------------------------
+
+    var resizeFlag = false;
+
     getRespParams();
+
+    // if(bodyWidth <= 1200) {
+
+    //     $(".header-site").addClass("animation_none");
+    //     $(".sidebar").addClass("animation_none");
+    //     $(".main_content").addClass("animation_none");
+
+    //     setTimeout(function() {
+
+    //         $(".header-site").removeClass("animation_none");
+    //         $(".sidebar").removeClass("animation_none");
+    //         $(".main_content").removeClass("animation_none");
+
+    //     }, 700);
+
+    // }
 
     $(window).resize(function() {
 
@@ -55,9 +78,9 @@ $(document).ready(function() {
 
         // -------------------------
 
-        $("#fullH").css({
-            "height" : "auto"
-        });
+        // $("#fullH").css({
+        //     "height" : "auto"
+        // });
 
         // -------------------------
 
@@ -71,6 +94,24 @@ $(document).ready(function() {
 
         // -------------------------
 
+        // if(bodyWidth <= 1200 && !$(".sidebar").hasClass("hidden")) {
+
+        //     $(".header-site").addClass("animation_none");
+        //     $(".sidebar").addClass("animation_none");
+        //     $(".main_content").addClass("animation_none");
+
+        //     setTimeout(function(){
+
+        //         $(".header-site").removeClass("animation_none");
+        //         $(".sidebar").removeClass("animation_none");
+        //         $(".main_content").removeClass("animation_none");
+
+        //     }, 700);
+
+        // }
+
+        getRespParams();
+
     });
 
 
@@ -81,6 +122,17 @@ $(document).ready(function() {
         // var dropdownBlock;
 
         // var TOP_DROPDOWNMENU_COORD = 50;
+
+        $(".dropdown-block-wrapp").each(function() {
+
+            if( $(this).find(".dropdown-block").length > 0 ) {
+
+                $(this).find(".dropdown-link").append("<span class='chevron'></span>");
+
+            }
+
+        });
+
 
         $(".dropdown-link").click(function(e) {
 
@@ -144,13 +196,11 @@ $(document).ready(function() {
 
                 $(".dropdown-block").each(function() {
 
-                    dropdownAttr = $(this).attr("data-dropdown-block");
-
                     if ( $(this).is(":visible") ) {
 
                         $(this).fadeOut(200);
 
-                        $(".dropdown-link[data-dropdown-link = '" + dropdownAttr + "']").removeClass("active");
+                        $(this).closest(".dropdown-block-wrapp").removeClass("active");
                     }
                     
                 });
@@ -181,11 +231,9 @@ $(document).ready(function() {
 
                     if ( $(this).is(":visible") ) {
 
-                        dropdownAttr = $(this).attr("data-dropdown-block");
-
                         $(this).fadeOut(200);
 
-                        $(".dropdown-link[data-dropdown-link = '" + dropdownAttr + "']").removeClass("active");
+                        hide_element.closest(".dropdown-block-wrapp").removeClass("active");
 
                     }
 
@@ -270,8 +318,8 @@ $(document).ready(function() {
 
     });
 
-    var linkTxt;
-    var respTooltip = $(".resp-tooltip");
+    // var linkTxt;
+    // var respTooltip = $(".resp-tooltip");
 
     $( ".tooltips a" ).bind({
         mouseenter: function() {
@@ -302,13 +350,37 @@ $(document).ready(function() {
 
     function getRespParams() {
 
+        // if(bodyWidth <= 1200 && resizeFlag == true) {
         if(bodyWidth <= 1200) {
 
             $(".sidebar").addClass("hidden");
             $(".main_content").addClass("fullwidth");
             $(".header-site").addClass("resp-width");
 
+            // resizeFlag = false;
+
         }
+        //  else if( $(".sidebar").hasClass("hidden") ) {
+
+        //     return true;
+
+        // } else {
+
+        //     resizeFlag = true;
+
+        // }
+
+        $(".header-site").addClass("animation_none");
+        $(".sidebar").addClass("animation_none");
+        $(".main_content").addClass("animation_none");
+
+        setTimeout(function(){
+
+            $(".header-site").removeClass("animation_none");
+            $(".sidebar").removeClass("animation_none");
+            $(".main_content").removeClass("animation_none");
+
+        }, 700);
 
     }
 
