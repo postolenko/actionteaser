@@ -140,31 +140,35 @@ $(document).ready(function() {
 
             parentBLock = $(this).closest(".dropdown-block-wrapp");
 
-            dropdownAttr = $(this).attr("data-dropdown-link");
+            // dropdownAttr = $(this).attr("data-dropdown-link");
 
-            dropdownBlock = parentBLock.find(".dropdown-block[data-dropdown-block = '"+ dropdownAttr +"']");
+            if( parentBLock.find(".dropdown-block").length > 0 ) {
 
-            if(dropdownBlock.is(":visible")) {
+                dropdownBlock = parentBLock.find(".dropdown-block");
 
-                dropdownBlock.fadeOut(200);
+                if(dropdownBlock.is(":visible")) {
 
-                parentBLock.removeClass("active");
+                    dropdownBlock.fadeOut(200);
 
-            } else {
+                    parentBLock.removeClass("active");
 
-                dropdownBlock.fadeIn(200);
+                } else {
 
-                dropdownBlock.css({ "top" : TOP_DROPDOWNMENU_COORD + "px"});
+                    dropdownBlock.fadeIn(200);
 
-                parentBLock.addClass("active");
+                    dropdownBlock.css({ "top" : TOP_DROPDOWNMENU_COORD + "px"});
 
-                rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
+                    parentBLock.addClass("active");
 
-                wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+                    rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
 
-                if( rightDropdownCoord > wrapperRightCoord) {
+                    wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
 
-                    dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+                    if( rightDropdownCoord > wrapperRightCoord) {
+
+                        dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+
+                    }
 
                 }
 
