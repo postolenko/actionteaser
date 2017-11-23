@@ -1996,6 +1996,7 @@ a.user-acc .img-box img {
 .white-block {
     background: #ffffff;
     border-bottom: 3px solid #dbe2e9;
+    padding: 0 0 20px 0;
 }
 
 .white-block-header {
@@ -2040,6 +2041,10 @@ a.user-acc .img-box img {
     vertical-align: top;
     margin: 0 2%;
     padding: 10px 0;
+}
+
+.search-block_3 input {
+    width: 101px;
 }
 
 .search-block .search-col-1 {
@@ -2145,7 +2150,6 @@ a.user-acc .img-box img {
 
 .thumbnais-wrapp {
     overflow: hidden;
-    margin: 0 0 15px 0;
 }
 
 .thumbnais {
@@ -2249,6 +2253,20 @@ a.user-acc .img-box img {
     color: #333333;
 }
 
+.row-two-cols {
+
+}
+
+.row-two-cols .row-col-1 {
+    width: 54%;
+    padding-top: 21px;
+}
+
+.row-two-cols .row-col-2 {
+    width: 46%;
+    text-align: right;
+}
+
 /*-- Tabs --*/
 
 .tabs-block {
@@ -2260,7 +2278,7 @@ a.user-acc .img-box img {
 }
 
 .tabs {
-    margin: 15px 0;
+    margin: 15px 0 20px 0;
     border-bottom: 1px solid #cecece;
 }
 
@@ -2406,9 +2424,72 @@ a.user-acc .img-box img {
     opacity: .01;
 }
 
-
-
 /*-- /Tabs --*/
+
+.thumbnails_2 {
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    margin: 0 0 24px 0;
+    padding: 44px 0 20px 0;
+}
+
+.thumbnail_2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 142px;
+    margin: 20px 0;
+    padding: 0 13px;
+    text-align: center;
+}
+
+.thumbnail_2 .inner {
+
+}
+
+.thumbnail_2 .img-box {
+    height: 114px;
+    overflow: hidden;
+    background: #f8f8f8;
+    border: 5px solid #e3e3e3;
+}
+
+.thumbnail_2 .img-box p {
+    text-align: center;
+    font-family: Times New Roman, Arial, Verdana, sans-serif;
+    font-size: 80px;
+    line-height: 104px;
+    font-weight: normal;
+    color: #595959;
+}
+
+.thumbnail_2 p {
+    padding: 3px 0;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: normal;
+    color: #a7a7a7;
+}
+
+.thumbnail_2 p.p-1 {
+    /*min-height: 45px;*/
+    padding: 10px 0 3px 0;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.thumbnail_2 p.price {
+    padding: 3px 0;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #38d07c;
+}
+
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
