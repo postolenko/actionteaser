@@ -533,7 +533,7 @@
     color: #333333;
 }
 
-.select2-container--default .select2-results__option--highlighted[aria-selected]:hover {
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: #eef1f8;
     color: #555555;
 }
