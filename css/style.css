@@ -292,6 +292,10 @@ a:active {
     float: right;
 }
 
+.align-center {
+    text-align: center;
+}
+
 /*-- Icons --*/
 
 .user {
@@ -602,15 +606,28 @@ a:active {
     background-size: 100%;
 }
 
+.check {
+    display: inline-block;
+    vertical-align: top;
+    width: 19px;
+    height: 19px;
+    background-image: url(../img/check.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 /*-- Icons --*/
 
 /*-- Buttons --*/
 
 .blue-btn {
-    display: block;
+    /*display: block;*/
+    display: inline-block;
+    vertical-align: top;
     background: #37a0e3;
     margin: 3px 0;
-    padding: 9px 10px;
+    padding: 9px 12px;
     border: 1px solid transparent;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -656,8 +673,16 @@ a:active {
     background: #4cb3f5;
 }
 
+.blue-btn i {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 12px 0 0;
+}
+
 .green-btn {
-    display: block;
+    /*display: block;*/
+    display: inline-block;
+    vertical-align: top;
     background: #38d07c;
     margin: 3px 0;
     padding: 9px 10px;
@@ -782,6 +807,7 @@ header {
     display: block;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -789,9 +815,10 @@ header {
 
 .logo span {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    max-width: 259px;
+    white-space: nowrap;
+    width: 177px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -800,29 +827,68 @@ header {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 .logo span img {
-    display: block;
-    width: auto;
     height: auto;
-    max-width: 100%;
+}
+
+.logo span img.logo-desc {
+    width: 27px;
 }
 
 .logo span img.logo-resp {
-    display: none;
+    width: 139px;
+    position: absolute;
+    top: 6px;
+    left: 37px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
-.header-site.resp-width .logo span {
-    max-width: 27px;
+.resp-width .logo span {
+    width: 27px;
 }
 
-.header-site.resp-width span img.logo-resp {
-    display: block;
-}
-
-.header-site.resp-width span img.logo-desc {
-    display: none;
+.resp-width .logo span img.logo-resp {
+    top: -200px;
 }
 
 .header-site .col-2 .inner-col {
@@ -978,12 +1044,50 @@ header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    /*padding: 0 4px 0 0;*/
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal;
     color: #ffffff;
+}
+
+a.dropdown-link .link-txt {
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+a.dropdown-link:link .link-txt,
+a.dropdown-link:visited .link-txt {
+    color: #ffffff;
+}
+
+.dropdown-block-wrapp.active.link-txt {
+    color: #7992ac;
+}
+
+a.dropdown-link:active .link-txt {
+    color: #7992ac;
+}
+
+a.dropdown-link:hover .link-txt {
+    color: #7992ac;
 }
 
 a.dropdown-link .chevron {
@@ -1050,6 +1154,10 @@ a.dropdown-link .chevron {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.dropdown-block.w-284 {
+    width: 284px;
 }
 
 .dropdown-block .inner {
@@ -1154,6 +1262,84 @@ p.icon-box .count {
     position: absolute;
     top: -12px;
     right: -3px;
+}
+
+.news-list {
+    cursor: default;
+}
+
+.news-list li {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    border-bottom: 1px solid #dee1e8;
+}
+
+.news-list li:before {
+    display: table-cell;
+    vertical-align: top;
+    overflow: hidden;
+    width: 27px;
+    min-height: 10px;
+}
+
+.news-list li:after {
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    background: #2ecc71;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.news-list .news {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    padding: 13px 6% 6px 27px;
+}
+
+.news-list li:nth-child(1) .news {
+    padding-top: 7px;
+}
+
+.news-list li:nth-child(1):after {
+    top: 13px;
+}
+
+.news-list .news h3 {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.news-list .news p {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #555555;
+    padding: 2px 0 3px 0;
+}
+
+.news-list .news p.date {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #bababa;
+}
+
+.dropdown-block .more-link-box {
+    padding-top: 13px;
 }
 
 a.user-acc {
@@ -1669,6 +1855,7 @@ a.user-acc .img-box img {
 }
 
 .balance-item .buttons-block a {
+    display: block;
     width: 48%;
 }
 

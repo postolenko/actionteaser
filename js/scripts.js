@@ -148,9 +148,21 @@ $(document).ready(function() {
 
                 if(dropdownBlock.is(":visible")) {
 
-                    dropdownBlock.fadeOut(200);
+                    dropdownBlock.fadeOut(200);                    
 
                     parentBLock.removeClass("active");
+
+                    if( dropdownBlock.width() > parentBLock.width() ) {
+
+                        setTimeout(function() {
+
+                            dropdownBlock.css({
+                                "left" : 0 + "px"
+                            });                            
+
+                        }, 300);
+
+                    }                    
 
                 } else {
 
@@ -162,11 +174,25 @@ $(document).ready(function() {
 
                     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
 
-                    wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
+                    wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();                    
 
                     if( rightDropdownCoord > wrapperRightCoord) {
 
                         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
+
+                    } else {
+
+                        var menuItemCenterCoord = parentBLock.offset().left + ( parentBLock.width() / 2 );
+
+                        var dropdownBlockCenterCoord = dropdownBlock.offset().left + ( dropdownBlock.width() / 2 );
+
+                        var centerCoord = menuItemCenterCoord - dropdownBlockCenterCoord;
+
+                        // dropdownBlock.offset({left : centerCoord });
+
+                        dropdownBlock.css({
+                            "left" : centerCoord + "px"
+                        });
 
                     }
 
@@ -266,7 +292,7 @@ $(document).ready(function() {
 
                     if( $(this).hasClass("active") ) {
 
-                        $(this).find(".menu-dropdown").slideUp(400);
+                        $(this).find(".menu-dropdown").slideUp(200);
 
                         $(this).removeClass("active");
 
@@ -290,7 +316,7 @@ $(document).ready(function() {
 
             } else if(dropdownBlock.is(":visible")) {
 
-                dropdownBlock.slideUp(400, function() {
+                dropdownBlock.slideUp(200, function() {
 
                     $("#sidebar").css({
                         "min-height" : "auto"
@@ -317,6 +343,7 @@ $(document).ready(function() {
             $(".sidebar").toggleClass("hidden");
             $(".main_content").toggleClass("fullwidth");
             $(".header-site").toggleClass("resp-width");
+            // $(".logo").toggleClass("resp-logo");
 
         });
 
