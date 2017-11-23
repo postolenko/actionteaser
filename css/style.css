@@ -857,7 +857,7 @@ header {
     width: 27px;
 }
 
-.logo span img.logo-resp {
+.logo span img.logo-txt {
     width: 139px;
     position: absolute;
     top: 6px;
@@ -887,7 +887,7 @@ header {
     width: 27px;
 }
 
-.resp-width .logo span img.logo-resp {
+.resp-width .logo span img.logo-txt {
     top: -200px;
 }
 
