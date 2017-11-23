@@ -2155,7 +2155,7 @@ a.user-acc .img-box img {
 .thumbnais {
     width: 102%;
     margin: 0 0 0 -1%;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .thumbnail {
@@ -2428,9 +2428,9 @@ a.user-acc .img-box img {
 
 .thumbnails_2 {
     border: 1px solid #e3e3e3;
-    text-align: center;
+    /*text-align: center;*/
     margin: 0 0 24px 0;
-    padding: 44px 0 20px 0;
+    padding: 44px 4% 20px 4%;
 }
 
 .thumbnail_2 {
