@@ -2404,7 +2404,7 @@ input:focus {
 
 .thumbnail .mask p {
     display: block;
-    min-height: 88px;
+    /*min-height: 88px;*/
     max-height: 109px;
     overflow: hidden;
     margin: 11px 0 12px 0;
