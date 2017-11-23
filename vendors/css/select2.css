@@ -484,3 +484,128 @@
 
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb; }
+
+.select2-container--default .select2-selection--single {
+    display: block;
+    width: 100%;
+    min-width: 302px;
+    height: 38px;
+    padding: 0 15px;
+    border: 1px solid #dee1e8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; 
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 37px;
+    font-weight: 500;
+    color: #333333;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.select2-results__option {
+/*    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none;*/
+    padding: 0 15px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 37px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    height: 38px;
+    padding: 0 15px;
+    border: 1px solid #dee1e8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; 
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 37px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #38d07c;
+    color: #ffffff;
+}
+
+/*.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #6099f3;
+    color: #ffffff;
+}*/
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #555555;
+    line-height: 38px;
+}
+
+.select2-selection__arrow {
+  display: block;
+  width: 11px !important;
+  height: 7px !important;
+  background-image: url(../../img/select_arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-timing-function: ease;
+
+  -moz-transition-property: all;
+  -moz-transition-duration: .3s;
+  -moz-transition-timing-function: ease;
+
+  -ms-transition-property: all;
+  -ms-transition-duration: .3s;
+  -ms-transition-timing-function: ease;
+
+  -o-transition-property: all;
+  -o-transition-duration: .3s;
+  -o-transition-timing-function: ease;
+
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 15px;
+    right: 10px;
+}
+
+.select2-selection__arrow b {
+  display: none;
+}

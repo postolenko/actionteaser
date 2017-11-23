@@ -617,7 +617,67 @@ a:active {
     background-size: 100%;
 }
 
-/*-- Icons --*/
+.pencil {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 15px;
+    background-image: url(../img/pencil.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*-- /Icons --*/
+
+/*-- Links --*/
+
+a.blue-link {
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: normal;
+    color: #37a0e3;
+
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+a.blue-link:link,
+a.blue-link:visited {
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+}
+
+a.blue-link:active,
+a.blue-link.active {
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+}
+
+a.blue-link:hover {
+    border-bottom: 1px solid transparent;
+}
+
+/*-- /Links --*/
 
 /*-- Buttons --*/
 
@@ -625,9 +685,10 @@ a:active {
     /*display: block;*/
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
     background: #37a0e3;
     margin: 3px 0;
-    padding: 9px 12px;
+    padding: 8px 12px;
     border: 1px solid transparent;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -683,9 +744,10 @@ a:active {
     /*display: block;*/
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
     background: #38d07c;
     margin: 3px 0;
-    padding: 9px 10px;
+    padding: 8px 10px;
     border: 1px solid transparent;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -731,6 +793,62 @@ a:active {
     background: #43de88;
 }
 
+.white-pill {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    background: #ffffff;
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #37a0e3;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.white-pill:link,
+.white-pill:visited {
+    background: #ffffff;
+}
+
+.white-pill:active,
+.white-pill.active {
+    background: #d6efff;
+}
+
+.white-pill:hover {
+    background: #d6efff;
+}
+
+.white-pill i {
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+}
+
 /*-- /Buttons --*/
 
 /*-------------------------------------------*/
@@ -751,23 +869,23 @@ header {
     padding-top: 11px;
     padding-bottom: 7px;
     -webkit-transition-property: all;
-    -webkit-transition-duration: 1s;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: all;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: all;
-    -ms-transition-duration: 1s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: all;
-    -o-transition-duration: 1s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
@@ -829,23 +947,23 @@ header {
     transform: translate(-50%, -50%);
 
     -webkit-transition-property: all;
-    -webkit-transition-duration: 1s;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: all;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: all;
-    -ms-transition-duration: 1s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: all;
-    -o-transition-duration: 1s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
@@ -863,23 +981,23 @@ header {
     top: 6px;
     left: 37px;
     -webkit-transition-property: all;
-    -webkit-transition-duration: 1s;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: all;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: all;
-    -ms-transition-duration: 1s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: all;
-    -o-transition-duration: 1s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
@@ -1465,23 +1583,23 @@ a.user-acc .img-box img {
     width: 285px;
     position: relative;
     -webkit-transition-property: all;
-    -webkit-transition-duration: 1s;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: all;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: all;
-    -ms-transition-duration: 1s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: all;
-    -o-transition-duration: 1s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
@@ -1503,23 +1621,23 @@ a.user-acc .img-box img {
     padding: 20px 1.5%;
     width: calc(100% - 285px);
     -webkit-transition-property: all;
-    -webkit-transition-duration: 1s;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: all;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: all;
-    -ms-transition-duration: 1s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: all;
-    -o-transition-duration: 1s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
@@ -1881,103 +1999,65 @@ a.user-acc .img-box img {
 }
 
 .white-block-header {
+    margin-bottom: 7px;
     padding: 13px 2.5%;
     border-bottom: 1px solid #e7e7e7;
 }
 
 .white-block-row {
-    padding: 12px 2.5%;
+    padding: 6px 2.5%;
+    overflow: hidden;
 }
 
 .white-block-header .inner-col-1 {
-    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
 }
 
 .white-block-header .inner-col-2 {
-    width: 30%;
-    padding: 14px 0 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    /*padding: 14px 0 0 0;*/
     text-align: right;
 }
 
-h1 {
-    font-family: "SF UI Display", Arial, Verdana, sans-serif;
-    font-size: 20px;
-    line-height: 37px;
-    font-weight: bold;
-    color: #333333;
-}
-
-a.blue-link {
+.white-block-header a,
+.white-block-header button {
     display: inline-block;
-    vertical-align: top;
-    border-bottom: 1px solid rgba(55, 160, 227, .7);
-    font-family: "SF UI Display", Arial, Verdana, sans-serif;
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: normal;
-    color: #37a0e3;
-
-    -webkit-transition-property: all;
-    -webkit-transition-duration: .3s;
-    -webkit-transition-timing-function: ease;
-
-    -moz-transition-property: all;
-    -moz-transition-duration: .3s;
-    -moz-transition-timing-function: ease;
-
-    -ms-transition-property: all;
-    -ms-transition-duration: .3s;
-    -ms-transition-timing-function: ease;
-
-    -o-transition-property: all;
-    -o-transition-duration: .3s;
-    -o-transition-timing-function: ease;
-
-    transition-property: all;
-    transition-duration: .3s;
-    transition-timing-function: ease;
+    vertical-align: middle;
+    margin: 5px 0 5px 5%;
 }
 
-a.blue-link:link,
-a.blue-link:visited {
-    border-bottom: 1px solid rgba(55, 160, 227, .7);
-}
-
-a.blue-link:active,
-a.blue-link.active {
-    border-bottom: 1px solid rgba(55, 160, 227, .7);
-}
-
-a.blue-link:hover {
-    border-bottom: 1px solid transparent;
+.white-block-inner {
+    width: 104%;
+    margin: 0 0 0 -2%;
 }
 
 .search-block {
-    display: table;
-    width: 100%;
-    padding: 18px 0;
-}
-
-.search-block .search-col {
-    display: table-cell;
-    vertical-align: middle;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 2%;
+    padding: 10px 0;
 }
 
 .search-block .search-col-1 {
     display: inline-block;
-    vertical-align: middle;
-    min-width: 107px;
-    padding: 0 4% 0 0;
+    vertical-align: top;
     width: auto;
+    min-width: 92px;
+    padding: 10px 10px 0 0;    
 }
 
 .search-block .search-col-2 {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: auto;
+    white-space: nowrap;
 }
 
-.search-block h3 {
+.search-block label {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 15px;
     line-height: 25px;
@@ -1987,13 +2067,15 @@ a.blue-link:hover {
 
 .search-block input {
     display: block;
-    width: 100%;
-    min-width: 302px;
-    padding: 0 3%;
+    /*width: 100%;*/
+    max-width: 225px;
+    height: 38px;
+    margin: 5px 10px;
+    padding: 0 11px;
     border: 1px solid #dee1e8;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius: 32x; 
+    border-radius: 2px;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 15px;
     line-height: 37px;
@@ -2022,6 +2104,43 @@ a.blue-link:hover {
 
 .search-block input:focus {
     border: 1px solid #555555;
+}
+
+.select-block {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 369px;
+}
+
+.search-block .select-block {
+    vertical-align: middle;
+    margin: 5px 10px;
+}
+
+.search-block .green-btn {
+    margin: 5px 10px;
+}
+
+.modif-block {
+    background: #f7f7f7;
+    margin: 0 9px;
+    padding: 0 5px;
+}
+
+.modif-block p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px 9px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 33px;
+    font-weight: normal;
+    color: #555555;
+}
+
+.modif-block button {
+    vertical-align: middle;
+    margin: 4px 9px;
 }
 
 .thumbnais-wrapp {
@@ -2129,6 +2248,167 @@ a.blue-link:hover {
     font-weight: bold;
     color: #333333;
 }
+
+/*-- Tabs --*/
+
+.tabs-block {
+    margin: 31px 0 0 0;
+}
+
+.main-content_inner {
+    padding: 0 2.5%;
+}
+
+.tabs {
+    margin: 15px 0;
+    border-bottom: 1px solid #cecece;
+}
+
+.tabs-links {
+    width: 100%;
+    padding: 0 2.5%;
+    border-bottom: 1px solid #cecece;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+
+}
+
+.tabs-links label {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin: 3px;
+    padding: 15px 3px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #a7a7a7;
+    -webkit-transition-property: border, background, color;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: border, background, color;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: border, background, color;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: border, background, color;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: border, background, color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.tabs-links label:hover {
+    background: #ececec;
+    border: 1px solid #ececec;
+}
+
+.tabs-links label.active {
+    margin: 3px 3px 0 3px;
+    background: #ffffff;
+    border-top: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid transparent;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+    color: #333333;
+}
+
+.tabs-links label:before {
+    display: block;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #2ecc71;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+.tabs-links label:after {
+    display: block;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.tabs-links label:before,
+.tabs-links label:after {
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.tabs-links label.active:before,
+.tabs-links label.active:after {
+    opacity: 1;
+}
+
+.tab-wrapp {
+    position: relative;
+    padding: 0 2.5%;
+}
+
+.tab-wrapp .tab {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-wrapp .radio-tab:checked + .tab {
+    display: block;
+}
+
+.tab-wrapp .radio-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .01;
+}
+
+
+
+/*-- /Tabs --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
