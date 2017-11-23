@@ -936,7 +936,7 @@ header {
 .header-site {
     background: rgb(52, 73, 94);
     position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 .header-site .col {
