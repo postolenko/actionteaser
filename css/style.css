@@ -2404,7 +2404,7 @@ input:focus {
 
 .thumbnail .mask p {
     display: block;
-    height: 100px;
+    max-height: 100px;
     overflow: hidden;
     margin: 13px 0 2px 0;
     text-align: left;
