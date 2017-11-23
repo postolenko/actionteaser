@@ -2406,7 +2406,7 @@ input:focus {
     display: block;
     max-height: 100px;
     overflow: hidden;
-    margin: 13px 0 2px 0;
+    margin: 13px 0 4px 0;
     text-align: left;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 12px;
