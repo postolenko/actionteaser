@@ -490,6 +490,88 @@ $(document).ready(function() {
 
     });
 
+    // Checkboxes
+
+    $(function() {
+
+        $(".checkboxes-wrapp").each(function() {
+
+            slidingBlock = $(this).find(".checkboxes-inner");
+
+            if( $(this).hasClass("active") && slidingBlock.is(":hidden")) {
+
+                slidingBlock.slideDown(30);
+
+            } else {
+
+                slidingBlock.slideUp(30);
+
+            }
+
+        });
+
+        $(".checkboxes-btn").click(function() {
+
+            parentBLock = $(this).closest(".checkboxes-wrapp");
+
+            slidingBlock = parentBLock.find(".checkboxes-inner");
+
+            if( slidingBlock.is(":hidden") ) {
+
+                slidingBlock.slideDown(200);
+
+                $(this).addClass("active");
+
+            } else {
+
+                slidingBlock.slideUp(200);
+
+                $(this).removeClass("active");
+
+            }
+
+        });
+
+        $(".checkboxes-wrapp input[type='checkbox']").click(function() {
+
+            var checkboxBlock = $(this).closest(".checkbox-block");            
+
+            if( checkboxBlock.next(".checkboxes-inner").length > 0 ) {
+
+                var innersCheckboxes = checkboxBlock.next(".checkboxes-inner");
+
+                if( $(this).is(":checked") ) {
+
+                    innersCheckboxes.find("input[type = 'checkbox']").each(function() {
+
+                        if( !$(this).is(":checked") ) {
+
+                            $(this).click();
+
+                        }
+
+                    });
+
+                } else {
+
+                    innersCheckboxes.find("input[type = 'checkbox']").each(function() {
+
+                        if( $(this).is(":checked") ) {
+
+                            $(this).click();
+
+                        }
+
+                    });
+
+                }
+
+            }
+
+        });
+
+    });
+
 
     function getRespParams() {
 

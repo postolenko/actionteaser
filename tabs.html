@@ -278,7 +278,7 @@
 									<div class="white-block-inner">
 
 										<form>
-											<div class="search-block search-block_1">
+											<div class="input-wrapp input-wrapp_1">
 												<div class="search-col-1">
 													<label>Название:</label>
 												</div>
@@ -287,7 +287,7 @@
 												</div>
 											</div>
 
-											<div class="search-block search-block_2">
+											<div class="input-wrapp input-wrapp_2">
 												<div class="search-col-1">
 													<label>Скопировать стиль:</label>
 												</div>
@@ -310,7 +310,7 @@
 
 								<div class="white-block-row">
 									<div class="white-block-inner">
-										<div class="search-block">
+										<div class="input-wrapp">
 											<div class="search-col-1">
 												<label>Тип блока:</label>
 											</div>
@@ -343,34 +343,425 @@
 											</div>
 										</div>
 										<div class="tabs-content">
+											
 											<div class="tab-wrapp">
-												<input type="radio" name="tabs" class="radio-tab" id="tab_1">
+												<!-- Tab 1 -->
+												<input type="radio" name="tabs" class="radio-tab" id="tab_1">					
 												<div class="tab">
-													<h1>1</h1>
+													<div class="white-block-inner clearfix">
+														<form>
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Ширина таблицы:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp">
+																<div class="radio-block">
+																	<input type="radio" name="radio_1" id="radio_1" />
+																	<label for="radio_1">px</label>
+																</div>
+																<div class="radio-block">
+																	<input type="radio" name="radio_1" id="radio_2" />
+																	<label for="radio_2">%</label>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет фона:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp">
+																<div class="checkbox-block">
+																	<input type="checkbox" name="checkbox_1" id="checkbox_2" />
+																	<label for="checkbox_2">прозрачный</label>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет границы:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Размер границы, px:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp right">
+																<button type="submit" class="green-btn">Сохранить</button>
+															</div>
+
+														</form>
+													</div>
+
 												</div>
+												<!-- Tab 1 -->
 											</div>
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_2">
-												<div class="tab">
-													<h1>2</h1>
+												<div class="tab clearfix">
+													<div class="white-block-inner clearfix">
+														<form>
+															
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Отступы между ячейками, px:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Отступы внутри ячеек, px:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет рамки ячейки:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет рамки ячейки:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="select-block">
+																		<select>
+																			<option>сплошная</option>
+																			<option>пунктирная</option>
+																			<option>загогулинка</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Размер рамки ячейки, px::</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Фон ячейки:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Выравнивание:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="select-block">
+																		<select>
+																			<option>по центру</option>
+																			<option>лево</option>
+																			<option>право</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp right">
+																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="green-btn">Сохранить</button>
+															</div>
+
+														</form>
+													</div>
 												</div>
 											</div>
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_3">
-												<div class="tab">
-													<h1>3</h1>
+												<div class="tab clearfix">
+													<div class="white-block-inner clearfix">
+														<form>
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Кол-во по вертикали:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Ширина изображения, px:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет рамки:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Тип рамки:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="select-block">
+																		<select>
+																			<option>сплошная</option>
+																			<option>пунктирная</option>
+																			<option>загогулинка</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Кол-во по горизонтали:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Толщина границы, px:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Скругление:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp right">
+																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="green-btn">Сохранить</button>
+															</div>
+														</form>
+													</div>
 												</div>
 											</div>
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_4">
-												<div class="tab">
-													<h1>4</h1>
+												<div class="tab clearfix">
+													<div class="white-block-inner clearfix">
+														<form>
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Выберите шрифт:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="select-block">
+																		<select>
+																			<option>Arial</option>
+																			<option>Verdana</option>
+																			<option>PT Sans</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет и размер шрифта:</label>
+																</div>
+																<div class="search-col-2">
+																	<input class="color" type="text" placeholder="" value="#e6286f" style="background-color: #e6286f;" />
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Стиль шрифта:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_2" id="checkbox_3">
+																		<label for="checkbox_3"><b>B</b></label>
+																	</div>
+
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_2" id="checkbox_4">
+																		<label for="checkbox_4"><i>I</i></label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Позиция текста:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="select-block">
+																		<select>
+																			<option>под картинкой</option>
+																			<option>над картинкой</option>
+																			<option>слева картинки</option>
+																			<option>справа картинки</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет и размер шрифта<br /> при наведении:</label>
+																</div>
+																<div class="search-col-2">
+																	<input class="color" type="text" placeholder="" value="#64a647" style="background-color: #64a647;" />
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Показывать описание:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_2" id="checkbox_5">
+																		<label for="checkbox_5"></label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_4">
+																<div class="search-col-1">
+																	<label>Размер описания:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_3">
+																<div class="search-col-1">
+																	<label>Цвет описания:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_4">
+																<div class="search-col-1">
+																	<label>Длина описания:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp right">
+																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="green-btn">Сохранить</button>
+															</div>
+														</form>
+													</div>
 												</div>
 											</div>
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_5">
-												<div class="tab">
-													<h1>5</h1>
+												<div class="tab clearfix">
+													<div class="white-block-inner clearfix">
+														<form>
+															<div class="input-wrapp input-wrapp_5">
+																<div class="search-col-1">
+																	<label>Увеличение изображения<br /> при наведении:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_3" id="checkbox_6">
+																		<label for="checkbox_6">да</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_5">
+																<div class="search-col-1">
+																	<label>Автообновление<br /> после клика:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_3" id="checkbox_7">
+																		<label for="checkbox_7">да</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_5">
+																<div class="search-col-1">
+																	<label>Автообновление:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_3" id="checkbox_8">
+																		<label for="checkbox_8">да</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="input-wrapp input-wrapp_4">
+																<div class="search-col-1">
+																	<label>Время<br /> перезагрузки, сек:</label>
+																</div>
+																<div class="search-col-2">
+																	<input type="text" />
+																</div>
+															</div>
+
+															<div class="input-wrapp right">
+																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="green-btn">Сохранить</button>
+															</div>
+														</form>
+													</div>
 												</div>
 											</div>
 											<div class="tab-wrapp">
@@ -381,8 +772,186 @@
 											</div>
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_7">
-												<div class="tab">
-													<h1>7</h1>
+												<div class="tab clearfix">
+													<div class="white-block-inner clearfix">
+														<form>
+															<div class="input-wrapp input-wrapp_5">
+																<div class="search-col-1">
+																	<label>Показывать анимацию:</label>
+																</div>
+																<div class="search-col-2">
+																	<div class="checkbox-block">
+																		<input type="checkbox" name="checkbox_4" id="checkbox_9">
+																		<label for="checkbox_9">да</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="dropdowns-checkboxes">
+
+																<h3>Тематики объявлений:</h3>
+
+																<div class="checkboxes-bricks offset-ziro">
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_1" />
+																			<label for="ch_1">Категория 1</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_2" />
+																				<label for="ch_2">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_3" />
+																				<label for="ch_3">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_4" />
+																			<label for="ch_4">Категория 2</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_5" />
+																				<label for="ch_5">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_6" />
+																				<label for="ch_6">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_7" />
+																			<label for="ch_7">Категория 3</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_8" />
+																				<label for="ch_8">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_9" />
+																				<label for="ch_9">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_10" />
+																			<label for="ch_10">Категория 4</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_11" />
+																				<label for="ch_11">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_12" />
+																				<label for="ch_12">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_13" />
+																			<label for="ch_13">Категория 5</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_14" />
+																				<label for="ch_14">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_15" />
+																				<label for="ch_15">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_16" />
+																			<label for="ch_16">Категория 6</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_7" />
+																				<label for="ch_7">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_18" />
+																				<label for="ch_18">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="checkboxes-wrapp clearfix">
+																		<button type="button" class="checkboxes-btn">
+																			<i class="fa fa-plus"></i>
+																			<i class="fa fa-minus"></i>
+																		</button>
+																		<div class="checkbox-block">
+																			<input type="checkbox" name="menu_ch_2" id="ch_19" />
+																			<label for="ch_19">Категория 7</label>
+																		</div>
+																		<div class="checkboxes-inner">
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_20" />
+																				<label for="ch_20">Подкатегория 1</label>
+																			</div>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_21" />
+																				<label for="ch_21">Подкатегория 1</label>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+
+																<div class="clearfix">
+																	<div class="input-wrapp right">
+																		<button type="submit" class="green-btn">Сохранить</button>
+																	</div>
+																</div>
+
+															</div>
+
+														</form>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -396,7 +965,7 @@
 											<h2>Просмотр блока</h2>
 										</div>
 										<div class="row-col-2 right">
-											<div class="search-block search-block_3">
+											<div class="input-wrapp input-wrapp_3">
 												<div class="search-col-1">
 													<label>Цвет фона:</label>
 												</div>
