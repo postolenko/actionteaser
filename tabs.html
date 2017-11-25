@@ -15,14 +15,17 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
+	<link rel="stylesheet" type="text/css" href="colorpicker/css/colorpicker.css">
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
+	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 	
 	<title>Actionteaser</title>	
@@ -268,7 +271,7 @@
 									</div>
 									<div class="inner-col-2">
 										<a href="#" class="blue-link">К списку блоков</a>
-										<a href="#" class="blue-btn"><i class="check"></i>Рекомендации по блокам</a>
+										<a href="#" class="orange-btn"><i class="check"></i>Рекомендации по блокам</a>
 									</div>
 								</div>
 
@@ -404,6 +407,7 @@
 															</div>
 
 															<div class="input-wrapp right">
+																<button type="submit" class="blue-btn next_tab">Далее</button>
 																<button type="submit" class="green-btn">Сохранить</button>
 															</div>
 
@@ -416,7 +420,7 @@
 											<div class="tab-wrapp">
 												<input type="radio" name="tabs" class="radio-tab" id="tab_2">
 												<div class="tab clearfix">
-													<div class="white-block-inner clearfix">
+													<div class="white-block-inner">
 														<form>
 															
 															<div class="input-wrapp input-wrapp_3">
@@ -494,9 +498,13 @@
 																</div>
 															</div>
 
-															<div class="input-wrapp right">
-																<button type="submit" class="blue-btn">Далее</button>
-																<button type="submit" class="green-btn">Сохранить</button>
+															<div class="clearfix">
+
+																<div class="input-wrapp right">
+																	<button type="submit" class="blue-btn next_tab">Далее</button>
+																	<button type="submit" class="green-btn">Сохранить</button>
+																</div>
+
 															</div>
 
 														</form>
@@ -578,7 +586,7 @@
 															</div>
 
 															<div class="input-wrapp right">
-																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="blue-btn next_tab">Далее</button>
 																<button type="submit" class="green-btn">Сохранить</button>
 															</div>
 														</form>
@@ -610,7 +618,7 @@
 																	<label>Цвет и размер шрифта:</label>
 																</div>
 																<div class="search-col-2">
-																	<input class="color" type="text" placeholder="" value="#e6286f" style="background-color: #e6286f;" />
+																	<input class="color" type="text" placeholder="" value="" />
 																	<input type="text" />
 																</div>
 															</div>
@@ -653,7 +661,7 @@
 																	<label>Цвет и размер шрифта<br /> при наведении:</label>
 																</div>
 																<div class="search-col-2">
-																	<input class="color" type="text" placeholder="" value="#64a647" style="background-color: #64a647;" />
+																	<input class="color" type="text" placeholder="" value="#64a647" />
 																	<input type="text" />
 																</div>
 															</div>
@@ -698,7 +706,7 @@
 															</div>
 
 															<div class="input-wrapp right">
-																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="blue-btn next_tab">Далее</button>
 																<button type="submit" class="green-btn">Сохранить</button>
 															</div>
 														</form>
@@ -756,7 +764,7 @@
 															</div>
 
 															<div class="input-wrapp right">
-																<button type="submit" class="blue-btn">Далее</button>
+																<button type="submit" class="blue-btn next_tab">Далее</button>
 																<button type="submit" class="green-btn">Сохранить</button>
 															</div>
 														</form>
@@ -792,151 +800,163 @@
 
 																<div class="checkboxes-bricks offset-ziro">
 
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_1" />
-																			<label for="ch_1">Категория 1</label>
-																		</div>
-																		<div class="checkboxes-inner">
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_2" />
-																				<label for="ch_2">Подкатегория 1</label>
-																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_3" />
-																				<label for="ch_3">Подкатегория 1</label>
-																			</div>
-																		</div>
-																	</div>
+																	<div class="bricks-col">
 
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_4" />
-																			<label for="ch_4">Категория 2</label>
-																		</div>
-																		<div class="checkboxes-inner">
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
 																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_5" />
-																				<label for="ch_5">Подкатегория 1</label>
+																				<input type="checkbox" name="menu_ch_2" id="ch_1" />
+																				<label for="ch_1">Категория 1</label>
 																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_6" />
-																				<label for="ch_6">Подкатегория 1</label>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_2" />
+																					<label for="ch_2">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_3" />
+																					<label for="ch_3">Подкатегория 1</label>
+																				</div>
 																			</div>
 																		</div>
-																	</div>
 
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_7" />
-																			<label for="ch_7">Категория 3</label>
-																		</div>
-																		<div class="checkboxes-inner">
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
 																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_8" />
-																				<label for="ch_8">Подкатегория 1</label>
+																				<input type="checkbox" name="menu_ch_2" id="ch_4" />
+																				<label for="ch_4">Категория 2</label>
 																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_9" />
-																				<label for="ch_9">Подкатегория 1</label>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_5" />
+																					<label for="ch_5">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_6" />
+																					<label for="ch_6">Подкатегория 1</label>
+																				</div>
 																			</div>
 																		</div>
-																	</div>
 
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_10" />
-																			<label for="ch_10">Категория 4</label>
-																		</div>
-																		<div class="checkboxes-inner">
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_11" />
-																				<label for="ch_11">Подкатегория 1</label>
-																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_12" />
-																				<label for="ch_12">Подкатегория 1</label>
-																			</div>
-																		</div>
-																	</div>
-
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_13" />
-																			<label for="ch_13">Категория 5</label>
-																		</div>
-																		<div class="checkboxes-inner">
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_14" />
-																				<label for="ch_14">Подкатегория 1</label>
-																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_15" />
-																				<label for="ch_15">Подкатегория 1</label>
-																			</div>
-																		</div>
-																	</div>
-
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_16" />
-																			<label for="ch_16">Категория 6</label>
-																		</div>
-																		<div class="checkboxes-inner">
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
 																			<div class="checkbox-block">
 																				<input type="checkbox" name="menu_ch_2" id="ch_7" />
-																				<label for="ch_7">Подкатегория 1</label>
+																				<label for="ch_7">Категория 3</label>
 																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_18" />
-																				<label for="ch_18">Подкатегория 1</label>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_8" />
+																					<label for="ch_8">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_9" />
+																					<label for="ch_9">Подкатегория 1</label>
+																				</div>
 																			</div>
 																		</div>
+
 																	</div>
 
-																	<div class="checkboxes-wrapp clearfix">
-																		<button type="button" class="checkboxes-btn">
-																			<i class="fa fa-plus"></i>
-																			<i class="fa fa-minus"></i>
-																		</button>
-																		<div class="checkbox-block">
-																			<input type="checkbox" name="menu_ch_2" id="ch_19" />
-																			<label for="ch_19">Категория 7</label>
-																		</div>
-																		<div class="checkboxes-inner">
+																	<div class="bricks-col">
+
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
 																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_20" />
-																				<label for="ch_20">Подкатегория 1</label>
+																				<input type="checkbox" name="menu_ch_2" id="ch_10" />
+																				<label for="ch_10">Категория 4</label>
 																			</div>
-																			<div class="checkbox-block">
-																				<input type="checkbox" name="menu_ch_2" id="ch_21" />
-																				<label for="ch_21">Подкатегория 1</label>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_11" />
+																					<label for="ch_11">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_12" />
+																					<label for="ch_12">Подкатегория 1</label>
+																				</div>
 																			</div>
 																		</div>
+
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_13" />
+																				<label for="ch_13">Категория 5</label>
+																			</div>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_14" />
+																					<label for="ch_14">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_15" />
+																					<label for="ch_15">Подкатегория 1</label>
+																				</div>
+																			</div>
+																		</div>
+
+																	</div>
+
+																	<div class="bricks-col">
+
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_16" />
+																				<label for="ch_16">Категория 6</label>
+																			</div>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_7" />
+																					<label for="ch_7">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_18" />
+																					<label for="ch_18">Подкатегория 1</label>
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="checkboxes-wrapp clearfix">
+																			<button type="button" class="checkboxes-btn">
+																				<i class="fa fa-plus"></i>
+																				<i class="fa fa-minus"></i>
+																			</button>
+																			<div class="checkbox-block">
+																				<input type="checkbox" name="menu_ch_2" id="ch_19" />
+																				<label for="ch_19">Категория 7</label>
+																			</div>
+																			<div class="checkboxes-inner">
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_20" />
+																					<label for="ch_20">Подкатегория 1</label>
+																				</div>
+																				<div class="checkbox-block">
+																					<input type="checkbox" name="menu_ch_2" id="ch_21" />
+																					<label for="ch_21">Подкатегория 1</label>
+																				</div>
+																			</div>
+																		</div>
+
 																	</div>
 
 																</div>

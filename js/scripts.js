@@ -53,7 +53,7 @@ $(document).ready(function() {
     var dropdownBlock;
     var rightDropdownCoord;
     var wrapperRightCoord;
-    var TOP_DROPDOWNMENU_COORD = 43;
+    // var TOP_DROPDOWNMENU_COORD = 43;
 
     // ----------------------------
 
@@ -67,9 +67,11 @@ $(document).ready(function() {
     // ----------------------------
 
     var tabsParent;
+    var tabParent;
     var tabLink;
     var attrForTabLink;
     var activeTabRadio;
+    var nextTab;
     var activeTabs = [];
     var activeFlag = true;
 
@@ -161,6 +163,10 @@ $(document).ready(function() {
 
             e.preventDefault();
 
+            var HEADERHEIGHT = 78;
+
+            var topMenuCoord;
+
             parentBLock = $(this).closest(".dropdown-block-wrapp");
 
             // dropdownAttr = $(this).attr("data-dropdown-link");
@@ -191,7 +197,15 @@ $(document).ready(function() {
 
                     dropdownBlock.fadeIn(200);
 
-                    dropdownBlock.css({ "top" : TOP_DROPDOWNMENU_COORD + "px"});
+                    topMenuCoord = $(".header-site").height() - $(this).offset().top - $(".header-site").offset().top - 3;
+ 
+                    console.log($(this).offset().top + "  " + $(".header-site").offset().top +"   "+ ( $(this).offset().top -  $(".header-site").offset().top )  + "   " + (HEADERHEIGHT - ( $(this).offset().top - $(".header-site").offset().top )) );
+
+                    // dropdownBlock.offset({top : topMenuCoord});
+
+                    dropdownBlock.css({
+                        "top" : topMenuCoord + "px"
+                    });
 
                     parentBLock.addClass("active");
 
@@ -406,9 +420,11 @@ $(document).ready(function() {
     $(function() {
 
         // var tabsParent;
+        // var tabParent;
         // var tabLink;
         // var attrForTabLink;
         // var activeTabRadio;
+        // var nextTab;
         // var activeTabs = [];
         // var activeFlag = true;
 
@@ -488,6 +504,22 @@ $(document).ready(function() {
 
         });
 
+
+        $(".next_tab").click(function(e) {
+
+            e.preventDefault();
+
+            tabParent = $(this).closest(".tab-wrapp");
+            attrForTabLink = tabParent.find(".radio-tab").attr("id");
+            tabsParent = tabParent.closest(".tabs");
+            
+            activeTabRadio = tabsParent.find(".tab-link[for = '"+ attrForTabLink +"']");
+            nextTab = activeTabRadio.next(".tab-link");
+            nextTab.click();
+
+
+        });
+
     });
 
     // Checkboxes
@@ -518,7 +550,11 @@ $(document).ready(function() {
 
             if( slidingBlock.is(":hidden") ) {
 
-                slidingBlock.slideDown(200);
+                slidingBlock.slideDown(200, function() {
+
+
+
+                });
 
                 $(this).addClass("active");
 
