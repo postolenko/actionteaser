@@ -627,17 +627,17 @@ $(document).ready(function() {
 
             }
 
-            $(".header-site").addClass("animation_none");
-            $(".sidebar_bg").addClass("animation_none");
-            $(".two-cols-templ").addClass("animation_none");
+            // $(".header-site").addClass("animation_none");
+            // $(".sidebar_bg").addClass("animation_none");
+            // $(".two-cols-templ").addClass("animation_none");
 
-            setTimeout(function(){
+            // setTimeout(function(){
 
-                $(".header-site").removeClass("animation_none");
-                $(".sidebar_bg").removeClass("animation_none");
-                $(".two-cols-templ").removeClass("animation_none");
+            //     $(".header-site").removeClass("animation_none");
+            //     $(".sidebar_bg").removeClass("animation_none");
+            //     $(".two-cols-templ").removeClass("animation_none");
 
-            }, 700);
+            // }, 700);
 
         }        
 
