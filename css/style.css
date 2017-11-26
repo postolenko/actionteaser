@@ -1141,6 +1141,11 @@ header {
     top: -200px;
 }
 
+.animation_none .logo span,
+.animation_none .logo span img.logo-txt {
+    transition: none;
+}
+
 .header-site .col-2 .inner-col {
     padding: 10px 1%;
 }
@@ -1739,9 +1744,52 @@ a.user-acc .img-box img {
 /* ----- CONTENT ------ */
 /*-------------------------------------------*/
 
+.sidebar_bg {
+    width: 285px;
+    height: 100%;
+    background: #34495e;
+    position: absolute;
+    top: 0;
+    left :0;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: width;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: width;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: width;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: width;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.sidebar_bg.resp {
+    width: 76px;
+}
+
 .two-cols-templ {
     position: relative;
 }
+
+/*.content:before {
+    display: block;
+    content: "";
+    width: 285px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #34495e;
+}*/
 
 .two-cols-templ .col-1 {
     /*width: 18%;*/
@@ -1778,10 +1826,6 @@ a.user-acc .img-box img {
     width: 285px;
 }
 
-.sidebar.hidden {
-    width: 76px;
-}
-
 .two-cols-templ .col-2 {
     padding: 20px 1.5%;
     width: calc(100% - 285px);
@@ -1806,16 +1850,20 @@ a.user-acc .img-box img {
     transition-timing-function: ease;
 }
 
-.two-cols-templ .col-1.animation_none {
-    transition: none;
-}
-
-.two-cols-templ .col-2.animation_none {
-    transition: none;
-}
-
-.main_content.fullwidth {
+.two-cols-templ.resp  .main_content {
     width: calc(100% - 79px);
+}
+
+.two-cols-templ.resp .sidebar {
+    width: 76px;
+}
+
+.two-cols-templ.animation_none .col-1 {
+    transition: none;
+}
+
+.two-cols-templ.animation_none .col-2 {
+    transition: none;
 }
 
 .resp-tooltip {    
@@ -1968,7 +2016,7 @@ a.user-acc .img-box img {
     display: none;
 }
 
-.sidebar.hidden .menu-item-header i {
+.two-cols-templ.resp .menu-item-header i {
     display: block;
 }
 
@@ -2083,11 +2131,11 @@ a.user-acc .img-box img {
     opacity: .75;
 }
 
-.sidebar.hidden .link-txt {
+.two-cols-templ.resp .link-txt {
     display: none;
 }
 
-.sidebar.hidden .resp-none {
+.two-cols-templ.resp .resp-none {
     display: none;
 }
 
