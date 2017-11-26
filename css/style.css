@@ -628,6 +628,17 @@ a:active {
     background-size: 100%;
 }
 
+.clipboard {
+    display: inline-block;
+    vertical-align: top;
+    width: 13px;
+    height: 16px;
+    background-image: url(../img/clipboard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 /*-- /Icons --*/
 
 /*-- Links --*/
@@ -838,17 +849,17 @@ a.blue-link:hover {
 
 .orange-btn:active,
 .orange-btn.active {
-    background: #ff1717;
+    background: #e76b5b;
 }
 
 .orange-btn:hover {
-    background: #ff1717;
+    background: #e76b5b;
 }
 
 .orange-btn i {
     display: inline-block;
     vertical-align: top;
-    margin: 0 12px 0 0;
+    margin: 1px 12px 0 0;
 }
 
 .white-pill {
