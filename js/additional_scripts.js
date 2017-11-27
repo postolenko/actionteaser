@@ -8,8 +8,14 @@
 
 	$(document).ready(function() {
 
-		$("select").select2({
-			minimumResultsForSearch: Infinity
+		
+
+		$("select").each(function() {
+
+			$(this).select2({
+				minimumResultsForSearch: Infinity
+			});
+
 		});
 
 		var inputColorAttr;

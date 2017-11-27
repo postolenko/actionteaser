@@ -609,6 +609,93 @@ $(document).ready(function() {
     });
 
 
+    // Upload File
+
+    $(function() {
+
+        $(".upload_btn").click(function() {
+
+            parentBlock = $(this).closest(".upload-file");
+
+            parentBlock.find("input[type='file']").click();
+
+        });
+
+    });
+
+    $(function() {
+
+        var questionTolltipLeftCoord;
+
+        $( ".tooltip-block").bind({
+            mouseenter: function() {                
+
+                $(this).find(".tooltip").attr("style", "display: block;");
+
+                questionTolltipLeftCoord = $(this).offset().left - ( $(this).width() / 2 + $(this).find(".tooltip").width() / 2) ;
+
+                $(this).find(".tooltip").offset({left : questionTolltipLeftCoord});
+
+            },
+            mouseleave: function() {
+
+                $(this).find(".tooltip").attr("style", "display: none;");
+
+            }
+        });
+
+    });
+
+    $(function() {
+
+        var inputCounterSymbols;
+        var maxSymbols;
+        var inputValTyped;
+        var countSymbols;
+        var counterSymbols;
+        var restSymbols = 0;
+
+        $(".symbol_count").each(function() {
+
+            inputCounterSymbols = $(this).attr("data-input-symbols");
+
+            maxSymbols = parseInt( $(this).attr("data-maxsymbols") );
+
+            counterSymbols = $(".count-symbols").filter("[data-countinputsymbols = '" + inputCounterSymbols + "']");
+
+            counterSymbols.text( maxSymbols );
+
+        });
+
+        $(".symbol_count").keyup(function() {
+
+            inputCounterSymbols = $(this).attr("data-input-symbols");
+
+            maxSymbols = parseInt( $(this).attr("data-maxsymbols") );
+
+            inputValTyped = $(this).val();
+
+            countSymbols =  inputValTyped.length;
+
+            counterSymbols = $(".count-symbols").filter("[data-countinputsymbols = '" + inputCounterSymbols + "']");
+
+            restSymbols = maxSymbols - countSymbols;
+
+            counterSymbols.text( restSymbols );
+
+            if( restSymbols < 0 ) {
+
+                $(this).val( inputValTyped.slice(0, maxSymbols) );
+
+                counterSymbols.text( 0 );
+
+            }
+
+        });
+
+    });
+
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
