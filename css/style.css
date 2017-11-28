@@ -3221,9 +3221,10 @@ input:focus {
     position: relative;
 }
 
-.input-wrapp.input-wrapp_6 {
-    width: 100%;
+.input-wrapp.input-wrapp_6 {    
     display: table;
+    width: 100%;
+    max-width: 700px;
     /*max-width: 620px;*/
     /*position: relative;*/
 }
