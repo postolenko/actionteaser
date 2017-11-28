@@ -3113,6 +3113,8 @@ input.color {
 
 .sucess-green p i {
     vertical-align: middle;
+    position: relative;
+    top: -1px;
 }
 
 .tab-two-cols {
