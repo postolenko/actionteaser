@@ -717,9 +717,13 @@ $(document).ready(function() {
 
                     if ( $(this).is(":visible") ) {
 
-                        $('img#photo').imgAreaSelect({
-                             hide: true
-                        });
+                        if( $(".selectareaimg-popup").length > 0 ) {      
+
+                            $('img#photo').imgAreaSelect({
+                                 hide: true
+                            });
+
+                        }
 
                         $(this).fadeOut(300);
 
@@ -735,9 +739,13 @@ $(document).ready(function() {
 
             popupBlock = $(this).closest(".popup-block");
 
-            $('img#photo').imgAreaSelect({
-                 hide: true
-            });
+            if( $(".selectareaimg-popup").length > 0 ) {            
+
+                $('img#photo').imgAreaSelect({
+                     hide: true
+                });
+
+            }
 
             popupBlock.fadeOut(300);
 

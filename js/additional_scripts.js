@@ -30,17 +30,21 @@
 			}
 		});
 
-		$('img#photo').imgAreaSelect({
-	        handles: true,
-	        onSelectStart: function () {
-	        	$(".img-size").addClass("active");
-	        },
-			onSelectChange: function (img, selection) {
-				$("#img_width").text(selection.width);
-				$("#img_height").text(selection.height);
-				console.log('width: ' + selection.width + '; height: ' + selection.height);
-			}
-	    });
+		if( $(".selectareaimg-popup").length > 0 ) { 
+
+			$('img#photo').imgAreaSelect({
+		        handles: true,
+		        onSelectStart: function () {
+		        	$(".img-size").addClass("active");
+		        },
+				onSelectChange: function (img, selection) {
+					$("#img_width").text(selection.width);
+					$("#img_height").text(selection.height);
+					console.log('width: ' + selection.width + '; height: ' + selection.height);
+				}
+		    });
+
+		}
 		
 	});
 
