@@ -3225,7 +3225,7 @@ input:focus {
 
 .input-wrapp_6 .search-col-1 {
     display: block;
-    width: 38%;
+    width: 36%;
     float: left;
     padding-top: 14px;
     padding-left: 1%;
@@ -3235,7 +3235,7 @@ input:focus {
 
 .input-wrapp_6 .search-col-2 {
     display: block;
-    width: 62%;
+    width: 64%;
     float: right;
     padding-left: 1%;
     padding-right: 1%;
@@ -3291,7 +3291,7 @@ input:focus {
     height: 16px;
     cursor: pointer;
     position: relative;
-    z-index: 2;
+    z-index: 9;
     /*outline: 1px solid red;*/
 }
 
@@ -3683,6 +3683,7 @@ input:focus {
 }
 
 .prew-thumb_2 .img-box {
+    width: 137px;
     height: 114px;
 }
 
@@ -3787,9 +3788,11 @@ footer {
 /*-- Popups --*/
 
 .popup-block {
-    display: block;
+    /*display: block;*/
+    display: none;
     width: 100%;
     height: 100vh;
+    /*opacity: 0;*/
     position: fixed;
     top: 0;
     left: 0;

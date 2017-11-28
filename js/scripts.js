@@ -696,6 +696,52 @@ $(document).ready(function() {
     });
 
 
+    $(function() {
+
+        $(".show_popup").click(function(e) {
+
+            e.preventDefault();
+
+            popupName = $(this).attr("data-popup");
+            popupBlock = $("[data-popup-name = '"+ popupName +"']");
+
+            popupBlock.fadeIn(300);
+
+        });
+
+         $(this).keydown(function(eventObject){
+
+            if (eventObject.which == 27) {
+
+                $("[data-popup-name]").each(function() {
+
+                    if ( $(this).is(":visible") ) {
+
+                        $(this).fadeOut(300);
+
+                    }
+
+                });
+
+            }
+
+        });
+
+        $(".close-popup, .popup-bg").click(function() {
+
+            popupBlock = $(this).closest(".popup-block");
+
+            $('img#photo').imgAreaSelect({
+                 hide: true
+            });
+
+            popupBlock.fadeOut(300);
+
+        });
+
+    });
+
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
