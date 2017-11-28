@@ -717,6 +717,10 @@ $(document).ready(function() {
 
                     if ( $(this).is(":visible") ) {
 
+                        $('img#photo').imgAreaSelect({
+                             hide: true
+                        });
+
                         $(this).fadeOut(300);
 
                     }
