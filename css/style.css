@@ -3186,7 +3186,7 @@ input:focus {
 /*-- Add Teaser Page --*/
 
 .add-teaser-wrapp {
-
+    max-width: 1040px;
 }
 
 .add-teaser-wrapp .white-block-inner {
@@ -3204,17 +3204,19 @@ input:focus {
 }
 
 .add-teaser-wrapp .col-1 {
-    width: 62%;
+    width: 65%;
     /*max-width: 620px;*/
     padding-top: 1px;
     padding-right: 3%;
+    /*outline: 1px solid red;*/
 }
 
 .add-teaser-wrapp .col-2 {
-    width: 38%;
-    max-width: 376px;
+    width: 35%;
+    /*max-width: 380px;*/
     padding-top: 11px;
     padding-left: 3%;
+    /*outline: 1px solid red;*/
 }
 
 .input-wrapp {
