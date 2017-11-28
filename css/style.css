@@ -3290,6 +3290,8 @@ input:focus {
     width: 16px;
     height: 16px;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
     /*outline: 1px solid red;*/
 }
 
