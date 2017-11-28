@@ -21,6 +21,7 @@
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
+	<script type="text/javascript" src="vendors/js/clipboard.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
 	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -787,37 +788,41 @@
 															</div>
 														</form>
 
-														<div class="sucess-green">
-															<p><i class="check-green_20"></i>Блок сохранен!</p>
+														<div class="tab-row">
+
+															<div class="sucess-green">
+																<p><i class="check-green_20"></i>Блок сохранен!</p>
+															</div>
+
 														</div>
 
 														<div class="tab-two-cols clearfix">
-															<div class="tab-row">
-																
-																<div class="col-1 left">
 
+															<div class="tab-row">
+																<div class="col-1 left">
 																	<div class="add-code-block">
 																		<h3>1. Вставьте эту часть там, где хотите выводить объявления</h3>
 																		<div class="add-code-box">
-																			<textarea>
-																				<div id="caZ3t9CZjI2jkDT99roCTu"><a href="http://actionteaser.ru">ActionTeaser.ru - тизерная реклама</a></div>
+																			<textarea id="code_box_1">
+																				<div id="caZ3t9CZjI2jkDT99roCTu">
+																					<a href="http://actionteaser.ru">ActionTeaser.ru - тизерная реклама</a>
+																				</div>
 																			</textarea>
 																		</div>
 																		<div class="align-right">
-																			<p><i class="copy"></i><a href="#" class="blue-link">Скопировать в буфер обмена</a></p>
+																			<p><i class="copy"></i><a href="#" class="blue-link no-line copy_code" data-clipboard-target="#code_box_1">Скопировать в буфер обмена</a></p>
 																		</div>
 																	</div>
 
 																	<div class="add-code-block">
 																		<h3>2. А эту часть в самом низу сайта, перед тэгом <code></body></code></h3>
 																		<div class="add-code-box">
-																			<textarea><div id="caZ3t9CZjI2jkDT99roCTu"><a href="http://actionteaser.ru">ActionTeaser.ru - тизерная реклама</a></div></textarea>
+																			<textarea id="code_box_2"><div id="caZ3t9CZjI2jkDT99roCTu"><a href="http://actionteaser.ru">ActionTeaser.ru - тизерная реклама</a></div></textarea>
 																		</div>
 																		<div class="align-right">
-																			<p><i class="copy"></i><a href="#" class="blue-link">Скопировать в буфер обмена</a></p>
+																			<p><i class="copy"></i><a href="#" class="blue-link no-line copy_code" data-clipboard-target="#code_box_2">Скопировать в буфер обмена</a></p>
 																		</div>
 																	</div>
-
 																</div>
 																<div class="col-2 right">
 																	<div class="blue-box">
@@ -829,8 +834,8 @@
 																		</div>
 																	</div>
 																</div>
-
 															</div>
+
 														</div>
 
 													</div>

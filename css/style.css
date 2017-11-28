@@ -854,6 +854,21 @@ a.blue-link:hover {
     border-bottom: 1px solid transparent;
 }
 
+
+a.blue-link.no-line:link,
+a.blue-link.no-line:visited {
+    border-bottom: 1px solid rgba(55, 160, 227, 0);
+}
+
+a.blue-link.no-line:active,
+a.blue-link.no-line.active {
+    border-bottom: 1px solid rgba(55, 160, 227, 0);
+}
+
+a.blue-link.no-line:hover {
+    border-bottom: 1px solid transparent;
+}
+
 /*-- /Links --*/
 
 /*-- Buttons --*/
@@ -3073,9 +3088,13 @@ input.color {
 
 /*-- Tab 5 --*/
 
+.tab-row {
+    padding: 0 2%;
+}
+
 .sucess-green {
     background: #cdf8df;
-    margin: 33px 2% 10px 2%;
+    margin: 33px 0 10px 0;
 }
 
 .sucess-green p {
@@ -3092,12 +3111,8 @@ input.color {
     vertical-align: middle;
 }
 
-.add-code-block {
-    margin: 11px 0;
-}
-
 .tab-two-cols {
-
+    margin: 35px 0 14px 0;
 }
 
 .tab-two-cols .col-1 {
@@ -3110,9 +3125,13 @@ input.color {
     padding-left: 2%;
 }
 
-.add-code-box code {
-    font-family: monospace;
+.add-code-block {
+    margin: 11px 0;
 }
+
+/*.add-code-box code {
+    font-family: monospace;
+}*/
 
 .add-code-box textarea {
     height: 108px;
@@ -3810,8 +3829,8 @@ input.color {
 }
 
 .prew-thumb_2 .img-box {
-    max-width: 137px;
-    height: 114px;
+    max-width: 130px;
+    height: 130px;
 }
 
 .prew-thumb_2 .prev-thumb-desc {
@@ -3819,11 +3838,11 @@ input.color {
 }
 
 .prew-thumb_2 .th-prices {
-    padding: 5px 0;
+    padding: 15px 0;
 }
 
 .prew-thumb_2 .btn-row {
-    margin-top: 7px;
+    margin-top: 3px;
     text-align: right;
 }
 
