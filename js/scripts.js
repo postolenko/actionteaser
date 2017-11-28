@@ -135,7 +135,7 @@ $(document).ready(function() {
 
         getRespParams();
 
-        // getSelectWidth();
+        getSelectWidth();
 
     });
 
@@ -764,17 +764,17 @@ $(document).ready(function() {
 
             }
 
-            // $(".header-site").addClass("animation_none");
-            // $(".sidebar_bg").addClass("animation_none");
-            // $(".two-cols-templ").addClass("animation_none");
+            $(".header-site").addClass("animation_none");
+            $(".sidebar_bg").addClass("animation_none");
+            $(".two-cols-templ").addClass("animation_none");
 
-            // setTimeout(function(){
+            setTimeout(function(){
 
-            //     $(".header-site").removeClass("animation_none");
-            //     $(".sidebar_bg").removeClass("animation_none");
-            //     $(".two-cols-templ").removeClass("animation_none");
+                $(".header-site").removeClass("animation_none");
+                $(".sidebar_bg").removeClass("animation_none");
+                $(".two-cols-templ").removeClass("animation_none");
 
-            // }, 700);
+            }, 700);
 
         }        
 
@@ -786,9 +786,21 @@ $(document).ready(function() {
 
             var parentBlock = $(this).closest(".select-block");
 
-            parentBlock.find(".select2-container").css({
-                "width" : parentBlock.width() + "px"
-            });
+            // parentBlock.css({
+            //     "width" : "auto"
+            // });
+
+            setTimeout(function(){
+
+                parentBlock.find(".select2-container").css({
+                    "width" : "auto"
+                });
+
+                parentBlock.find(".select2-container").css({
+                    "width" : parentBlock.width() + "px"
+                });
+
+            } , 300);
 
         });
 

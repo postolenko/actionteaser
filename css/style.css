@@ -249,6 +249,7 @@ p {
 
 p i {
     margin: 0 6px;
+    vertical-align: middle;
     position: relative;
     top: -3px;
 }
@@ -1592,6 +1593,7 @@ a.dropdown-link .chevron {
 .dropdown-list li i {
     display: inline-block;
     vertical-align: top;
+    top: 0;
 }
 
 .dropdown-list li a {
@@ -3202,15 +3204,17 @@ input:focus {
 }
 
 .add-teaser-wrapp .col-1 {
-    width: 65%;
+    width: 62%;
+    /*max-width: 620px;*/
     padding-top: 1px;
-    padding-right: 4%;
+    padding-right: 3%;
 }
 
 .add-teaser-wrapp .col-2 {
-    width: 35%;
+    width: 38%;
+    max-width: 376px;
     padding-top: 11px;
-    padding-left: 4%;
+    padding-left: 3%;
 }
 
 .input-wrapp {
@@ -3219,14 +3223,18 @@ input:focus {
 
 .input-wrapp.input-wrapp_6 {
     width: 100%;
-    /*max-width: 613px;*/
+    display: table;
+    /*max-width: 620px;*/
     /*position: relative;*/
 }
 
 .input-wrapp_6 .search-col-1 {
-    display: block;
-    width: 28%;
-    float: left;
+    /*display: block;*/
+    display: table-cell;
+    vertical-align: top;
+    /*width: 38%;*/
+    width: 240px;
+    /*float: left;*/
     padding-top: 14px;
     padding-left: 1%;
     padding-right: 1%;
@@ -3234,9 +3242,13 @@ input:focus {
 }
 
 .input-wrapp_6 .search-col-2 {
-    display: block;
-    width: 72%;
-    float: right;
+    /*display: block;*/
+    display: table-cell;
+    vertical-align: top;
+    /*width: 62%;*/
+    width: auto;
+    /*max-width: 375px;*/
+    /*float: left;*/
     padding-left: 1%;
     padding-right: 1%;
     /*outline: 1px solid blue;*/
@@ -3380,7 +3392,7 @@ input:focus {
 .input-wrapp.input-wrapp_6 .tooltip-block {
     position: absolute;
     top: 16px;
-    right: -4%;
+    right: -5%;
     /*right: 0;*/
 }
 
@@ -3689,7 +3701,7 @@ input:focus {
 }
 
 .prew-thumb_2 .img-box {
-    width: 137px;
+    max-width: 137px;
     height: 114px;
 }
 
@@ -3876,3 +3888,15 @@ footer {
 
 
 /*-- /Popups --*/
+
+.header-site.animation_none {
+    transition: none;
+}
+
+.sidebar_bg.animation_none {
+    transition: none;
+}
+
+.two-cols-templ.animation_none {
+    transition: none;
+}
