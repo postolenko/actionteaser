@@ -359,7 +359,7 @@ textarea:focus {
 }
 
 .inner-row {
-    padding: 0 1%;
+    padding: 0 1.5%;
 }
 
 .offset-ziro {
@@ -3239,7 +3239,7 @@ input.color {
     /*max-width: 240px;*/
     float: left;
     padding-top: 14px;
-    padding-left: 1%;
+    /*padding-left: 1%;*/
     padding-right: 1%;
     /*outline: 1px solid blue;*/
 }
