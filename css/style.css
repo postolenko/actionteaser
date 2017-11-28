@@ -3483,15 +3483,21 @@ input:focus {
 }
 
 .select-btns-block {
-
+    display: table;
+    width: 100%;
 }
 
 .select-btns-col-1 {
-    width: 58%;
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
 }
 
 .select-btns-col-2 {
-    width: 42%;
+    display: table-cell;
+    vertical-align: top;
+    /*width: 34%;*/
+    width: 140px;
     text-align: right;
 }
 
