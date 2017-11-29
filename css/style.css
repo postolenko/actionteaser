@@ -1247,11 +1247,11 @@ a.orange-link:hover {
 
 .orange-btn:active,
 .orange-btn.active {
-    background: #e68013;
+    background: #f9a449;
 }
 
 .orange-btn:hover {
-    background: #e68013;
+    background: #f9a449;
 }
 
 .light-green-btn {
@@ -1299,11 +1299,11 @@ a.orange-link:hover {
 
 .light-green-btn:active,
 .light-green-btn.active {
-    background: #60da3a;
+    background: #70d651;
 }
 
 .light-green-btn:hover {
-    background: #60da3a;
+    background: #70d651;
 }
 
 .white-pill {
@@ -2288,7 +2288,7 @@ a.user-acc .img-box img {
 .sidebar {
     overflow: hidden;
     background: #34495e;
-    z-index: 2;
+    z-index: 3;
 }
 
 .sidebar .inner-wrapp {
@@ -4226,12 +4226,20 @@ input.color {
 .search-block {
     display: inline-block;
     vertical-align: top;
-    width: 215px;
+    white-space: nowrap;
     margin: 5px 1.5%;
 }
 
 .search-block input {
-    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px 0 0;
+}
+
+.search-block button {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 3px;
 }
 
 .inline-nav {
@@ -4270,7 +4278,7 @@ input.color {
 }
 
 .company_teaser-table {
-
+    margin: 41px 0 0 0;
 }
 
 .table-row {
@@ -4409,27 +4417,26 @@ input.color {
 }
 
 .thumb_2-col-1 .img-box {
-    width: 100%;
+    display: block;
+    width: auto;
     max-width: 126px;
-    height: 126px;
+    height: auto;
     overflow: hidden;
     margin: 5px 0;
 }
 
 .thumb_2-col-1 .img-box img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
     position: relative;
-    top: 50%;
+    top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 
 .thumb_2-col-1 .img-box + p {
