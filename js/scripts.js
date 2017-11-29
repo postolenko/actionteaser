@@ -764,6 +764,19 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".fancy_link").click(function(e) {
+
+            e.preventDefault();
+
+            var imageAttr = $(this).attr("data-image");
+
+            $("[data-fancy-image = '"+ imageAttr +"'").click();
+
+        });
+
+    });
 
     function getRespParams() {
 

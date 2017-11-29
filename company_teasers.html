@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
 	<link rel="stylesheet" type="text/css" href="colorpicker/css/colorpicker.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -23,6 +24,7 @@
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
 	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
@@ -370,10 +372,10 @@
 												<div class="thumb_2">
 													<div class="thumb_2-row clearfix">
 														<div class="thumb_2-col-1">
-															<div class="img-box">
+															<a class="img-box" data-fancybox data-fancy-image = "img_1" href="img/good_photo.jpg">
 																<img src="img/good_photo.jpg" alt="" />
-															</div>
-															<p><a href="#" class="blue-link show_popup">300х250</a><i class="zoom"></i></p>
+															</a>
+															<p><a href="#" class="blue-link fancy_link" data-image = "img_1">300х250</a><i class="zoom"></i></p>
 														</div>
 														<div class="thumb_2-col-2">
 															<div class="on-off_2">Выключена</div>
