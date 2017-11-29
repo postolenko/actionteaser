@@ -4,6 +4,10 @@
 
 		$(".scroll").mCustomScrollbar();
 
+		$(".scroll-x").mCustomScrollbar({
+			axis:"x"
+		});
+
 	});
 
 	$(document).ready(function() {		
