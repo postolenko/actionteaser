@@ -46,7 +46,12 @@
 
 		}
 
-		new Clipboard('.copy_code');
+		if($(".copy_code").length > 0) {
+
+			new Clipboard('.copy_code');
+
+		}
+		
 		
 	});
 
