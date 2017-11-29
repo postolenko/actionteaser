@@ -1436,6 +1436,14 @@ a.orange-link:hover {
     background-image: url(../img/pencil_white.png);
 }
 
+a.disabled,
+button.disabled {
+    background: #f8f8f8 !important;
+    pointer-events: none;
+    color: #a7a7a7 !important;
+    cursor: default;
+}
+
 /*-- /Buttons --*/
 
 /*-------------------------------------------*/
@@ -4624,28 +4632,22 @@ input.color {
     text-align: center;
 }
 
-.grey-buttons {
+.buttons-row {
     padding: 10px 0;
 }
 
-.grey-buttons .inner-col-1 {
+.buttons-row .inner-col-1 {
     display: inline-block;
     vertical-align: middle;
     width: 70%;
 }
 
-.grey-buttons .inner-col-2 {
+.buttons-row .inner-col-2 {
     display: inline-block;
     vertical-align: middle;
     width: 30%;
     text-align: right;
 }
-
-/*.grey-buttons a:link,
-.grey-buttons a:visited {
-    background: #f8f8f8;
-    color: #a7a7a7;
-}*/
 
 .pagination-block {
     padding: 7px 0 0 0;
