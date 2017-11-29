@@ -4778,6 +4778,7 @@ footer {
     display: none;
     width: 100%;
     height: 100vh;
+    padding: 20px 0;
     /*opacity: 0;*/
     position: fixed;
     top: 0;
@@ -4799,6 +4800,7 @@ footer {
     display: block;
     width: 90%;
     max-width: 960px;
+    max-height: 90vh;
     padding: 30px 2% 21px 2%;
     background: #ffffff;
     position: absolute;
@@ -4911,12 +4913,12 @@ footer {
 }
 
 .teaser_price-table .cell-1 {
-    width: 40%;
+    width: 39%;
     padding-left: 0;
 }
 
 .teaser_price-table .cell-2 {
-    width: 26%;
+    width: 27%;
 }
 
 .teaser_price-table .cell-3 {
