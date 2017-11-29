@@ -4278,13 +4278,14 @@ input.color {
 }
 
 .company_teaser-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
     margin: 41px 0 0 0;
 }
 
 .table-row {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
+    display: table-row;
     border-bottom: 1px solid #dcdcdc;
 }
 
