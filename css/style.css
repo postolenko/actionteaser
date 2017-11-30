@@ -4278,7 +4278,7 @@ input.color {
 }
 
 .company_teaser-table {
-    min-width: 1000px;
+    min-width: 920px;
     margin: 41px 0 0 0;
 }
 
@@ -4403,7 +4403,6 @@ input.color {
 .thumb_2-col-1 {
     display: table-cell;
     vertical-align: top;
-    /*width: 41%;*/
     width: 141px;
     /*float: left;*/
     padding-right: 3%;
