@@ -782,13 +782,13 @@ $(document).ready(function() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
 
-            if( bodyWidth <= 1200 ) {
+            if( bodyWidth <= 1280 ) {
 
                 $(".two-cols-templ").addClass("resp");
                 $(".sidebar_bg").addClass("resp");
                 $(".header-site").addClass("resp-width");
 
-            } else if( bodyWidth > 1200 ) {
+            } else if( bodyWidth > 1280 ) {
 
                 $(".two-cols-templ").removeClass("resp");
                 $(".sidebar_bg").removeClass("resp");
