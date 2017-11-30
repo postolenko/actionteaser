@@ -247,16 +247,17 @@ p {
 
 }
 
+p a {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 p i {
     margin: 0 6px;
-    vertical-align: middle;
-    position: relative;
-    top: -3px;
+    vertical-align: middle !important;
 }
 
 p a + i {
-    vertical-align: middle !important;
-    top: 0;
     margin: 0 0 0 6px;
 }
 
@@ -861,6 +862,61 @@ textarea:focus {
     width: 15px;
     height: 15px;
     background-image: url(../img/zoom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.zoom {
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/zoom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.check_17 {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/check_17.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.x {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.minus {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/minus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.clocks {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/clock.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -2714,8 +2770,8 @@ a.user-acc .img-box img {
     text-align: right;
 }
 
-.white-block-header a,
-.white-block-header button {
+.white-block-header .inner-col-2 a,
+.white-block-header .inner-col-2 button {
     display: inline-block;
     vertical-align: middle;
     margin: 5px 0 5px 5%;
@@ -2959,7 +3015,7 @@ input.color {
 .select-block {
     display: inline-block;
     vertical-align: top;
-    min-width: 369px;
+    /*min-width: 369px;*/
 }
 
 .input-wrapp .select-block {
@@ -3762,10 +3818,6 @@ input.color {
     border-radius: 2px;
 }
 
-.tooltip p {
-    display: block;
-}
-
 .tooltip:before {
     display: block;
     width: 0;
@@ -3781,11 +3833,12 @@ input.color {
 }
 
 .tooltip p {
+    display: block;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
-    font-size: 12px;
-    line-height: 17px;
-    font-weight: normal;
-    color: #ffffff;
+    font-size: 12px !important;;
+    line-height: 17px !important;;
+    font-weight: normal !important;;
+    color: #ffffff !important;
 }
 
 .input-wrapp.input-wrapp_6 .tooltip-block {
@@ -4280,12 +4333,12 @@ input.color {
 
 .company_teaser-table {
     min-width: 920px;
-    margin: 41px 0 0 0;
 }
 
 .table {
     display: table;
     width: 100%;
+    margin: 41px 0 0 0;
     border-collapse: collapse;
 }
 
@@ -4301,7 +4354,8 @@ input.color {
 
 .table-row.table-header .cell {
     padding-top: 14px;
-    padding-bottom: 8px;
+    /*padding-bottom: 8px;*/
+    padding-bottom: 14px;
 }
 
 .table-row .cell {
@@ -4312,8 +4366,8 @@ input.color {
     border-right: 1px solid #dcdcdc;
 }
 
-.company_teaser-table .cell > div {
-    margin: 20px 0;
+.table-row .cell > div {
+    margin: 18px 0;
 }
 
 .company_teaser-table .cell-1 {
@@ -4379,6 +4433,10 @@ input.color {
     padding: 2px 0 5px 0;
 }
 
+.checkbox-block.single {
+    padding: 0 2px;
+}
+
 .checkbox-block.single label {
     display: block;
     width: 18px;
@@ -4391,7 +4449,7 @@ input.color {
     left: 0;
 }
 
-.company_teaser-table .cell-1 .checkbox-block {
+.company_teaser-table .cell-1 .checkbox-block.single {
     margin: 41px auto 10px auto;
     padding: 14px 0;
 }
@@ -4751,6 +4809,208 @@ input.color {
 
 /*-- /Company Teasers --*/
 
+/*-- Company --*/
+
+.white-block-header_2 {
+
+}
+
+.white-block-header_2 .inner-col-1 {
+    width: 30%;
+}
+
+.white-block-header_2 .inner-col-2 {
+    width: 70%;
+}
+
+.select-block_2 {
+    width: 174px;
+    min-width: 174px;
+}
+
+.select-block_2 .select2-container--default .select2-selection--single {
+    min-width: 174px;
+}
+
+.inline-blocks > div,
+.inline-blocks > p,
+.inline-blocks > a {
+    display: inline-block;
+    vertical-align: middle !important;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.inputs-7_wrapp {
+    overflow: hidden;
+}
+
+.input-wrapp_7 {
+    margin: 0 8px 0 0;
+}
+
+.input-wrapp_7 label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+
+.input-wrapp_7 input {
+    width: 174px;
+}
+
+.input-wrapp_7 .select-block {
+    width: 174px;
+    margin: 0;
+}
+
+.input-wrapp_7 button {
+    margin: 0 4px;
+}
+
+.input_wr6_2-cols {
+    /*width: 360px;*/
+    white-space: nowrap;
+}
+
+.input_wr6_2-cols input:nth-child(odd),
+.input_wr6_2-cols .select-block:nth-child(odd) {
+    margin: 0 3px 0 0;
+}
+
+.input_wr6_2-cols input:nth-child(even),
+.input_wr6_2-cols .select-block:nth-child(even) {
+    margin: 0 0 0 3px;
+}
+
+.nav-2_wrapp {
+    overflow: hidden;
+}
+
+.nav-2 {
+    margin-left: -14px;
+}
+
+.table .cell h3,
+.table .cell .tooltip-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.table .cell .tooltip-block {
+    position: relative;
+    top: 3px;
+    margin: 0 5px;
+}
+
+.table div.checkbox-block {
+    margin: 0;
+    padding: 0;
+}
+
+.table .checkbox-block label {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 41px;
+    padding-top: 2px;
+    text-align: right;
+}
+
+.table .checkbox-block label:before {
+    top: 1px;
+}
+
+.company-table .cell-1 {
+    width: 5%;
+}
+
+.company-table .cell-2 {
+    width: 16%;
+}
+
+.company-table .cell-3 {
+    width: 14%;
+}
+
+.company-table .cell-4 {
+    width: 12%;
+}
+
+.company-table .cell-5 {
+    width: 12%;
+}
+
+.company-table .cell-6 {
+    width: 8%;
+}
+
+.company-table .cell-7 {
+    width: 7%;
+}
+
+.company-table .cell-8 {
+    width: 8%;
+}
+
+.company-table .cell-9 {
+    width: 10%;
+}
+
+.company-table .cell-9 {
+    width: 8%;
+}
+
+.company-table .on-off {
+    margin: 0;
+}
+
+.ad {
+    display: table;
+    width: 100%;
+    margin: 6px 0 11px 0;
+}
+
+.ad-1 {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+}
+
+.ad-2 {
+    display: table-cell;
+    vertical-align: top;
+    width: 18px;
+    text-align: center;
+}
+
+.ad p {
+    padding: 0;
+    color: #38d07c;
+}
+
+.ad.red p {
+    color: #ff5543;
+}
+
+.ad.blue p {
+    color: #37a0e3;
+}
+
+.ad.orange p {
+    color: #f28b1c;
+}
+
+.ad i {
+    margin: 0 7px 0 0;
+    position: relative;
+    top: -1px;
+}
+
+
+
+
+/*-- /Company --*/
+
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
@@ -4888,7 +5148,6 @@ footer {
 .selectareaimg-popup .submits-block {
     margin: 13px 0 0 0;
 }
-
 
 .header-site.animation_none {
     transition: none;
