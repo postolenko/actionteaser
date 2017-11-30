@@ -4949,8 +4949,13 @@ input.color {
 
 .input-wrapp_7 label {
     display: block;
-    font-size: 16px;
     padding-bottom: 16px;
+}
+
+.input-wrapp_7 label.fs-16 {
+    font-size: 16px;
+    position: relative;
+    top: -1px;
 }
 
 .input-wrapp_7 input {
