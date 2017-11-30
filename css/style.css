@@ -4395,20 +4395,26 @@ input.color {
     padding: 14px 0;
 }
 
-.thumb_2-row {
-
+.thumb_2 {
+    display: table;
+    width: 100%;
 }
 
 .thumb_2-col-1 {
-    width: 41%;
-    float: left;
+    display: table-cell;
+    vertical-align: top;
+    /*width: 41%;*/
+    width: 141px;
+    /*float: left;*/
     padding-right: 3%;
     /*padding-top: 5px;*/
 }
 
 .thumb_2-col-2 {
-    width: 59%;
-    float: right;
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    /*float: right;*/
     padding-left: 3%;
     padding-top: 0;
 }
