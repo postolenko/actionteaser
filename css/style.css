@@ -127,10 +127,10 @@ footer {
 
 
 
-::-webkit-input-placeholder {color:#a5abb8;}
-::-moz-placeholder          {color:#a5abb8;}
-:-moz-placeholder           {color:#a5abb8;}
-:-ms-input-placeholder      {color:#a5abb8;}
+::-webkit-input-placeholder {color:#555555;}
+::-moz-placeholder          {color:#555555;}
+:-moz-placeholder           {color:#555555;}
+:-ms-input-placeholder      {color:#555555;}
 
 input,
 textarea,
