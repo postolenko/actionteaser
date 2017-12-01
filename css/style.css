@@ -979,6 +979,16 @@ textarea:focus {
     background-size: 100%;
 }
 
+.user-grey_14 {
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/user_grey_small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
 /*-- /Icons --*/
 
@@ -992,7 +1002,7 @@ a.blue-link {
     font-size: 14px;
     line-height: 14px;
     font-weight: normal;
-    color: #37a0e3;
+    color: #37a0e3 !important;
 
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
@@ -1897,7 +1907,7 @@ header {
 }
 
 .dropdown-block-wrapp.active {
-    z-index: 2;
+    z-index: 4;
 }
 
 .header-site .col-2 .inner-col-3 .dropdown-block-wrapp {
@@ -4932,6 +4942,66 @@ input.color {
     width: 70%;
 }
 
+.dropdown-block.companies {
+    min-width: 247px;
+}
+
+.companies .inner {
+    /*overflow: hidden;*/
+}
+
+.companies h3 {
+    padding: 3px 13px 0 13px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.companies-row {
+    border-bottom: 1px solid #e7e7e7;
+    padding: 11px 13px 13px 13px;
+}
+
+.companies h3 + .companies-row {
+    padding-top: 3px`;
+}
+
+.companies p {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #333333;
+}
+
+.companies p i {
+    margin: -3px 6px 0 0;
+}
+
+.companies p span.middle {
+    font-weight: 500;
+}
+
+.companies .nav-2 {
+    margin-left: -6px;
+    padding: 1px 0;
+    white-space: normal;
+}
+
+.companies .nav-2 li {
+    padding: 0 6px;
+}
+
+.companies .align-center {
+    padding: 5px 0 0 0;
+}
+
+.companies .align-center a {
+    margin-left: 0;
+}
+
 .select-block_2 {
     width: 174px;
     min-width: 174px;
@@ -5197,6 +5267,33 @@ input.color {
     margin-right: 7px;
 }
 
+.company {
+    max-width: 386px;
+    margin: 30px auto;
+    text-align: center;
+    padding-bottom: 26px;
+}
+
+.company img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 3px auto 31px auto;
+}
+
+.company h3 {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.company p {
+    margin: 5px 0;
+}
+
 /*-- /Company --*/
 
 
@@ -5243,7 +5340,7 @@ footer {
 .footer p a {
     display: inline-block;
     vertical-align: top;
-    margin: 0 1.7%;
+    margin: 0 1.7% !important;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
     line-height: 20px;
@@ -5509,7 +5606,8 @@ p.desc {
 }
 
 .add-advertiser {
-    max-width: 395px;
+    max-width: 405px;
+    padding: 30px 1.5% 21px 1.5%;
 }
 
 .add-advertiser-form {
@@ -5536,7 +5634,7 @@ p.desc {
 .radio-inline h3 {
     display: table-cell;
     vertical-align: middle;
-    width: 82px;
+    width: 83px;
     padding: 0 3px 0 0;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
@@ -5548,23 +5646,18 @@ p.desc {
 .radio-box_wrapp {
     display: table-cell;
     vertical-align: middle;
-    width: auto;
     text-align: right;
 }
 
 .radio-box {
     display: inline-block;
     vertical-align: top;
+    min-width: 245px;
     padding: 0 2px;
     border: 1px solid #dee1e8;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-}
-
-.radio-inline .radio-box {
-    display: inline-block;
-    vertical-align: top;
 }
 
 .radio-sq {
@@ -5640,7 +5733,7 @@ label.brown-2 {
 .company-popup {
     max-width: 386px;
     text-align: center;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
 }
 
 .company-popup img {

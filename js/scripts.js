@@ -169,17 +169,15 @@ $(document).ready(function() {
 
             parentBLock = $(this).closest(".dropdown-block-wrapp");
 
-            // dropdownAttr = $(this).attr("data-dropdown-link");
-
             if( parentBLock.find(".dropdown-block").length > 0 ) {
 
                 dropdownBlock = parentBLock.find(".dropdown-block");
 
                 if(dropdownBlock.is(":visible")) {
 
-                    dropdownBlock.fadeOut(200);                    
+                    dropdownBlock.fadeOut(200);
 
-                    parentBLock.removeClass("active");
+                    parentBLock.removeClass("active"); 
 
                     if( dropdownBlock.width() > parentBLock.width() ) {
 
@@ -187,7 +185,7 @@ $(document).ready(function() {
 
                             dropdownBlock.css({
                                 "left" : 0 + "px"
-                            });                            
+                            });                                                  
 
                         }, 300);
 
@@ -197,11 +195,15 @@ $(document).ready(function() {
 
                     dropdownBlock.fadeIn(200);
 
-                    topMenuCoord = $(".header-site").height() - $(this).offset().top - $(".header-site").offset().top - 3;
- 
-                    console.log($(this).offset().top + "  " + $(".header-site").offset().top +"   "+ ( $(this).offset().top -  $(".header-site").offset().top )  + "   " + (HEADERHEIGHT - ( $(this).offset().top - $(".header-site").offset().top )) );
+                    if(parentBLock.closest(".header-site").length > 0) {
 
-                    // dropdownBlock.offset({top : topMenuCoord});
+                        topMenuCoord = $(".header-site").height() - $(this).offset().top - $(".header-site").offset().top - 3;
+                    
+                    } else {
+
+                        topMenuCoord = 39;
+
+                    }
 
                     dropdownBlock.css({
                         "top" : topMenuCoord + "px"
@@ -225,8 +227,6 @@ $(document).ready(function() {
 
                         var centerCoord = menuItemCenterCoord - dropdownBlockCenterCoord;
 
-                        // dropdownBlock.offset({left : centerCoord });
-
                         dropdownBlock.css({
                             "left" : centerCoord + "px"
                         });
@@ -238,23 +238,6 @@ $(document).ready(function() {
             }
 
         });
-
-
-        // $(".dropdown-block-wrapp").hover(function() {
-
-        //     dropdownBlock = $(this).find(".dropdown-block");
-
-        //     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
-
-        //     wrapperRightCoord = $(".wrapper").offset().left + $(".wrapper").width();
-
-        //     if( rightDropdownCoord > wrapperRightCoord) {
-
-        //         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
-
-        //     }
-
-        // });
 
 
         $(this).keydown(function(eventObject){
@@ -300,7 +283,7 @@ $(document).ready(function() {
 
                         $(this).fadeOut(200);
 
-                        hide_element.closest(".dropdown-block-wrapp").removeClass("active");
+                        $(this).closest(".dropdown-block-wrapp").removeClass("active");
 
                     }
 
@@ -386,33 +369,37 @@ $(document).ready(function() {
 
     });
 
-    // var linkTxt;
-    // var respTooltip = $(".resp-tooltip");
+    $(function() {
 
-    $( ".tooltips a" ).bind({
-        mouseenter: function() {
-            if( $(".sidebar").hasClass("hidden") ) {
+        // var linkTxt;
+        // var respTooltip = $(".resp-tooltip");
 
-                linkTxt = $( this ).find(".link-txt").text();
+        $( ".tooltips a" ).bind({
+            mouseenter: function() {
+                if( $(".sidebar").hasClass("hidden") ) {
 
-                respTooltip.attr("style", "opacity: 1");
+                    linkTxt = $( this ).find(".link-txt").text();
 
-                respTooltip.text(linkTxt);
+                    respTooltip.attr("style", "opacity: 1");
 
-                respTooltip.offset({top: $( this ).offset().top + ( $( this ).outerHeight() - respTooltip.outerHeight() ) / 2 , left : $(".sidebar").offset().left + $(".sidebar").width() + 10});
+                    respTooltip.text(linkTxt);
+
+                    respTooltip.offset({top: $( this ).offset().top + ( $( this ).outerHeight() - respTooltip.outerHeight() ) / 2 , left : $(".sidebar").offset().left + $(".sidebar").width() + 10});
+
+                }
+
+            },
+            mouseleave: function() {
+
+                if( $(".sidebar").hasClass("hidden") ) {
+                
+                    respTooltip.attr("style", "opacity: 0");
+
+                }
 
             }
+        });
 
-        },
-        mouseleave: function() {
-
-            if( $(".sidebar").hasClass("hidden") ) {
-            
-                respTooltip.attr("style", "opacity: 0");
-
-            }
-
-        }
     });
 
     // Tabs 
