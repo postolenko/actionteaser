@@ -1833,7 +1833,8 @@ header {
 
 .header-site .col-2 .inner-col-2 {
     width: 26%;
-    padding-top: 14px;
+    /*padding-top: 14px;*/
+    padding-top: 15px;
 }
 
 .header-site .col-2 .inner-col-3 {
@@ -1936,7 +1937,9 @@ header {
 
 .dropdown-block-wrapp {
     display: inline-block;
-    vertical-align: sub;
+    /*vertical-align: sub;*/
+    vertical-align: baseline-middle;
+    vertical-align: -webkit-baseline-middle;
     margin: 0 3% 0 0;
     position: relative;
     cursor: pointer;
@@ -2037,7 +2040,8 @@ a.dropdown-link .chevron {
     position: absolute;
     top: 50%;
     right: -8px;
-    margin: -8px 0 0 0;
+    /*margin: -8px 0 0 0;*/
+    margin: -6px 0 0 0;
     opacity: .7;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -2110,7 +2114,8 @@ a.dropdown-link .chevron {
 }
 
 .manager a.dropdown-link .chevron {
-    margin: -4px 0 0 0;
+    /*margin: -4px 0 0 0;*/
+    margin: -6px 0 0 0;
 }
 
 .dropdown-block {
@@ -4403,15 +4408,13 @@ input.color {
     display: inline-block;
     vertical-align: top;
     /*margin-right: 5px;*/
-    margin: 0 5px 0 0;
-    position: relative;
-    top: 6px;
+    margin: 1px 5px 0 0;
 }
 
 .nav-2 li a {
     display: inline-block;
     vertical-align: top;
-    margin: 5px 0;
+    margin: 0;
 }
 
 .white-block-header .inner-col-2 p {
@@ -4422,6 +4425,7 @@ input.color {
 .link-p {
     white-space: nowrap;
     padding: 0 14px;
+    line-height: 23px;
 }
 
 /*.link-p i {
@@ -5311,6 +5315,10 @@ input.color {
     position: relative;
 }
 
+.nav-2 .blue-checkbox {
+    top: -5px;
+}
+
 .blue-checkbox input {
     display: block;
     width: 1px;
@@ -5373,12 +5381,12 @@ input.color {
 }
 
 .blue-checkbox label i {
-    margin: 5px 5px 5px 0;
+    margin: 0 5px 0 0;
     top: 1px;
 }
 
 .blue-checkbox label span {
-    margin: 5px 0;
+    margin: 0;
 }
 
 .blue-checkbox input[type="checkbox"] + label .on {
