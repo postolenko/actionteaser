@@ -4871,7 +4871,7 @@ input.color {
 }
 
 .dropdown-block.companies {
-    min-width: 247px;
+    min-width: 240px;
 }
 
 .companies h3 {
@@ -4901,7 +4901,7 @@ input.color {
 }
 
 .companies p i {
-    margin: -3px 6px 0 0;
+    margin: 3px 6px 0 0;
 }
 
 .companies p span.middle {
@@ -4916,6 +4916,10 @@ input.color {
 
 .companies .nav-2 li {
     padding: 0 6px;
+}
+
+.companies .nav-2 a {
+    font-size: 13px;
 }
 
 .companies .align-center {
