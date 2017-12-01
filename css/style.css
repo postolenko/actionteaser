@@ -4298,9 +4298,9 @@ input.color {
 }
 
 .nav-2 li a {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0;
+    display: inline-block !important;
+    vertical-align: top !important;
+    margin: 0 !important;
 }
 
 .white-block-header .inner-col-2 p {
@@ -4988,11 +4988,11 @@ input.color {
 }
 
 .nav-2_wrapp.border {
-    padding-bottom: 22px;
+    padding-bottom: 17px;
 }
 
 .nav-2 {
-    margin-left: -11px;
+    margin: 5px 0 5px -11px;
 }
 
 .table .cell h3,
@@ -5169,11 +5169,12 @@ input.color {
     display: inline-block;
     vertical-align: top;
     position: relative;
+/*    top: -5px;*/
 }
 
-.nav-2 .blue-checkbox {
+/*.nav-2 .blue-checkbox {
     top: -5px;
-}
+}*/
 
 .blue-checkbox input {
     display: block;
