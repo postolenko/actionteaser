@@ -3757,21 +3757,21 @@ input.color {
 }
 
 .add-teaser-two-cols {
-    max-width: 1040px;
+    max-width: 1120px;
     padding-top: 6px;
     padding-bottom: 15px;
 }
 
 .add-teaser-two-cols .col-1 {
-    width: 65%;
+    width: 62% !important;
     padding-top: 1px;
-    padding-right: 3%;
+    padding-right: 3% !important;
 }
 
 .add-teaser-two-cols .col-2 {
-    width: 35%;
+    width: 38% !important;
     padding-top: 11px;
-    padding-left: 3%;
+    padding-left: 3% !important;
 }
 
 .input-wrapp {
@@ -4052,11 +4052,11 @@ input.color {
 }
 
 .teaser-preview-col-1 {
-    width: 44%;
+    width: 43%;
 }
 
 .teaser-preview-col-2 {
-    width: 56%;
+    width: 57%;
     padding-top: 8px;
 }
 
