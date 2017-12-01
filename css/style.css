@@ -262,7 +262,7 @@ p a {
 
 p i {
     margin: 0 6px;
-    vertical-align: middle !important;
+    /*vertical-align: middle !important;*/
 }
 
 p a + i {
@@ -4420,6 +4420,10 @@ input.color {
     padding: 0 14px;
 }
 
+.link-p i {
+    margin: 7px 0 5px 6px;
+}
+
 .white-block-header .sub-col {
     display: inline-block;
     vertical-align: middle;
@@ -4512,7 +4516,6 @@ input.color {
 
 .table-row.table-header .cell {
     padding-top: 14px;
-    /*padding-bottom: 8px;*/
     padding-bottom: 14px;
 }
 
@@ -4598,6 +4601,7 @@ input.color {
 .checkbox-block.single label {
     display: block;
     width: 18px;
+    min-width: 18px !important;
     height: 18px;
     padding: 0;
 }
