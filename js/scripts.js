@@ -30,10 +30,6 @@ $(window).load(function() {
 
     });
 
-    // $(".sidebar").css({
-    //     "min-height" : $(".content").height() + "px"
-    // });
-
     // ----------------------------
 
 });
@@ -53,7 +49,8 @@ $(document).ready(function() {
     var dropdownBlock;
     var rightDropdownCoord;
     var wrapperRightCoord;
-    // var TOP_DROPDOWNMENU_COORD = 43;
+    var HEADERHEIGHT = 78;
+    var topMenuCoord;
 
     // ----------------------------
 
@@ -77,61 +74,35 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var checkboxBlock;
+    var innersCheckboxes;
+
+    // ----------------------------
+
+    var questionTolltipLeftCoord;
+
+    // ----------------------------
+
+    var inputCounterSymbols;
+    var maxSymbols;
+    var inputValTyped;
+    var countSymbols;
+    var counterSymbols;
+    var restSymbols = 0;
+
+    // ----------------------------
+
+    var disabledElementsMame;
+    var disabledElements;
+    var checkedFlag = false;
+
+    // ----------------------------
+
     getRespParams();
-
-    // if(bodyWidth <= 1200) {
-
-    //     $(".header-site").addClass("animation_none");
-    //     $(".sidebar").addClass("animation_none");
-    //     $(".main_content").addClass("animation_none");
-
-    //     setTimeout(function() {
-
-    //         $(".header-site").removeClass("animation_none");
-    //         $(".sidebar").removeClass("animation_none");
-    //         $(".main_content").removeClass("animation_none");
-
-    //     }, 700);
-
-    // }
 
     $(window).resize(function() {
 
         bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
-
-        // -------------------------
-
-        // $("#fullH").css({
-        //     "height" : "auto"
-        // });
-
-        // -------------------------
-
-        // $("#sidebar").css({
-        //     "min-height" : "auto"
-        // });
-
-        // $("#sidebar").css({
-        //     "height" : $(".content").height() + "px"
-        // });
-
-        // -------------------------
-
-        // if(bodyWidth <= 1200 && !$(".sidebar").hasClass("hidden")) {
-
-        //     $(".header-site").addClass("animation_none");
-        //     $(".sidebar").addClass("animation_none");
-        //     $(".main_content").addClass("animation_none");
-
-        //     setTimeout(function(){
-
-        //         $(".header-site").removeClass("animation_none");
-        //         $(".sidebar").removeClass("animation_none");
-        //         $(".main_content").removeClass("animation_none");
-
-        //     }, 700);
-
-        // }
 
         getRespParams();
 
@@ -145,8 +116,6 @@ $(document).ready(function() {
         // var parentBLock;
         // var dropdownAttr;
         // var dropdownBlock;
-
-        // var TOP_DROPDOWNMENU_COORD = 50;
 
         $(".dropdown-block-wrapp").each(function() {
 
@@ -163,9 +132,9 @@ $(document).ready(function() {
 
             e.preventDefault();
 
-            var HEADERHEIGHT = 78;
+            // var HEADERHEIGHT = 78;
 
-            var topMenuCoord;
+            // var topMenuCoord;
 
             parentBLock = $(this).closest(".dropdown-block-wrapp");
 
@@ -557,11 +526,11 @@ $(document).ready(function() {
 
         $(".checkboxes-wrapp input[type='checkbox']").click(function() {
 
-            var checkboxBlock = $(this).closest(".checkbox-block");            
+            checkboxBlock = $(this).closest(".checkbox-block");            
 
             if( checkboxBlock.next(".checkboxes-inner").length > 0 ) {
 
-                var innersCheckboxes = checkboxBlock.next(".checkboxes-inner");
+                innersCheckboxes = checkboxBlock.next(".checkboxes-inner");
 
                 if( $(this).is(":checked") ) {
 
@@ -612,7 +581,7 @@ $(document).ready(function() {
 
     $(function() {
 
-        var questionTolltipLeftCoord;
+        // var questionTolltipLeftCoord;
 
         $( ".tooltip-block").bind({
             mouseenter: function() {                
@@ -635,12 +604,12 @@ $(document).ready(function() {
 
     $(function() {
 
-        var inputCounterSymbols;
-        var maxSymbols;
-        var inputValTyped;
-        var countSymbols;
-        var counterSymbols;
-        var restSymbols = 0;
+        // var inputCounterSymbols;
+        // var maxSymbols;
+        // var inputValTyped;
+        // var countSymbols;
+        // var counterSymbols;
+        // var restSymbols = 0;
 
         $(".symbol_count").each(function() {
 
@@ -767,7 +736,7 @@ $(document).ready(function() {
 
     $(function() {
 
-        $(".company-table .checkbox-block").click(function() {
+        $(".checkbox-block").click(function() {
 
             if( $(this).hasClass("parent") ) {
 
@@ -809,9 +778,9 @@ $(document).ready(function() {
 
     $(function() {
 
-        var disabledElementsMame;
-        var disabledElements;
-        var checkedFlag = false;
+        // var disabledElementsMame;
+        // var disabledElements;
+        // var checkedFlag = false;
 
         $("[data-select]").click(function() {
 
@@ -844,8 +813,6 @@ $(document).ready(function() {
                 disabledElements.addClass("disabled");
 
             }
-
-            console.log(checkedFlag);
 
         });
 
@@ -889,11 +856,7 @@ $(document).ready(function() {
 
         $("select").each(function() {
 
-            var parentBlock = $(this).closest(".select-block");
-
-            // parentBlock.css({
-            //     "width" : "auto"
-            // });
+            parentBlock = $(this).closest(".select-block");
 
             setTimeout(function(){
 
