@@ -765,6 +765,92 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".company-table .checkbox-block").click(function() {
+
+            if( $(this).hasClass("parent") ) {
+
+                var inputCh = $(this).find("input");
+
+                var nameCheckboxes = inputCh.attr("name");
+
+                if( inputCh.is(":checked") ) {
+
+                    $("input[ name = '"+ nameCheckboxes +"']").each(function() {
+
+                        if( !$(this).is(":checked") ) {
+
+                            $(this).click();
+
+                        }
+
+                    });
+
+                } else {
+
+                    $("input[ name = '"+ nameCheckboxes +"']").each(function() {
+
+                        if( $(this).is(":checked") ) {
+
+                            $(this).click();
+
+                        }
+
+                    });
+
+                }
+
+            }
+
+        });
+
+    });
+
+    $(function() {
+
+        var disabledElementsMame;
+        var disabledElements;
+        var checkedFlag = false;
+
+        $("[data-select]").click(function() {
+
+            disabledElementsName = $(this).attr("data-select");
+
+            disabledElements = $("[data-onoff = '"+ disabledElementsName +"']");
+
+            $("[data-select]").each(function() {
+
+                if( $(this).is(":checked") ) {
+
+                    checkedFlag = true;
+
+                    return false;
+
+                } else {
+
+                    checkedFlag = false;
+
+                }
+
+            });
+
+            if( checkedFlag == true ) {
+
+                disabledElements.removeClass("disabled");
+
+            } else {
+
+                disabledElements.addClass("disabled");
+
+            }
+
+            console.log(checkedFlag);
+
+        });
+
+    });
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
