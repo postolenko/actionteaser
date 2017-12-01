@@ -801,6 +801,17 @@ textarea:focus {
     background-size: 100%;
 }
 
+.trash-11 {
+    display: inline-block;
+    vertical-align: top;
+    width: 11px;
+    height: 13px;
+    background-image: url(../img/trash_small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .pic {
     display: inline-block;
     vertical-align: top;
@@ -946,11 +957,11 @@ textarea:focus {
     background-size: 100%;
 }
 
-.plus_2 {
+.plus-2 {
     display: inline-block;
     vertical-align: top;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background-image: url(../img/pluse_2.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -985,6 +996,28 @@ textarea:focus {
     width: 14px;
     height: 14px;
     background-image: url(../img/user_grey_small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pause {
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/pause.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.conf {
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/conf.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -4359,7 +4392,7 @@ input.color {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-    padding: 0 14px;
+    padding: 0 11px;
 }
 
 .nav-2 li i {
@@ -4967,7 +5000,7 @@ input.color {
 }
 
 .companies h3 + .companies-row {
-    padding-top: 3px`;
+    padding-top: 3px;
 }
 
 .companies p {
@@ -5078,7 +5111,7 @@ input.color {
 }
 
 .nav-2 {
-    margin-left: -14px;
+    margin-left: -11px;
 }
 
 .table .cell h3,
@@ -5249,6 +5282,90 @@ input.color {
 
 .teaser-article p a {
     line-height: 24px;
+}
+
+.blue-checkbox {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.blue-checkbox input {
+    display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .01;
+}
+
+.blue-checkbox span {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+    color: #37a0e3 !important;
+
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.blue-checkbox span:link,
+.blue-checkbox span:visited {
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+}
+
+.blue-checkbox span:active,
+.blue-checkbox span.active {
+    border-bottom: 1px solid rgba(55, 160, 227, .7);
+}
+
+.blue-checkbox span:hover {
+    border-bottom: 1px solid transparent;
+}
+
+.blue-checkbox label i,
+.blue-checkbox label span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.blue-checkbox input[type="checkbox"] + label .on {
+    display: none;
+}
+
+.blue-checkbox input[type="checkbox"]:checked + label .on {
+    display: inline-block;
+}
+
+.blue-checkbox input[type="checkbox"] + label .off {
+    display: inline-block;
+}
+
+.blue-checkbox input[type="checkbox"]:checked + label .off {
+    display: none;
 }
 
 .buttons-block.inline-row {
