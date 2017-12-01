@@ -262,12 +262,16 @@ p a {
 
 p i {
     margin: 0 6px;
-    /*vertical-align: middle !important;*/
+/*    position: relative;
+    top: 6px;*/
+    vertical-align: middle !important;
 }
 
-p a + i {
+/*p a + i {
     margin: 0 0 0 6px;
-}
+    position: relative;
+    top: 0;
+}*/
 
 li {
     list-style: none;
@@ -4420,9 +4424,10 @@ input.color {
     padding: 0 14px;
 }
 
-.link-p i {
+/*.link-p i {
     margin: 7px 0 5px 6px;
-}
+    margin: 0 0 0 6px;
+}*/
 
 .white-block-header .sub-col {
     display: inline-block;
@@ -4977,12 +4982,20 @@ input.color {
 
 }
 
-.white-block-header_2 .inner-col-1 {
+/*.white-block-header_2 .inner-col-1 {
     width: 30%;
 }
 
 .white-block-header_2 .inner-col-2 {
     width: 70%;
+}*/
+
+.white-block-header_2 .inner-col-1 {
+    width: 36%;
+}
+
+.white-block-header_2 .inner-col-2 {
+    width: 64%;
 }
 
 .dropdown-block.companies {
