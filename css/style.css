@@ -3757,19 +3757,19 @@ input.color {
 }
 
 .add-teaser-two-cols {
-    max-width: 1120px;
+    max-width: 1115px;
     padding-top: 6px;
     padding-bottom: 15px;
 }
 
 .add-teaser-two-cols .col-1 {
-    width: 62% !important;
+    width: 63% !important;
     padding-top: 1px;
     padding-right: 3% !important;
 }
 
 .add-teaser-two-cols .col-2 {
-    width: 38% !important;
+    width: 37% !important;
     padding-top: 11px;
     padding-left: 3% !important;
 }
