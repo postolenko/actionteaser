@@ -7,3 +7,5 @@
 # http://postolenko.github.io/actionteaser/company_popup_1.html
 # http://postolenko.github.io/actionteaser/company_popup_2.html
 # http://postolenko.github.io/actionteaser/company_popup_3.html
+# http://postolenko.github.io/actionteaser/creative_search.html
+# http://postolenko.github.io/actionteaser/creative_search_notification.html
