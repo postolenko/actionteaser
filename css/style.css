@@ -2865,11 +2865,14 @@ a.user-acc .img-box img {
     padding: 0;
 }
 
+.balance-item p {
+    padding: 5px 0;
+}
+
 .balance-item p.p-1 {
-    padding: 9px 0;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
     font-weight: normal;
     color: #ffffff;
 }
@@ -2879,12 +2882,6 @@ a.user-acc .img-box img {
     top: 50%;
     right: -20px;
     margin: -10px 0 0 0;
-}
-
-.balance-item .blue-link {
-    display: inline-block;
-    vertical-align: top;
-    margin: 12px 0;
 }
 
 .balance-item .buttons-block a {
