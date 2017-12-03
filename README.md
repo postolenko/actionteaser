@@ -9,3 +9,5 @@
 # http://postolenko.github.io/actionteaser/company_popup_3.html
 # http://postolenko.github.io/actionteaser/creative_search.html
 # http://postolenko.github.io/actionteaser/creative_search_notification.html
+# http://postolenko.github.io/actionteaser/tracker.html
+# http://postolenko.github.io/actionteaser/tracker_popup_8.html
