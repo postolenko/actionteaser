@@ -516,11 +516,7 @@ $(document).ready(function() {
 
             if( slidingBlock.is(":hidden") ) {
 
-                slidingBlock.slideDown(200, function() {
-
-
-
-                });
+                slidingBlock.slideDown(200);
 
                 $(this).addClass("active");
 
@@ -813,13 +809,22 @@ $(document).ready(function() {
 
     $(function() {
 
+        var inputCh;
+        var nameCheckboxes;
+        var activeCheckboxes = [];
+        var emptyCheckboxes;
+
         $(".checkbox-block").click(function() {
+
+            inputCh = $(this).find("input");
+
+            nameCheckboxes = inputCh.attr("name");
 
             if( $(this).hasClass("parent") ) {
 
-                var inputCh = $(this).find("input");
+                // inputCh = $(this).find("input");
 
-                var nameCheckboxes = inputCh.attr("name");
+                // nameCheckboxes = inputCh.attr("name");
 
                 if( inputCh.is(":checked") ) {
 
@@ -846,6 +851,66 @@ $(document).ready(function() {
                     });
 
                 }
+
+            } else {
+
+                // if( $("input[ name = '"+ nameCheckboxes +"'].parent").is(":checked") ){
+
+                    activeCheckboxes = [];
+
+                    $("input[ name = '"+ nameCheckboxes +"']").each(function() {
+
+                        if( !$(this).closest(".checkbox-block").hasClass("parent") ) {
+
+                            if( $(this).is(":checked") ) {
+
+                                activeCheckboxes.push(true);
+
+                            } else {
+
+                                activeCheckboxes.push(false);
+
+                            }
+
+                        }
+
+                    });
+
+                    // activeCheckboxes.some(isPositive);
+
+                    // function isPositive(number) {
+                    //   return number == false;
+                    // }
+
+                    emptyCheckboxes = activeCheckboxes.some(function(number) {
+
+                        return number == false;
+
+                    });
+
+                    var parentCheckbox = $(".parent input[ name = '"+ nameCheckboxes +"']");
+
+                    console.log(nameCheckboxes);
+
+                    if( emptyCheckboxes == false && parentCheckbox.is("checked") ) {
+
+                        parentCheckbox.click();
+
+                    } else if( !parentCheckbox.is("checked") ) {
+
+                        parentCheckbox.click();
+
+                    }
+
+                    // if( emptyCheckboxes == true ) {
+
+                    //     $("input[ name = '"+ nameCheckboxes +"'].parent").attr("checked", false);
+
+                    // }
+
+                    console.log(emptyCheckboxes);
+
+                // }
 
             }
 

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
+	<link rel="stylesheet" type="text/css" href="colorpicker/css/colorpicker.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/imgareaselect-default.css">
+	<script type="text/javascript" src="vendors/js/jquery.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="vendors/js/select2.js"></script>
+	<script type="text/javascript" src="vendors/js/clipboard.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.imgareaselect.js"></script>
+	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
+	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
+	
+	<title>Actionteaser</title>	
+
+</head>
+
+<body>
+
+	<!-- Popups -->
+
+	<div class="popup-block scroll" data-popup-name = "popup_1">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup selectareaimg-popup">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<h3>Выбрать область изображения для сохранения</h3>
+
+			<div class="selectareaimg-block">
+				
+				<div class="img-size">					
+					<p id="img_width"></p>
+					<p>x</p>
+					<p id="img_height"></p>
+					<p>px</p>
+				</div>
+
+				<div class="selectareaimg">
+					<img src="img/photo_popap.jpg" id="photo" alt="" />
+				</div>
+
+			</div>
+
+			<div class="submits-block align-center">
+											
+				<button type="submit" class="green-btn">Сохранить изображение</button>
+				<button type="button" class="blue-btn close-popup">Отменить</button>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="popup-block scroll" data-popup-name = "popup_9">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup select-company">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<h3>Выбирите компанию</h3>
+
+			<p>Сайт будет добавлен в белый список компании</p>
+
+			<div class="select-company-box scroll">
+
+				<div class="inner">
+
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_1">
+						<label for="ch_1"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_2">
+						<label for="ch_2"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_3">
+						<label for="ch_3"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_4">
+						<label for="ch_4"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_5">
+						<label for="ch_5"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_6">
+						<label for="ch_6"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_7">
+						<label for="ch_7"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_8">
+						<label for="ch_8"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_9">
+						<label for="ch_9"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_10">
+						<label for="ch_10"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_11">
+						<label for="ch_11"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_12">
+						<label for="ch_12"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_13">
+						<label for="ch_13"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_14">
+						<label for="ch_14"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_15">
+						<label for="ch_15"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+					<div class="checkbox-block">
+						<input type="checkbox" name="company_ch" id="ch_16">
+						<label for="ch_16"># 1 Some Company - Заявка СНГ (300) (ad1)</label>
+					</div>
+
+				</div>
+
+			</div>
+
+			<button type="submit" class="green-btn">Добавить</button>
+
+		</div>
+
+	</div>
+
+	<div class="popup-block scroll" data-popup-name = "popup_10">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup addsuccesfull">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<i class="checked-46"></i>
+
+			<h3>Сайты успешно добавлены<br /> в белый список</h3>
+
+			<p>В белом списке добавилось 1 новых сайтов(а)</p>
+
+		</div>
+
+	</div>
+
+	<div class="popup-block scroll" data-popup-name = "popup_11">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup lists-operations">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<h3>Операции со списками</h3>
+
+			<div class="input-wrapp input-wrapp_3">
+				<div class="search-col-1">
+					<label>Выбрать список:</label>
+				</div>
+				<div class="search-col-2">
+					<div class="select-block">
+						<select data-placeholder = "Список 1">
+							<option></option>
+							<option>Cписок 1</option>
+							<option>Cписок 2</option>
+							<option>Cписок 3</option>
+						</select>
+					</div>
+					<p>или <a href="#" class="blue-link">создать новый</a></p>
+				</div>
+			</div>
+
+			<div class="input-wrapp input-wrapp_3">
+				<div class="search-col-1">
+					<label>Название:</label>
+				</div>
+				<div class="search-col-2">
+					<input type="text" placeholder="">
+				</div>
+			</div>
+
+			<div class="submits-block align-center">
+											
+				<button type="submit" class="green-btn">Сохранить</button>
+				<button type="button" class="blue-btn close-popup">Отменить</button>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- /Popups -->
+
+	<div class="wrapper">
+
+	<!-- Header -->
+
+		<header>
+
+			<div class="header-site">		
+				
+				<div class="row clearfix">
+					<div class="col col-1 left">
+						
+						<a href="#" class="logo">
+							<span>
+								<img class="logo-desc" src="img/logo.png" alt="" />
+								<img class="logo-txt" src="img/logo_txt.png" alt="" />
+							</span>
+						</a>
+
+					</div>
+					<div class="col col-2 right">
+						
+						<div class="inner-col inner-col-1 left">
+							<button type="button" class="respmenubtn clearfix">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="inner-col inner-col-2 left">
+							<div class="dropdown-block-wrapp manager">
+								<div class="dropdown-header">
+									<a class="dropdown-link" href="#">
+										<p><i class="user"></i><span class="title">Ваш менеджер:</span>Константин</p>
+									</a>
+								</div>
+								<div class="dropdown-block">
+									<div class="inner">
+										<ul class="dropdown-list">
+											<li><p><i class="skype"></i></p><p>skype: <a href="skype:sitesup_actionteaser">sitesup_actionteaser</a></p></li>
+											<li><p><i class="telegram"></i></p><p>telegram: <a href="telegram:@actionteaser">@actionteaser</a></p></li>
+											<li><p><i class="mail"></i></p><p><a href="mailto:sitesup@actionteaser.ru">sitesup@actionteaser.ru</a></p></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="inner-col inner-col-3 left">
+
+							<div class="dropdown-block-wrapp">
+								<div class="dropdown-header">
+									<a class="dropdown-link" href="#">
+										<p class="icon-box"><i class="duble-bubble"></i></p>
+										<p>Помощь</p>
+									</a>
+								</div>
+								<!-- <div class="dropdown-block" data-dropdown-block = "2">
+									<div class="inner">
+										<ul class="user-list">
+											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+											<li><a href="#"><i class="many"></i>Журнал</a></li>
+											<li><a href="#"><i class="out"></i>Выход</a></li>
+										</ul>
+									</div>
+								</div> -->
+							</div>
+
+							<div class="dropdown-block-wrapp">
+								<div class="dropdown-header">
+									<a class="dropdown-link" href="#">
+										<p class="icon-box"><i class="bell"></i><span class="count red">2</span></p>
+										<p>Уведомления</p>
+									</a>
+								</div>
+								<div class="dropdown-block w-284">
+									<div class="inner">
+										<ul class="news-list">
+											<li>
+												<div class="news">
+													<h3>Холд</h3>
+													<p>Мы обновили логику перевода холда, в связи с этим все средства с холда переведены на баланс. Следующий перевод с холда будет через 7 дней, начиная от сегодняшнего дня.</p>
+													<p class="date">2 мин назад</p>
+												</div>
+											</li>
+											<li>
+												<div class="news">
+													<h3>Выплаты на Яндекс.Деньги</h3>
+													<p>Возобновлены выплаты на Яндекс.Деньги. Можете выбрать данный способ в настройках своего профиля.</p>
+													<p class="date">18 нояб. 2015</p>
+												</div>
+											</li>
+										</ul>
+										<div class="align-center more-link-box">
+											<a href="#" class="blue-link">Все уведомления</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="dropdown-block-wrapp">
+								<div class="dropdown-header">
+									<a class="dropdown-link" href="#">
+										<p class="icon-box"><i class="doc"></i><span class="count orange">23</span></p>
+										<p>Тикеты</p>
+									</a>
+								</div>
+								<!-- <div class="dropdown-block" data-dropdown-block = "2">
+									<div class="inner">
+										<ul class="user-list">
+											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+											<li><a href="#"><i class="many"></i>Журнал</a></li>
+											<li><a href="#"><i class="out"></i>Выход</a></li>
+										</ul>
+									</div>
+								</div> -->
+							</div>
+
+							<div class="dropdown-block-wrapp">
+								<div class="dropdown-header">
+									<a class="user-acc dropdown-link" href="#">
+										<div class="us-photo">
+											<div class="img-box">
+												<img src="img/photo.jpg" alt="" />		
+											</div>
+											<i class="pro"></i>
+										</div>
+										<p>Святослав</p>
+									</a>
+								</div>
+								<div class="dropdown-block">
+									<div class="inner">
+										<ul class="user-list">
+											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+											<li><a href="#"><i class="many"></i>Журнал</a></li>
+											<li><a href="#"><i class="out"></i>Выход</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+									
+		</header>
+
+	<!-- /Header -->
+
+		<!-- Selection Platform -->
+
+		<!-- Content -->
+			<div class="content">
+
+				<div class="sidebar_bg"></div>
+
+				<div class="two-cols-templ">
+
+					<div class="row clearfix">
+
+						<div class="resp-tooltip">Мои кампании</div>
+
+						<div class="col col-1 sidebar left scroll">
+							
+							<div class="inner-wrapp">
+
+								<div class="sidebar-item menu-dropdown-item tooltips">
+									<a href="#" class="menu-item-header"><i class="user-green"></i><span class="link-txt">Вебмастер</span></a>
+									<div class="sidebar-item-menu menu-dropdown">
+										<ul class="sidebar-menu-list">
+											<li><a href="#"><span class="icon-block"><i class="icon-1"></i></span><span class="link-txt">Мои кампании</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-2"></i></span><span class="link-txt">Подбор площадок</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-3"></i></span><span class="link-txt">Статистика</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-4"></i></span><span class="link-txt">Список сайтов</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-5"></i></span><span class="link-txt">Рефералы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-6"></i></span><span class="link-txt">Бонусы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-7"></i></span><span class="link-txt">Мои настройки</span></a></li>
+										</ul>
+
+										<div class="sidebar-item balance-item resp-none">
+											<p class="p-1">На балансе: 100 000 Р</p>
+											<p>Холд: 0 Р</p>
+											<p><a href="#" class="blue-link">История списаний и начислений</a></p>
+											<div class="buttons-block clearfix">
+												<a href="#" class="blue-btn">Перевод</a>
+												<a href="#" class="green-btn">Вывести</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="sidebar-item menu-dropdown-item tooltips active">
+									<a href="#" class="menu-item-header"><i class="plain"></i><span class="link-txt">Рекламодатель</span></a>
+									<div class="sidebar-item-menu menu-dropdown">
+										<ul class="sidebar-menu-list">
+											<li><a href="#"><span class="icon-block"><i class="icon-1"></i></span><span class="link-txt">Мои кампании</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-2"></i></span><span class="link-txt">Подбор площадок</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-3"></i></span><span class="link-txt">Статистика</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-4"></i></span><span class="link-txt">Список сайтов</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-5"></i></span><span class="link-txt">Рефералы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-6"></i></span><span class="link-txt">Бонусы</span></a></li>
+											<li><a href="#"><span class="icon-block"><i class="icon-7"></i></span><span class="link-txt">Мои настройки</span></a></li>
+										</ul>
+
+										<div class="sidebar-item balance-item resp-none">
+											<div class="balance-block">
+												<p class="p-1">На балансе: 100 000 Р</p>
+												<a href="#" class="green-plus"></a>
+											</div>
+											<p>Ваша скидка: 10%</p>
+										</div>
+
+									</div>
+								</div>
+								
+
+								<div class="sidebar-item-menu tooltips single">
+
+									<ul class="sidebar-menu-list">
+										<li><a href="#"><span class="icon-block"><i class="icon-8"></i></span><span class="link-txt">Новости</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-9"></i></span><span class="link-txt">Блоги</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-10"></i></span><span class="link-txt">Частые вопросы</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-11"></i></span><span class="link-txt">Правила</span></a></li>
+										<li><a href="#"><span class="icon-block"><i class="icon-12"></i></span><span class="link-txt">API</span></a></li>
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col col-2 right main_content">
+							
+							<div class="white-block">
+
+								<div class="white-block-header offset-ziro">
+									<h1>Подбор площадок</h1>
+								</div>
+
+								<div class="white-block-header">
+									<div class="inputs-7_wrapp">
+										<form>
+
+											<h2>Фильтры </h2>
+
+											<div class="input-wrapp input-wrapp_7 small">
+												<label>ID сайта:</label>
+												<input type="text" placeholder="">
+											</div>											
+
+											<div class="input-wrapp input-wrapp_7">
+												<label>Тематики:</label>
+												<div class="select-block">
+													<select data-placeholder = "Выберите тематику">
+														<option></option>
+														<option>Категория_1</option>
+														<option>Категория_2</option>
+														<option>Категория_3</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="input-wrapp input-wrapp_7">
+												<label>Показы по региону:</label>
+												<div class="select-block">
+													<select data-placeholder = "Все регионы">
+														<option></option>
+														<option>Все регионы</option>
+														<option>Опция_1</option>
+														<option>Опция_2</option>
+														<option>Опция_3</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="input-wrapp input-wrapp_7 small">
+												<label>Показы в сутки от:</label>
+												<input type="text" placeholder="">
+											</div>
+
+											<div class="input-wrapp input-wrapp_7 small">
+												<label>CTR от:</label>
+												<input type="text" placeholder="">
+											</div>
+
+											<div class="input-wrapp input-wrapp_7 single">
+												<!-- <label></label> -->
+												<div class="select-block">
+													<select data-placeholder = "Все списки">
+														<option></option>
+														<option>Все списки</option>
+														<option>Опция_1</option>
+														<option>Опция_2</option>
+														<option>Опция_3</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="input-wrapp input-wrapp_7 single">
+												<a href="#" class="green-btn">Отправить</a>
+												<a href="#" class="blue-btn">Сбросить</a>
+											</div>
+
+										</form>
+									</div>
+								</div>
+
+								<div class="white-block-row">
+									
+									<div class="platform-table table">
+										<div class="table-row table-header">
+											<div class="cell cell-1">
+												<div class="checkbox-block single parent">
+													<input type="checkbox" name="platform_ch" id="platform_ch_1" data-select="elements_3">
+													<label for="platform_ch_1"></label>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<h3>id</h3>
+											</div>
+											<div class="cell cell-3">
+												<h3>Сайт</h3>
+											</div>
+											<div class="cell cell-4">
+												<h3>Мин. цена</h3>
+											</div>
+											<div class="cell cell-5">
+												<h3>Показы</h3>
+											</div>
+											<div class="cell cell-6">
+												<h3>Клики</h3>
+											</div>
+											<div class="cell cell-7">
+												<h3>Показатели</h3>
+											</div>
+											<div class="cell cell-8">
+												<h3>BL</h3>
+												<div class="tooltip-block">
+													<div class="icon-box">
+														<i class="fa fa-question-circle-o"></i>
+													</div>
+													<div class="tooltip">
+														<p>Открывает попап с одним полем</p>
+														<p>URL, которое идентично полю</p>
+														<p>URL в кампании с соответствующими</p>
+													</div>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<h3>WL</h3>
+												<div class="tooltip-block">
+													<div class="icon-box">
+														<i class="fa fa-question-circle-o"></i>
+													</div>
+													<div class="tooltip">
+														<p>Открывает попап с одним полем</p>
+														<p>URL, которое идентично полю</p>
+														<p>URL в кампании с соответствующими</p>
+													</div>
+												</div>
+											</div>
+											<div class="cell cell-10">
+												<h3>Действия</h3>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="cell cell-1">
+												<div>
+													<div class="checkbox-block single">
+														<input type="checkbox" name="platform_ch" id="platform_ch_2" data-select="elements_3">
+														<label for="platform_ch_2"></label>
+													</div>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<div>
+													<p>1</p>
+												</div>
+											</div>
+											<div class="cell cell-3">
+												<div>
+													<p><span>URL:</span> скрыт</p>
+													<p><span>Тематика:</span> литература, учеба</p>
+													<p><span>Аудитория:</span> женский, 25 - 45 лет</p>
+													<p><span>Список:</span> кино сайты</p>
+													<p><span>Категории:</span> авто, мото, бытовая, техника...</p>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Показать все</a>
+												</div>
+											</div>
+											<div class="cell cell-4">
+												<div>
+													<p>2.00</p>
+												</div>
+											</div>
+											<div class="cell cell-5">
+												<div>
+													<h3>Сегодня:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Вчера:</h3>
+													<p>42 000</p>
+												</div>
+												<div>
+													<h3>Месяц:</h3>
+													<p>353 000</p>
+												</div>
+											</div>
+											<div class="cell cell-6">
+												<div>
+													<h3>Сегодня:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Вчера:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Месяц:</h3>
+													<p>11 000</p>
+												</div>
+											</div>
+											<div class="cell cell-7">
+												<div>
+													<p><span>CTR:</span> 2.11 %</p>
+												</div>
+												<div>
+													<p><span>CPM:</span> 22.30 р</p>
+												</div>
+												<div>
+													<p><span>Ср. цена:</span> 1.05 р</p>
+												</div>
+											</div>
+											<div class="cell cell-8">
+												<div>
+													<p>450</p>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<div>
+													<p>75</p>
+												</div>
+											</div>
+											<div class="cell cell-10">
+												<div>
+													<a href="#" class="blue-link">Добавить в белый список</a>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Выбрать для кампании</a>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Добавить в список</a>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="cell cell-1">
+												<div>
+													<div class="checkbox-block single">
+														<input type="checkbox" name="platform_ch" id="platform_ch_3" data-select="elements_3">
+														<label for="platform_ch_3"></label>
+													</div>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<div>
+													<p>1</p>
+												</div>
+											</div>
+											<div class="cell cell-3">
+												<div>
+													<p><span>URL:</span> скрыт</p>
+													<p><span>Тематика:</span> литература, учеба</p>
+													<p><span>Аудитория:</span> женский, 25 - 45 лет</p>
+													<p><span>Список:</span> кино сайты</p>
+													<p><span>Категории:</span> авто, мото, бытовая, техника...</p>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Показать все</a>
+												</div>
+											</div>
+											<div class="cell cell-4">
+												<div>
+													<p>2.00</p>
+												</div>
+											</div>
+											<div class="cell cell-5">
+												<div>
+													<h3>Сегодня:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Вчера:</h3>
+													<p>42 000</p>
+												</div>
+												<div>
+													<h3>Месяц:</h3>
+													<p>353 000</p>
+												</div>
+											</div>
+											<div class="cell cell-6">
+												<div>
+													<h3>Сегодня:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Вчера:</h3>
+													<p>11 000</p>
+												</div>
+												<div>
+													<h3>Месяц:</h3>
+													<p>11 000</p>
+												</div>
+											</div>
+											<div class="cell cell-7">
+												<div>
+													<p><span>CTR:</span> 2.11 %</p>
+												</div>
+												<div>
+													<p><span>CPM:</span> 22.30 р</p>
+												</div>
+												<div>
+													<p><span>Ср. цена:</span> 1.05 р</p>
+												</div>
+											</div>
+											<div class="cell cell-8">
+												<div>
+													<p>450</p>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<div>
+													<p>75</p>
+												</div>
+											</div>
+											<div class="cell cell-10">
+												<div>
+													<a href="#" class="blue-link">Добавить в белый список</a>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Выбрать для кампании</a>
+												</div>
+												<div>
+													<a href="#" class="blue-link">Добавить в список</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col2right-tpl vert-al-m">
+										<div class="col2right-1 inline-blocks">
+											<div class="buttons-block inline-row disabled" data-onoff="elements_3">
+
+												<h3>Выбранные сайты:</h3>
+
+												<a href="#" class="green-btn">Добавить в белый список</a>
+												<a href="#" class="blue-btn">Добавить в черный список</a>
+												<a href="#" class="orange-btn">Выбрать для компании</a>
+												<a href="#" class="red-btn">Добавить в список</a>
+
+											</div>
+										</div>
+										<div class="col2right-2">
+											<div class="input-wrapp input-wrapp_4">
+												<div class="search-col-1">
+													<label>Показывать по:</label>
+												</div>
+												<div class="search-col-2">
+													<div class="select-block">
+														<select data-placeholder="50" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+															<option></option>
+															<option>50</option>
+															<option>70</option>
+															<option>80</option>
+															<option>100</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="pagination-block">
+										
+										<h3>Страницы:</h3>
+										<ul class="pagination">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">›</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		<!-- /Content -->
+
+		<!-- /Selection Platform -->
+
+		<!-- Footer -->
+
+		<footer>
+
+			<div class="footer">
+
+				<div class="row clearfix">
+					<div class="col col-1 left">
+						<p>&copy; «ActionTeaser» 2013-2017. Все права защищены.</p>
+					</div>
+					<div class="col col-2 right">
+						<p>Мы в интернете:<a href="#">Webmasters.ru</a><a href="#">Searchhenius.guru</a><a href="#">Kote.ws</a></p>
+					</div>
+				</div>
+
+			</div>
+
+		</footer>
+
+		<!-- /Footer -->
+
+		<script src="js/scripts.js"></script>
+		<script src="js/additional_scripts.js"></script>
+	
+	</div>
+
+</body>
+</html>

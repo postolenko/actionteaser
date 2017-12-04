@@ -403,6 +403,33 @@
 
 	</div>
 
+	<div class="popup-block scroll" data-popup-name = "popup_9" style="opacity: 1; z-index: 10;">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup balance-popup">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<img class="popup-logo" src="img/webmoney.png" alt="" />
+
+			<div class="align-center">
+
+				<p>Пополнить баланс на 300 руб</p>
+
+				<div class="submits-block">
+					
+					<button type="submit" class="green-btn">Продолжить</button>
+					<button type="button" class="blue-btn">Отменить</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
 	<!-- /Popups -->
 
 
@@ -556,7 +583,7 @@
 
 	<!-- /Header -->
 
-		<!-- Tracker -->
+		<!-- Balance -->
 
 		<!-- Content -->
 			<div class="content">
@@ -644,183 +671,226 @@
 							<div class="white-block">
 
 								<div class="white-block-header">
-									<div class="col">
-										<h1>Трекер</h1>
+									<div>
+										<h1>Баланс</h1>
 									</div>
-									<div class="col">
-										<p class="p-link"><i class="datepicker"></i><a href="#" class="blue-link show_popup" data-popup="popup_6">Код трекера</a></p>
+									<div>
+										<i class="pro"></i>
 									</div>
 								</div>
 
-								<div class="two-cols-templ_2 clearfix">
-									<div class="templ_2-col-1">
-										<h2>Компании</h2>
-										<ul class="nav_3">
-											<li><a href="#" class="blue-link">#1 Название кампании (1)</a></li>
-											<li><a href="#" class="blue-link">#2 Название кампании (2)</a></li>
-										</ul>
-										<div class="btn-wrapp">
-											<a href="#" class="green-btn show_popup" data-popup="popup_7"><i class="fa fa-plus"></i>Добавить цель</a>
-										</div>
-									</div>
-									<div class="templ_2-col-2">
-										<h2>Цели компании #1 Название кампании</h2>
+								<div class="two-cols-templ_3 clearfix">
+									<div class="templ_3-col-1">
 
-										<div class="tracker-table table">
+										<h2>Выберите способ пополнения</h2>
+
+										<div class="payment-box">
+
+											<div class="payment-header">
+												<div class="header-col-1">
+													<h2>WebMoney</h2>
+												</div>
+												<div class="header-col-2">
+													<img src="img/webmoney.png" alt="" />
+												</div>
+											</div>
+
+											<div class="payment-inputs clearfix">
+												<form>
+													<div class="inputs-1">
+														<div class="inputs-table">
+															<div class="cell-1">
+																<div class="select-block">
+																	<select data-placeholder="WMR">
+																		<option></option>
+																		<option>WMR</option>
+																		<option>WMU</option>
+																	</select>
+																</div>
+															</div>
+															<div class="cell-2">
+																<input type="text" placeholder="300" />
+																<div class="input-desc">
+																	<p>+100 бонус</p>
+																	<div class="tooltip-block">
+																		<div class="icon-box">
+																			<i class="fa fa-question-circle-o"></i>
+																		</div>
+																		<div class="tooltip">
+																			<p>Открывает попап с одним полем</p>
+																			<p>URL, которое идентично полю</p>
+																			<p>URL в кампании с соответствующими</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="inputs-2">
+														<button type="submit" class="green-btn">Оплатить</button>
+													</div>
+												</form>
+											</div>
+
+											<div class="info-row">
+												<p>Минимальная сумма для пополнения</p>
+												<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
+											</div>
+
+										</div>
+
+										<div class="payment-box">
+
+											<div class="payment-header">
+												<div class="header-col-1">
+													<h2>Яндекс.Деньги</h2>
+												</div>
+												<div class="header-col-2">
+													<img src="img/yandex.png" alt="" />
+												</div>
+											</div>
+
+											<div class="payment-inputs clearfix">
+												<form>
+													<div class="inputs-1">
+														<input type="text" placeholder="300">
+														<div class="input-desc">
+															<p>+100 бонус</p>
+															<div class="tooltip-block">
+																<div class="icon-box">
+																	<i class="fa fa-question-circle-o"></i>
+																</div>
+																<div class="tooltip">
+																	<p>Открывает попап с одним полем</p>
+																	<p>URL, которое идентично полю</p>
+																	<p>URL в кампании с соответствующими</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="inputs-2">
+														<button type="submit" class="green-btn">Оплатить</button>
+													</div>
+												</form>
+											</div>
+
+											<div class="info-row">
+												<p>Минимальная сумма для пополнения</p>
+												<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
+											</div>
+
+										</div>
+
+										<div class="payment-box">
+
+											<div class="payment-header">
+												<div class="header-col-1">
+													<h2>Безналичный перевод</h2>
+												</div>
+												<div class="header-col-2">
+													<img src="img/wallet.png" alt="" />
+												</div>
+											</div>
+
+											<div class="payment-inputs clearfix">
+												<h3>Сумма:</h3>
+												<form>
+													<div class="inputs-1">
+														<input type="text" placeholder="300">
+													</div>
+													<div class="inputs-2">
+														<button type="submit" class="green-btn">Создать счет</button>
+													</div>
+												</form>
+											</div>
+
+											<div class="info-row">
+												<p>Для оплаты безналичным переводом нужно сформировать и скачать счет для оплаты. Для создания счета нужно заполнить <a href="#" class="blue-link">данные в профиле</a></p>
+											</div>
+
+										</div>
+
+										<div class="payment-box">
+
+											<div class="payment-header">
+												<div class="header-col-1">
+													<h2>Промокод</h2>
+												</div>
+												<div class="header-col-2">
+													<img src="img/promo.png" alt="" />
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="templ_3-col-2">
+										<h2>История списаний и начислений</h2>
+
+										<!-- Голубые кнопки -->
+
+										<!-- .Голубые кнопки -->
+
+										<div class="payment-table table">
 											<div class="table-row table-header">
 												<div class="cell cell-1">
-													<h3>id</h3>
+													<h3>Дата</h3>
 												</div>
 												<div class="cell cell-2">
-													<h3>Название цели</h3>
+													<h3>Сумма</h3>
 												</div>
 												<div class="cell cell-3">
-													<h3>Описание</h3>
+													<h3>Бонус</h3>
 												</div>
 												<div class="cell cell-4">
-													<h3>Действия</h3>
+													<h3>Остаток</h3>
+												</div>
+												<div class="cell cell-4">
+													<h3>Описание</h3>
 												</div>
 											</div>
 											<div class="table-row">
 												<div class="cell cell-1">
 													<div>
-														<p>1</p>
+														<p>06 нояб. 2017</p>
 													</div>
 												</div>
 												<div class="cell cell-2">
 													<div>
-														<p>Покупка</p>
+														<p><a href="#" class="orange-link">-6,00</a></p>
 													</div>
 												</div>
 												<div class="cell cell-3">
 													<div>
-														<p>Содержит cart</p>
+														<p>100</p>
 													</div>
 												</div>
 												<div class="cell cell-4">
 													<div>
-														<ul class="nav_3">
-															<li><i class="trash-11"></i><a href="#" class="blue-link">Удалить</a></li>
-															<li><i class="pencil"></i><a href="#" class="blue-link">Редактировать</a></li>
-														</ul>
+														<p>4 300</p>
+													</div>
+												</div>
+												<div class="cell cell-5">
+													<div>
+														<p>За клики по кампании No 16478 Рюкзак Kalidi Bobby с защитой от карманников</p>
 													</div>
 												</div>
 											</div>
 										</div>
 
-										<div class="tracker-form">
-
-											<form>
-											
-												<h2>Редактировать цель</h2>
-
-												<div class="form-row">
-													<div class="form-col-1">
-														<h3>Название:</h3>
-													</div>
-													<div class="form-col-2">
-														<input type="text" name="" placeholder="" />
-														<p>Не может быть пустым</p>
-													</div>
-												</div>
-
-												<div class="form-row">
-
-													<div class="form-col-1">
-														<h3>Условие::</h3>
-													</div>
-
-													<div class="form-col-2">
-
-														<div class="radio-inline">
-															<div class="radio-block">
-																<input type="radio" name="cond_radio_1" id="cond_radio_4">
-																<label for="cond_radio_4">URL страницы</label>
-															</div>
-															<div class="radio-block">
-																<input type="radio" name="cond_radio_1" id="cond_radio_5">
-																<label for="cond_radio_5">Событие</label>
-															</div>
-															<div class="radio-block">
-																<input type="radio" name="cond_radio_1" id="cond_radio_6">
-																<label for="cond_radio_6">Postback CPA</label>
-																<div class="tooltip-block">
-																	<div class="icon-box">
-																		<i class="fa fa-question-circle-o"></i>
-																	</div>
-																	<div class="tooltip">
-																		<p>Открывает попап с одним полем</p>
-																		<p>URL, которое идентично полю</p>
-																		<p>URL в кампании с соответствующими</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div class="input-wrapp input-wrapp_7">
-															<label>Выберите CPA сеть</label>
-															<div class="select-block">
-																<select data-placeholder="Actionads">
-																	<option></option>
-																	<option>Actionads</option>
-																	<option>Option 1</option>
-																	<option>Option 2</option>
-																</select>
-															</div>
-														</div>
-
-														<div class="input-wrapp input-wrapp_7">
-															<label>Выберите CPA сеть</label>
-															<div class="two-inputs clearfix">
-																<div class="two-inputs-col-1">
-																	<div class="select-block">
-																		<select data-placeholder="Содержит">
-																			<option></option>
-																			<option>Содержит</option>
-																			<option>Option 1</option>
-																			<option>Option 2</option>
-																		</select>
-																	</div>
-																</div>
-																<div class="two-inputs-col-2">
-																	<input type="text" name="">
-																	<p>Не может быть пустым</p>
-																</div>
-															</div>
-														</div>
-
-														<div class="form-inner-row">
-															<p>Ссылка кампании:</p>
-															<p><a href="#" class="blue-link">http://site.ru</a></p>
-														</div>
-
-														<div class="input-wrapp input-wrapp_7">
-															<label>Идентификатор цели</label>
-															<input type="text" placeholder="Содержит" >
-														</div>
-
-													</div>
-
-												</div>
-
-												<div class="info-box">
-													<p>Для подсчета целей нужно добавить к ссылке два SubID:</p>
-													<p>Sub ID: [SID] Sub ID 2: [UID]</p>
-													<p>После чего у вас должна получиться ссылка вида:</p>
-													<p>http://tracking.actionads.ru/aff_c?offer_id=1&aff_id=2&aff_sub=[SID]&aff_sub2=[UID]</p>
-													<p>которую вы используете в своих объявлениях.</p>
-												</div>
-
-												<div class="submits-block align-center">
-											
-													<button type="submit" class="green-btn">Сохранить</button>
-													<button type="button" class="blue-btn">Отмена</button>
-
-												</div>
-
-											</form>
+										<div class="pagination-block">
+										
+											<h3>Страницы:</h3>
+											<ul class="pagination">
+												<li><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">›</a></li>
+											</ul>
 
 										</div>
+
 
 									</div>
 								</div>
@@ -836,7 +906,7 @@
 			</div>
 		<!-- /Content -->
 
-		<!-- /Tracker -->
+		<!-- /Balance -->
 
 		<!-- Footer -->
 

@@ -11,3 +11,5 @@
 # http://postolenko.github.io/actionteaser/creative_search_notification.html
 # http://postolenko.github.io/actionteaser/tracker.html
 # http://postolenko.github.io/actionteaser/tracker_popup_8.html
+# http://postolenko.github.io/actionteaser/balance.html
+# http://postolenko.github.io/actionteaser/selection_platform.html
