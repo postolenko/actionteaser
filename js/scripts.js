@@ -882,25 +882,25 @@ $(document).ready(function() {
                     //   return number == false;
                     // }
 
-                    emptyCheckboxes = activeCheckboxes.some(function(number) {
+                    // emptyCheckboxes = activeCheckboxes.some(function(number) {
 
-                        return number == false;
+                    //     return number == false;
 
-                    });
+                    // });
 
-                    var parentCheckbox = $(".parent input[ name = '"+ nameCheckboxes +"']");
+                    // var parentCheckbox = $(".parent input[ name = '"+ nameCheckboxes +"']");
 
-                    console.log(nameCheckboxes);
+                    // console.log(nameCheckboxes);
 
-                    if( emptyCheckboxes == false && parentCheckbox.is("checked") ) {
+                    // if( emptyCheckboxes == false && parentCheckbox.is("checked") ) {
 
-                        parentCheckbox.click();
+                    //     parentCheckbox.click();
 
-                    } else if( !parentCheckbox.is("checked") ) {
+                    // } else if( !parentCheckbox.is("checked") ) {
 
-                        parentCheckbox.click();
+                    //     parentCheckbox.click();
 
-                    }
+                    // }
 
                     // if( emptyCheckboxes == true ) {
 
