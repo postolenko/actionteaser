@@ -400,6 +400,10 @@ textarea:focus {
     color: #8b8b8b !important;
 }
 
+.color {
+    color: #f28b1c;
+}
+
 /*-- Icons --*/
 
 .user {
