@@ -400,9 +400,8 @@ textarea:focus {
     color: #8b8b8b !important;
 }
 
-.color,
-p.color {
-    color: #f28b1c;
+.orange {
+    color: #f28b1c !important;
 }
 
 /*-- Icons --*/
