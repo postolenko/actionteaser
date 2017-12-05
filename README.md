@@ -13,4 +13,4 @@
 # http://postolenko.github.io/actionteaser/tracker_popup_8.html
 # http://postolenko.github.io/actionteaser/balance.html
 # http://postolenko.github.io/actionteaser/selection_platform.html
-# http://postolenko.github.io/actionteaser/satistic.html
+# http://postolenko.github.io/actionteaser/statistic.html
