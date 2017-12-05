@@ -173,7 +173,7 @@
 
 						var topCoord = $(this).offset().top - chartTooltip.outerHeight();
 
-						var leftCoord = $(this).offset().left;
+						var leftCoord = $(this).offset().left - chartTooltip.width() / 2;
 
 						chartTooltip.offset({top : topCoord, left : leftCoord});
 
