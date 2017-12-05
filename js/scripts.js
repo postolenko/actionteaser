@@ -960,6 +960,32 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".slide-link").click(function(e) {
+
+            e.preventDefault();
+
+            var slideBLockName = $(this).attr("data-slide-link");
+
+            var slideBLock = $("[data-slide-block = '"+ slideBLockName +"']");
+
+            if( slideBLock.is(":hidden") ) {
+
+                slideBLock.slideDown(200);                
+                $(this).removeClass("hidden");
+
+            } else {
+
+                slideBLock.slideUp(200);
+                $(this).addClass("hidden");
+
+            }
+
+        });
+
+    });
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {

@@ -241,6 +241,14 @@ h3 {
     color: #333333;
 }
 
+h4 {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #333333;
+}
+
 p {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
@@ -1057,6 +1065,28 @@ textarea:focus {
     background-size: 100%;
 }
 
+.datepiker {
+    display: inline-block;
+    vertical-align: top;
+    width: 13px;
+    height: 13px;
+    background-image: url(../img/datepiker.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.eye-line {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 12px;
+    background-image: url(../img/eye_line.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 /*-- /Icons --*/
 
 /*-- Links --*/
@@ -1070,7 +1100,8 @@ a.blue-link {
     /*line-height: 14px;*/
     line-height: 25px;
     font-weight: normal;
-    color: #37a0e3 !important;
+    /*color: #37a0e3 !important;*/
+    color: #37a0e3;
 
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
@@ -4386,8 +4417,8 @@ input.color {
 }
 
 .nav-2 li a {
-    display: inline-block !important;
-    vertical-align: top !important;
+/*    display: inline-block !important;
+    vertical-align: top !important;*/
     margin: 0 !important;
 }
 
@@ -5058,10 +5089,10 @@ input.color {
     padding-bottom: 11px;
 }
 
-.input-wrapp_7 label.fs-16 {
+label.fs-16 {
     font-size: 16px;
-    position: relative;
-    top: -1px;
+/*    position: relative;
+    top: -1px;*/
 }
 
 .input-wrapp_7 input {
@@ -5625,13 +5656,17 @@ p.new {
 /*-- Tracker --*/
 
 .white-block-header h1,
-.white-block-header div {
+.white-block-header .col  {
     display: inline-block;
     vertical-align: top;
 }
 
 .white-block-header .col {
     padding-right: 20px;
+}
+
+.white-block-header.v-m .col {
+    vertical-align: middle;
 }
 
 .white-block-header div p {
@@ -6097,6 +6132,338 @@ p.new {
 }
 
 /*-- /Selection Platform --*/
+
+/*-- Statistic --*/
+
+.nav-2_wrapp {
+
+}
+
+.input-wrapp_3.date .search-col-1 {
+    min-width: auto;
+}
+
+.two-cols-option {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.select-tmpl .col-1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px !important;
+}
+
+.select-tmpl .col-1 .img-box {
+    display: block;
+    width: 13px;
+    height: 13px;
+}
+
+.select-tmpl .col-1 .img-box img {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.select-tmpl .col-2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    padding: 0 0 0 4px;
+}
+
+.nav-4-col {
+    padding-top: 20px;
+}
+
+.nav-4 {
+
+}
+
+.nav-4 li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px 4px;
+}
+
+.nav-4 li a {
+    margin: 0;
+}
+
+a.blue-link.active {
+    color: #555555;
+    border: 1px solid transparent;
+}
+
+.chart-sort {
+    margin: 23px 0;
+}
+
+.sort-block button,
+.sort-block a {
+    margin: 0 3px;
+}
+
+.select-block.w-234 {
+    width: 234px;
+}
+
+.statistic-chart_wrapp {
+    margin: 49px 0 30px 0;
+}
+
+.statistic-chart {
+    width: 82%;
+    position: relative;
+}
+
+.statistic-marks {
+    width: 18%;
+}
+
+.statistic-chart .ct-chart {
+    height: 240px;
+}
+
+.statistic-chart .ct-grid {
+    stroke: #959595;
+    stroke-width: 1px;
+    stroke-dasharray: 0px;
+    opacity: 0;
+}
+
+.statistic-chart .ct-bar {
+    fill: none;
+    stroke-width: 40px;
+}
+
+.statistic-chart .ct-series-a .ct-bar {
+    stroke: #44c345;
+}
+
+.statistic-chart .ct-series-b .ct-bar {
+    stroke: #fe6799;
+}
+
+.statistic-chart .ct-label {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    fill: #333333;
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.statistic-chart .ct-label.ct-vertical.ct-start {
+    font-size: 12px;
+}
+
+.statistic-chart .ct-series line {
+    cursor: pointer;
+}
+
+.statistic-marks {
+
+}
+
+.statistic-marks h3 {
+    margin: 0 0 5px 0;
+    padding: 4px 0;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #333333;
+    border-bottom: 2px solid #a8a8a8;
+}
+
+.ch-mark {
+    display: inline-block;
+    vertical-align: top;
+    background: #ffffff;
+    margin: 1px 0;
+    padding: 3px 4px;
+    border: 1px solid #a5a3a3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.ch-mark.pink {
+    background: #ff6499;
+}
+
+.ch-mark.green {
+    background: #44c245;
+}
+
+.chart-tooltip {
+    /*display: inline-block;
+    vertical-align: top;*/
+    display: none;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 4px 8px;
+    border: 2px solid #4d4d4d;
+    /*opacity: 0;*/
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+/*    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;*/
+}
+
+.chart-tooltip h3,
+.chart-tooltip p {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.chart-tooltip h3 {
+    padding-bottom: 3px;
+}
+
+.chart-info {
+    display: table;
+    width: 100%;
+}
+
+.chart-info .cell-1 {
+    display: table-cell;
+    vertical-align: top;
+    width: 40%;
+}
+
+.chart-info .cell-2 {
+    display: table-cell;
+    vertical-align: top;
+    width: 60%;
+    padding-top: 4px;
+    text-align: right;
+}
+
+.chart-info .cell-1 i,
+.chart-info .cell-1 p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.green-o {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    background: #43c345;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.pink-o {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    background: #fe6899;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.slide-link .hidden {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slide-link .show {
+    display: none;
+}
+
+.slide-link.hidden .hidden {
+    display: none;
+}
+
+.slide-link.hidden .show {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.statistic-table {
+
+}
+
+.statistic-table .cell {
+    padding: 4px 2%;
+}
+
+.statistic-table .cell-1 {
+    width: 13%;
+}
+
+.statistic-table .cell-2 {
+    width: 10%;
+}
+
+.statistic-table .cell-3 {
+    width: 10%;
+}
+
+.statistic-table .cell-4 {
+    width: 10%;
+}
+
+.statistic-table .cell-5 {
+    width: 11%;
+}
+
+.statistic-table .cell-6 {
+    width: 12%;
+}
+
+.statistic-table .cell-7 {
+    width: 11%;
+}
+
+.statistic-table .cell-8 {
+    width: 11%;
+}
+
+.statistic-table .cell-9 {
+    width: 12%;
+}
+
+/*-- /Statistic --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
