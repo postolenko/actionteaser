@@ -6497,9 +6497,15 @@ input.datepicker-input:focus {
 
 .statistic-table .table-row:hover {
     background: #f9f9f9;
-    -webkit-box-shadow: 0 0 18px 0 rgba(166, 166, 166, 1);
-    -moz-box-shadow: 0 0 18px 0 rgba(166, 166, 166, 1);
-    box-shadow: 0 0 18px 0 rgba(166, 166, 166, 1);
+    -webkit-box-shadow: 0 0 18px 0 rgba(166, 166, 166, .5);
+    -moz-box-shadow: 0 0 18px 0 rgba(166, 166, 166, .5);
+    box-shadow: 0 0 18px 0 rgba(166, 166, 166, .5);
+}
+
+.statistic-table .table-row:hover + .table-row {
+    -webkit-box-shadow: inset 0px 10px 18px -8px rgba(166, 166, 166, .5);
+    -moz-box-shadow: inset 0px 10px 18px -8px rgba(166, 166, 166, .5);
+    box-shadow: inset 0px 10px 18px -8px rgba(166, 166, 166, .5);
 }
 
 .statistic-table .cell-1 {
