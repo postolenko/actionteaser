@@ -412,6 +412,10 @@ textarea:focus {
     color: #f28b1c !important;
 }
 
+.red {
+    color: #e74c3c !important;
+}
+
 /*-- Icons --*/
 
 .user {
@@ -6247,7 +6251,7 @@ a.blue-link.active {
     stroke: #fe6799;
 }
 
-.statistic-chart .ct-label {
+.ct-chart-line .ct-label {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     fill: #333333;
     color: #333333;
@@ -6256,7 +6260,7 @@ a.blue-link.active {
     font-weight: 500;
 }
 
-.statistic-chart .ct-label.ct-vertical.ct-start {
+.ct-chart-line .ct-label.ct-vertical.ct-start {
     font-size: 12px;
 }
 
@@ -6461,6 +6465,178 @@ a.blue-link.active {
 
 .statistic-table .cell-9 {
     width: 12%;
+}
+
+.smallcharts-table {
+
+}
+
+.smallcharts-table .cell-1 {
+    width: 17%;
+}
+
+.smallcharts-table .cell-2 {
+    width: 14%;
+}
+
+.smallcharts-table .cell-3 {
+    width: 14%;
+}
+
+.smallcharts-table .cell-4 {
+    width: 14%;
+}
+
+.smallcharts-table .cell-5 {
+    width: 14%;
+}
+
+.smallcharts-table .cell-6 {
+    width: 14%;
+}
+
+.smallcharts-table .cell-7 {
+    width: 13%;
+}
+
+.smallcharts-table .img-box {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 9px;
+    width: auto;
+    height: auto;
+}
+
+.smallcharts-table .img-box img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.chart-line_wrapp {
+/*    height: 100px;
+    cursor: pointer;*/
+    margin: 47px 0 0 0;
+    /*border: 1px solid #c4c4c4;*/
+}
+
+.chart-line {
+    height: 93px;
+    cursor: pointer;
+}
+
+/*.chart-line svg {
+    height: 181px;
+}*/
+
+/*.chart-line svg {
+    height: 41px;
+}*/
+
+.chart-line .ct-point {
+    stroke-width: 0;
+}
+
+.chart-line .ct-line {
+    stroke-width: 1px;
+}
+
+.chart-line .ct-grids {
+    border: 1px solid #c4c4c4;
+}
+
+.chart-line .ct-grids line {
+    stroke-dasharray: 0;
+}
+
+.chart-line .ct-series-a .ct-line {
+    stroke: #6da2e0;
+}
+
+.charts-popup {
+    max-width: 600px;
+}
+
+.chart3_wrapp {
+    border: 1px solid #dee1e8;
+    margin: 0 0 6px 0;
+    padding: 18px 0 0 0;
+}
+
+.chart3_wrapp .chart-col-1 {
+    width: 82%;
+}
+
+.chart3_wrapp .statistic-marks {
+    width: 18%;
+}
+
+.chart3_wrapp .statistic-marks h3 {
+    padding: 0;
+    font-size: 14px;
+}
+
+.chart-table {
+    display: table;
+    width: 100%;
+    margin: 18px 0 14px 0;
+}
+
+.chart-table .table-row {
+    display: table-row;
+    border-bottom: none;
+}
+
+.chart-table .cell {
+    display: table-cell;
+    vertical-align: top;
+    border-left: none;
+    border-right: none;
+    padding: 0 2% 0 0;
+}
+
+.chart-table .cell-1 {
+    width: 20%;
+}
+
+.chart-table .cell-2 {
+    width: 80%;
+}
+
+.chart-table .table-row p {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.chart_3 {
+    height: 200px;
+}
+
+.chart_3 .ct-line {
+    stroke-width: 1px;
+}
+
+.chart_3 .ct-point {
+    cursor: pointer;
+    stroke-width: 8px;
+    stroke-linecap: square;
+}
+
+.chart_3 .ct-series-a .ct-line,
+.chart_3 .ct-series-a .ct-point {
+    stroke: #9edd99;
+}
+
+.chart_3 .ct-series-b .ct-line,
+.chart_3 .ct-series-b .ct-point {
+    stroke: #ff4585;
 }
 
 /*-- /Statistic --*/

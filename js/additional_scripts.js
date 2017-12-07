@@ -140,19 +140,19 @@
 
 				});
 
-				$(".statistic-chart .ct-series").each(function() {
+				// $(".statistic-chart .ct-series").each(function() {
 
-					chartLineIndex = 0;
+				// 	chartLineIndex = 0;
 
-					$(this).find("line").each(function() {						
+				// 	$(this).find("line").each(function() {						
 
-						$(this).attr("data-index", chartLineIndex);
+				// 		$(this).attr("data-index", chartLineIndex);
 
-						chartLineIndex++;
+				// 		chartLineIndex++;
 
-					});
+				// 	});
 
-				});
+				// });
 
 				chartLineIndex = 0;
 
@@ -200,8 +200,166 @@
 
 			});
 
-		}		
-		
+		}
+
+		if($(".chart-line").length > 0) {
+			var parentBlock;
+			var seriesVals;
+			var seriesArr;
+			var seriesArrs;
+
+			$(".chart-line").each(function() {
+
+				seriesArr = [];
+
+				parentBlock = $(this).closest(".chart-line_wrapp");
+
+				seriesVals = parentBlock.find(".series");
+
+				for (var index = 0; index < seriesVals.length; index++) {
+
+					seriesArr[index] = seriesVals.eq(index).text().split(', ');
+
+					for (var index2 = 0; index2 < seriesArr[index].length; index2++) {
+
+					  seriesArr[index][index2] = parseInt(seriesArr[index][index2]);
+
+					}
+
+				};
+
+				new Chartist.Line(this, {
+					
+				  labels: false,
+				  fullWidth: true,
+				  series: [
+				    seriesArr[0],
+				    seriesArr[1]
+				  ]
+				}, {
+				  chartPadding: {
+				    left: -30
+				  }
+				},{
+					axisY: {
+					    offset: 0
+					  }
+				}, {
+				  axisX: {
+				  	offset: 0
+				  }
+
+				});
+
+			});
+
+
+			$(".chart-line").click(function() {
+
+				parentBlock = $(this).closest(".chart-line_wrapp");
+
+				labelsVals = parentBlock.find(".labels");
+
+				labelsArr = labelsVals.text().split(', ');
+
+				seriesArr = [];
+
+				parentBlock = $(this).closest(".chart-line_wrapp");
+
+				seriesVals = parentBlock.find(".series");
+
+				for (var index = 0; index < seriesVals.length; index++) {
+
+					seriesArr[index] = seriesVals.eq(index).text().split(', ');
+
+					for (var index2 = 0; index2 < seriesArr[index].length; index2++) {
+
+					  seriesArr[index][index2] = parseInt(seriesArr[index][index2]);
+
+					}
+
+				};
+
+				$("[data-popup-name = 'popup_12'").animate({
+					"opacity" : 1
+				});
+
+				$("[data-popup-name = 'popup_12'").css({
+					"z-index" : 10
+				});
+
+				var char_popup = new Chartist.Line(".chart_3", {
+					  type: 'line',
+					  labels: labelsArr,
+					  series: [
+					    seriesArr[0],
+					    seriesArr[1]
+					  ]
+					});
+
+				char_popup.on('created', function(data) {
+
+					$(".chart_3 .ct-series").each(function() {
+
+						chartLineIndex = 0;
+
+						$(this).find("line").each(function() {						
+
+							$(this).attr("data-index", chartLineIndex);
+
+							chartLineIndex++;
+
+						});
+
+					});
+
+					chartLineIndex = 0;
+
+					$(".chart_3 .ct-label.ct-horizontal").each(function() {
+
+						$(this).attr("data-index", chartLineIndex);
+
+						chartLineIndex++;
+
+					});
+
+					$( ".chart_3 .ct-series line" ).bind({
+						mouseenter: function() {
+							chartParent = $(this).closest(".chart_3");
+							chartName = chartParent.attr("data-chart");
+							chartTooltip = $(".chart-tooltip[data-chart-tooltip = '" + chartName + "']");
+
+							chartTooltip.attr("style" , "display: block;");
+
+							var topCoord = $(this).offset().top - chartTooltip.outerHeight(true) - 10;
+
+							var leftCoord = $(this).offset().left - chartTooltip.width() / 2;
+
+							chartTooltip.offset({top : topCoord, left : leftCoord});							
+
+							chartLineIndex = $(this).attr("data-index");
+
+							chartBarName = chartParent.find(".ct-label.ct-horizontal[data-index = '" + chartLineIndex + "']").text();
+
+							valAttrSal = chartParent.find(".ct-series-a line[data-index = '" + chartLineIndex + "']").attr("ct:value");
+
+							valAttrImp = chartParent.find(".ct-series-b line[data-index = '" + chartLineIndex + "']").attr("ct:value");
+
+							chartTooltip.find(".cht-title").text(chartBarName);
+							chartTooltip.find(".salval").text(valAttrSal);
+							chartTooltip.find(".impval").text(valAttrImp);
+						},
+						mouseleave: function() {
+							chartTooltip.attr("style" , "display: none;");
+						}
+					});
+
+				});
+
+			});
+
+		}
+
 	});
 
 })(jQuery);

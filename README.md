@@ -14,3 +14,4 @@
 # http://postolenko.github.io/actionteaser/balance.html
 # http://postolenko.github.io/actionteaser/selection_platform.html
 # http://postolenko.github.io/actionteaser/statistic.html
+# http://postolenko.github.io/actionteaser/statistic_small_chart.html
