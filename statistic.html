@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="colorpicker/css/colorpicker.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/datepicker.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/imgareaselect-default.css">
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -26,6 +27,7 @@
 	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="vendors/js/chartist.min.js"></script>
+	<script type="text/javascript" src="vendors/js/datepicker.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<title>Actionteaser</title>	
@@ -223,6 +225,26 @@
 				<button type="button" class="blue-btn close-popup">Отменить</button>
 
 			</div>
+
+		</div>
+
+	</div>
+
+	<div class="popup-block scroll" data-popup-name = "popup_13">
+		
+		<div class="popup-bg"></div>
+
+		<div class="popup add-events">
+
+			<button type="button" class="x-btn close-popup"></button>
+
+			<h3>Добавление события</h3>
+
+			<p class="medium">11 нояб 2017</p>
+
+			<textarea placeholder="Текст"></textarea>
+											
+			<button type="submit" class="green-btn">Добавить событие</button>
 
 		</div>
 
@@ -519,12 +541,16 @@
 												<label>Период от:</label>
 											</div>
 											<div class="search-col-2">
-												<div class="select-block">
+												<!-- <div class="select-block">
 													<select class="select-date">
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 													</select>
+												</div> -->
+												<div class="datepiker-range">
+													<i class="datepiker"></i>
+													<input type="text" class="datepicker-input datepicker-here" data-position="left top" data-date-format="yyyy-mm-dd">
 												</div>
 											</div>
 										</div>
@@ -534,12 +560,16 @@
 												<label>по:</label>
 											</div>
 											<div class="search-col-2">
-												<div class="select-block">
+												<!-- <div class="select-block">
 													<select class="select-date">
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 														<option data-img-url="img/datepiker.png">2017-04-01</option>
 													</select>
+												</div> -->
+												<div class="datepiker-range">
+													<i class="datepiker"></i>
+													<input type="text" class="datepicker-input datepicker-here" data-position="left top" data-date-format="yyyy-mm-dd">
 												</div>
 											</div>
 										</div>
@@ -562,22 +592,18 @@
 
 									<div class="sort-block chart-sort">
 
-										<form>
+										<div class="select-block w-234">
+									
+											<select data-placeholder="Группировать по дням">
+												<option></option>
+												<option>Группа_1</option>
+												<option>Группа_2</option>
+												<option>Группа_3</option>
+											</select>
 
-											<div class="select-block w-234">
-										
-												<select data-placeholder="Группировать по дням">
-													<option></option>
-													<option>Группа_1</option>
-													<option>Группа_2</option>
-													<option>Группа_3</option>
-												</select>
+										</div>
 
-											</div>
-
-											<button type="submit" class="green-btn">Добавить событие</button>
-
-										</form>
+										<a href="#" type="sbutton" class="green-btn show_popup" data-popup="popup_13">Добавить событие</a>
 
 									</div>
 
@@ -657,18 +683,33 @@
 										<div class="table-row table-header">
 											<div class="cell cell-1">
 												<h3>Дата</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-2">
 												<h3>Показы</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-3">
 												<h3>Клики</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-4">
 												<h3>CTR, %</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-5">
 												<h3>CPM</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 												<div class="tooltip-block">
 													<div class="icon-box">
 														<i class="fa fa-question-circle-o"></i>
@@ -682,15 +723,171 @@
 											</div>
 											<div class="cell cell-6">
 												<h3>Деньги, р</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-7">
 												<h3>Рефы, р</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-8">
 												<h3>Бонус, р</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
 											</div>
 											<div class="cell cell-9">
 												<h3>Всего, р</h3>
+												<button type="button" class="sort-arr">
+													<i class="fa fa-angle-down"></i>
+												</button>
+											</div>
+										</div>
+
+										<div class="table-row">
+											<div class="cell cell-1">
+												<div>
+													<p>2017-04-29</p>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<div>
+													<p>1 784</p>
+												</div>
+											</div>
+											<div class="cell cell-3">
+												<div>
+													<p>5</p>
+												</div>
+											</div>
+											<div class="cell cell-4">
+												<div>
+													<p>0,05</p>
+												</div>
+											</div>
+											<div class="cell cell-5">
+												<div>
+													<p>450</p>
+												</div>
+											</div>
+											<div class="cell cell-6">
+												<div>
+													<p>75</p>
+												</div>
+											</div>
+											<div class="cell cell-7">
+												<div>
+													<p>-</p>
+												</div>
+											</div>
+											<div class="cell cell-8">
+												<div>
+													<p>0,27</p>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<div>
+													<p>5,71</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-row">
+											<div class="cell cell-1">
+												<div>
+													<p>2017-04-29</p>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<div>
+													<p>1 784</p>
+												</div>
+											</div>
+											<div class="cell cell-3">
+												<div>
+													<p>5</p>
+												</div>
+											</div>
+											<div class="cell cell-4">
+												<div>
+													<p>0,05</p>
+												</div>
+											</div>
+											<div class="cell cell-5">
+												<div>
+													<p>450</p>
+												</div>
+											</div>
+											<div class="cell cell-6">
+												<div>
+													<p>75</p>
+												</div>
+											</div>
+											<div class="cell cell-7">
+												<div>
+													<p>-</p>
+												</div>
+											</div>
+											<div class="cell cell-8">
+												<div>
+													<p>0,27</p>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<div>
+													<p>5,71</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-row">
+											<div class="cell cell-1">
+												<div>
+													<p>2017-04-29</p>
+												</div>
+											</div>
+											<div class="cell cell-2">
+												<div>
+													<p>1 784</p>
+												</div>
+											</div>
+											<div class="cell cell-3">
+												<div>
+													<p>5</p>
+												</div>
+											</div>
+											<div class="cell cell-4">
+												<div>
+													<p>0,05</p>
+												</div>
+											</div>
+											<div class="cell cell-5">
+												<div>
+													<p>450</p>
+												</div>
+											</div>
+											<div class="cell cell-6">
+												<div>
+													<p>75</p>
+												</div>
+											</div>
+											<div class="cell cell-7">
+												<div>
+													<p>-</p>
+												</div>
+											</div>
+											<div class="cell cell-8">
+												<div>
+													<p>0,27</p>
+												</div>
+											</div>
+											<div class="cell cell-9">
+												<div>
+													<p>5,71</p>
+												</div>
 											</div>
 										</div>
 

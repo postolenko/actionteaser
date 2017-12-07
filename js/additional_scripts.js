@@ -54,6 +54,19 @@
 
 		};
 
+		// --- Календарь  ----
+
+		$('.datepicker-here').data({inline: false});
+		$('.datepicker-here.inline-datepicker').data({inline: true});
+
+		$('.form-control').datepicker({
+			language: "ru",
+			todayHighlight: true,
+			format: "dd/mm"
+		});
+
+		// ------------------
+
 		var inputColorAttr;
 
 		$("input.color").ColorPicker({
@@ -78,7 +91,7 @@
 				onSelectChange: function (img, selection) {
 					$("#img_width").text(selection.width);
 					$("#img_height").text(selection.height);
-					console.log('width: ' + selection.width + '; height: ' + selection.height);
+					// console.log('width: ' + selection.width + '; height: ' + selection.height);
 				}
 		    });
 
@@ -90,19 +103,27 @@
 
 		}
 
+		// ----------------------------
+
+		var topCoord;
+		var leftCoord;
+		var chartParent;
+		var chartName;
+		var chartTooltip;
+
 
 		if($(".ct-chart").length > 0) {
 
 			var chartBarName;
 			var valAttrSal;
 			var valAttrImp;
-			var chartParent;
-			var chartName;
-			var chartTooltip;
+			// var chartParent;
+			// var chartName;
+			// var chartTooltip;
 			var chartLineParent;
 			var chartLineIndex;
-			var topCoord;
-			var leftCoord;
+			// var topCoord;
+			// var leftCoord;
 
 			var chart = new Chartist.Bar('.ct-chart', {
 			  labels: ['RU', 'UA', 'KZ', 'US', 'AZ', 'BY', 'CH', 'Остальные'],
@@ -157,7 +178,7 @@
 						chartName = $(this).closest(".ct-chart").attr("data-chart");
 						chartTooltip = $(".chart-tooltip[data-chart-tooltip = '" + chartName + "']");
 
-						chartTooltip.attr("style" , "opacity: 1;");
+						chartTooltip.attr("style" , "display: inline-block;");
 
 						topCoord = $(this).offset().top - chartTooltip.outerHeight();
 
@@ -180,7 +201,7 @@
 						chartTooltip.find(".impval").text(valAttrImp);
 					},
 					mouseleave: function() {
-						chartTooltip.attr("style" , "opacity: 0;");
+						chartTooltip.attr("style" , "display: none;");
 
 						chartTooltip.offset({top : topCoord, left : leftCoord});
 					}
@@ -317,7 +338,7 @@
 							chartName = chartParent.attr("data-chart");
 							chartTooltip = $(".chart-tooltip[data-chart-tooltip = '" + chartName + "']");
 
-							chartTooltip.attr("style" , "display: block;");
+							chartTooltip.attr("style" , "display: inline-block;");
 
 							topCoord = $(this).offset().top - chartTooltip.outerHeight(true) - 10;
 
