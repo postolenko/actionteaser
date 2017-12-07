@@ -6508,6 +6508,18 @@ input.datepicker-input:focus {
     box-shadow: inset 0px 10px 18px -8px rgba(166, 166, 166, .5);
 }
 
+.statistic-table .table-row.table-header:hover {
+    box-shadow: none;
+}
+
+.statistic-table .table-row.table-header:hover + .table-row {
+    box-shadow: none;
+}
+
+.statistic-table .table-row:last-child p {
+    font-weight: bold;
+}
+
 .statistic-table .cell-1 {
     width: 13%;
 }
