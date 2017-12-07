@@ -101,6 +101,8 @@
 			var chartTooltip;
 			var chartLineParent;
 			var chartLineIndex;
+			var topCoord;
+			var leftCoord;
 
 			var chart = new Chartist.Bar('.ct-chart', {
 			  labels: ['RU', 'UA', 'KZ', 'US', 'AZ', 'BY', 'CH', 'Остальные'],
@@ -140,20 +142,6 @@
 
 				});
 
-				// $(".statistic-chart .ct-series").each(function() {
-
-				// 	chartLineIndex = 0;
-
-				// 	$(this).find("line").each(function() {						
-
-				// 		$(this).attr("data-index", chartLineIndex);
-
-				// 		chartLineIndex++;
-
-				// 	});
-
-				// });
-
 				chartLineIndex = 0;
 
 				$(".statistic-chart .ct-label.ct-horizontal").each(function() {
@@ -164,16 +152,16 @@
 
 				});
 
-				$( ".statistic-chart line" ).bind({
+				$( ".statistic-chart .ct-series line" ).bind({
 					mouseenter: function() {
 						chartName = $(this).closest(".ct-chart").attr("data-chart");
 						chartTooltip = $(".chart-tooltip[data-chart-tooltip = '" + chartName + "']");
 
-						chartTooltip.attr("style" , "display: block;");
+						chartTooltip.attr("style" , "opacity: 1;");
 
-						var topCoord = $(this).offset().top - chartTooltip.outerHeight();
+						topCoord = $(this).offset().top - chartTooltip.outerHeight();
 
-						var leftCoord = $(this).offset().left - chartTooltip.width() / 2;
+						leftCoord = $(this).offset().left - chartTooltip.width() / 2;
 
 						chartTooltip.offset({top : topCoord, left : leftCoord});
 
@@ -192,7 +180,7 @@
 						chartTooltip.find(".impval").text(valAttrImp);
 					},
 					mouseleave: function() {
-						chartTooltip.attr("style" , "display: none;");
+						chartTooltip.attr("style" , "opacity: 0;");
 
 						chartTooltip.offset({top : topCoord, left : leftCoord});
 					}
@@ -331,9 +319,9 @@
 
 							chartTooltip.attr("style" , "display: block;");
 
-							var topCoord = $(this).offset().top - chartTooltip.outerHeight(true) - 10;
+							topCoord = $(this).offset().top - chartTooltip.outerHeight(true) - 10;
 
-							var leftCoord = $(this).offset().left - chartTooltip.width() / 2;
+							leftCoord = $(this).offset().left - chartTooltip.width() / 2;
 
 							chartTooltip.offset({top : topCoord, left : leftCoord});							
 
