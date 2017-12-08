@@ -15,15 +15,21 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
 	<link rel="stylesheet" type="text/css" href="colorpicker/css/colorpicker.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/datepicker.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/imgareaselect-default.css">
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/clipboard.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.imgareaselect.js"></script>
 	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="vendors/js/chartist.min.js"></script>
+	<script type="text/javascript" src="vendors/js/datepicker.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-<!-- 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<title>Actionteaser</title>	
 
 </head>
@@ -437,149 +443,149 @@
 
 	<!-- Header -->
 
-		<header>
+	<header>
 
-			<div class="header-site">		
-				
-				<div class="row clearfix">
-					<div class="col col-1 left">
-						
-						<a href="#" class="logo">
-							<span>
-								<img class="logo-desc" src="img/logo.png" alt="" />
-								<img class="logo-txt" src="img/logo_txt.png" alt="" />
-							</span>
-						</a>
+		<div class="header-site">		
+			
+			<div class="row clearfix">
+				<div class="col col-1 left">
+					
+					<a href="#" class="logo">
+						<span>
+							<img class="logo-desc" src="img/logo.png" alt="" />
+							<img class="logo-txt" src="img/logo_txt.png" alt="" />
+						</span>
+					</a>
 
-					</div>
-					<div class="col col-2 right">
-						
-						<div class="inner-col inner-col-1 left">
-							<button type="button" class="respmenubtn clearfix">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-						</div>
-						<div class="inner-col inner-col-2 left">
-							<div class="dropdown-block-wrapp manager">
-								<div class="dropdown-header">
-									<a class="dropdown-link" href="#">
-										<p><i class="user"></i><span class="title">Ваш менеджер:</span>Константин</p>
-										<!-- <p>Константин</p> -->
-									</a>
-								</div>
-								<div class="dropdown-block">
-									<div class="inner">
-										<ul class="dropdown-list">
-											<li><p><i class="skype"></i></p><p>skype: <a href="skype:sitesup_actionteaser">sitesup_actionteaser</a></p></li>
-											<li><p><i class="telegram"></i></p><p>telegram: <a href="telegram:@actionteaser">@actionteaser</a></p></li>
-											<li><p><i class="mail"></i></p><p><a href="mailto:sitesup@actionteaser.ru">sitesup@actionteaser.ru</a></p></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="inner-col inner-col-3 left">
-
-							<div class="dropdown-block-wrapp">
-								<div class="dropdown-header">
-									<a class="dropdown-link" href="#">
-										<p class="icon-box"><i class="duble-bubble"></i></p>
-										<p class="link-txt">Помощь</p>
-									</a>
-								</div>
-								<!-- <div class="dropdown-block" data-dropdown-block = "2">
-									<div class="inner">
-										<ul class="user-list">
-											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
-											<li><a href="#"><i class="many"></i>Журнал</a></li>
-											<li><a href="#"><i class="out"></i>Выход</a></li>
-										</ul>
-									</div>
-								</div> -->
-							</div>
-
-							<div class="dropdown-block-wrapp">
-								<div class="dropdown-header">
-									<a class="dropdown-link" href="#">
-										<p class="icon-box"><i class="bell"></i><span class="count red">2</span></p>
-										<p class="link-txt">Уведомления</p>
-									</a>
-								</div>
-								<div class="dropdown-block w-284">
-									<div class="inner">
-										<ul class="news-list">
-											<li>
-												<div class="news">
-													<h3>Холд</h3>
-													<p>Мы обновили логику перевода холда, в связи с этим все средства с холда переведены на баланс. Следующий перевод с холда будет через 7 дней, начиная от сегодняшнего дня.</p>
-													<p class="date">2 мин назад</p>
-												</div>
-											</li>
-											<li>
-												<div class="news">
-													<h3>Выплаты на Яндекс.Деньги</h3>
-													<p>Возобновлены выплаты на Яндекс.Деньги. Можете выбрать данный способ в настройках своего профиля.</p>
-													<p class="date">18 нояб. 2015</p>
-												</div>
-											</li>
-										</ul>
-										<div class="align-center more-link-box">
-											<a href="#" class="blue-link">Все уведомления</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="dropdown-block-wrapp">
-								<div class="dropdown-header">
-									<a class="dropdown-link" href="#">
-										<p class="icon-box"><i class="doc"></i><span class="count orange">23</span></p>
-										<p class="link-txt">Тикеты</p>
-									</a>
-								</div>
-								<!-- <div class="dropdown-block" data-dropdown-block = "2">
-									<div class="inner">
-										<ul class="user-list">
-											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
-											<li><a href="#"><i class="many"></i>Журнал</a></li>
-											<li><a href="#"><i class="out"></i>Выход</a></li>
-										</ul>
-									</div>
-								</div> -->
-							</div>
-
-							<div class="dropdown-block-wrapp">
-								<div class="dropdown-header">
-									<a class="user-acc dropdown-link" href="#">
-										<div class="us-photo">
-											<div class="img-box">
-												<img src="img/photo.jpg" alt="" />		
-											</div>
-											<i class="pro"></i>
-										</div>
-										<p>Святослав</p>
-									</a>
-								</div>
-								<div class="dropdown-block">
-									<div class="inner">
-										<ul class="user-list">
-											<li><a href="#"><i class="user-small"></i>Профиль</a></li>
-											<li><a href="#"><i class="many"></i>Журнал</a></li>
-											<li><a href="#"><i class="out"></i>Выход</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
 				</div>
+				<div class="col col-2 right">
+					
+					<div class="inner-col inner-col-1 left">
+						<button type="button" class="respmenubtn clearfix">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+					<div class="inner-col inner-col-2 left">
+						<div class="dropdown-block-wrapp manager">
+							<div class="dropdown-header">
+								<a class="dropdown-link" href="#">
+									<p><i class="user"></i><span class="title">Ваш менеджер:</span>Константин</p>
+								</a>
+							</div>
+							<div class="dropdown-block">
+								<div class="inner">
+									<ul class="dropdown-list">
+										<li><p><i class="skype"></i></p><p>skype: <a href="skype:sitesup_actionteaser">sitesup_actionteaser</a></p></li>
+										<li><p><i class="telegram"></i></p><p>telegram: <a href="telegram:@actionteaser">@actionteaser</a></p></li>
+										<li><p><i class="mail"></i></p><p><a href="mailto:sitesup@actionteaser.ru">sitesup@actionteaser.ru</a></p></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="inner-col inner-col-3 left">
 
+						<div class="dropdown-block-wrapp">
+							<div class="dropdown-header">
+								<a class="dropdown-link" href="#">
+									<p class="icon-box"><i class="duble-bubble"></i></p>
+									<p>Помощь</p>
+								</a>
+							</div>
+							<!-- <div class="dropdown-block" data-dropdown-block = "2">
+								<div class="inner">
+									<ul class="user-list">
+										<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+										<li><a href="#"><i class="many"></i>Журнал</a></li>
+										<li><a href="#"><i class="out"></i>Выход</a></li>
+									</ul>
+								</div>
+							</div> -->
+						</div>
+
+						<div class="dropdown-block-wrapp">
+							<div class="dropdown-header">
+								<a class="dropdown-link" href="#">
+									<p class="icon-box"><i class="bell"></i><span class="count">2</span></p>
+									<p>Уведомления</p>
+								</a>
+							</div>
+							<div class="dropdown-block w-284">
+								<div class="inner">
+									<ul class="news-list">
+										<li>
+											<div class="news">
+												<h3>Холд</h3>
+												<p>Мы обновили логику перевода холда, в связи с этим все средства с холда переведены на баланс. Следующий перевод с холда будет через 7 дней, начиная от сегодняшнего дня.</p>
+												<p class="date">2 мин назад</p>
+											</div>
+										</li>
+										<li>
+											<div class="news">
+												<h3>Выплаты на Яндекс.Деньги</h3>
+												<p>Возобновлены выплаты на Яндекс.Деньги. Можете выбрать данный способ в настройках своего профиля.</p>
+												<p class="date">18 нояб. 2015</p>
+											</div>
+										</li>
+									</ul>
+									<div class="align-center more-link-box">
+										<a href="#" class="blue-link">Все уведомления</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="dropdown-block-wrapp">
+							<div class="dropdown-header">
+								<a class="dropdown-link" href="#">
+									<p class="icon-box"><i class="doc"></i><span class="count orange-bg">23</span></p>
+									<p>Тикеты</p>
+								</a>
+							</div>
+							<!-- <div class="dropdown-block" data-dropdown-block = "2">
+								<div class="inner">
+									<ul class="user-list">
+										<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+										<li><a href="#"><i class="many"></i>Журнал</a></li>
+										<li><a href="#"><i class="out"></i>Выход</a></li>
+									</ul>
+								</div>
+							</div> -->
+						</div>
+
+						<div class="dropdown-block-wrapp">
+							<div class="dropdown-header">
+								<a class="user-acc dropdown-link" href="#">
+									<div class="us-photo">
+										<div class="img-box">
+											<img src="img/photo.jpg" alt="" />		
+										</div>
+										<i class="pro"></i>
+									</div>
+									<p>Святослав</p>
+								</a>
+							</div>
+							<div class="dropdown-block">
+								<div class="inner">
+									<ul class="user-list">
+										<li><a href="#"><i class="user-small"></i>Профиль</a></li>
+										<li><a href="#"><i class="many"></i>Журнал</a></li>
+										<li><a href="#"><i class="out"></i>Выход</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
 			</div>
-									
-		</header>
+
+		</div>
+								
+	</header>
 
 	<!-- /Header -->
 
@@ -671,10 +677,10 @@
 							<div class="white-block">
 
 								<div class="white-block-header">
-									<div>
+									<div class="col">
 										<h1>Баланс</h1>
 									</div>
-									<div>
+									<div class="col">
 										<i class="pro"></i>
 									</div>
 								</div>

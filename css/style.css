@@ -268,7 +268,13 @@ p a {
 
 p i {
     margin: 0 6px;
+    position: relative;
+    top: 2px;
     /*vertical-align: middle !important;*/
+}
+
+p i.fa-plus {
+    top: 5px;
 }
 
 li {
@@ -1069,12 +1075,12 @@ textarea:focus {
     background-size: 100%;
 }
 
-.datepiker {
+.code {
     display: inline-block;
     vertical-align: top;
-    width: 13px;
-    height: 13px;
-    background-image: url(../img/datepiker.png);
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/code.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1108,15 +1114,15 @@ textarea:focus {
 
 a.blue-link {
     /*display: inline-block;*/
-    vertical-align: top;
+    /*vertical-align: top;*/
     border-bottom: 1px solid rgba(55, 160, 227, .7);
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
-    /*line-height: 14px;*/
-    line-height: 25px;
+    line-height: 16px;
+    /*line-height: 25px;*/
     font-weight: normal;
-    /*color: #37a0e3 !important;*/
-    color: #37a0e3;
+    color: #37a0e3 !important;
+    /*color: #37a0e3;*/
 
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
@@ -1790,8 +1796,10 @@ button.disabled {
 }
 
 .header-site .col {
-    padding-top: 11px;
-    padding-bottom: 7px;
+    /*padding-top: 4px;*/
+    padding-top: 6px;
+    /*padding-top: 9px;*/
+    /*padding-bottom: 0;*/
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -1862,7 +1870,7 @@ button.disabled {
     white-space: nowrap;
     width: 177px;
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -1939,7 +1947,8 @@ button.disabled {
 }
 
 .header-site .col-2 .inner-col {
-    padding: 10px 1%;
+    /*padding: 10px 1%;*/
+    padding: 0 1%;
 }
 
 .header-site .col-2 .inner-col-1 {
@@ -1948,7 +1957,7 @@ button.disabled {
 
 .header-site .col-2 .inner-col-2 {
     width: 26%;
-    padding-top: 14px;
+    /*padding-top: 2px;*/
 }
 
 .header-site .col-2 .inner-col-3 {
@@ -1963,7 +1972,7 @@ button.disabled {
     vertical-align: middle;
     width: 28px;
     height: 23px;
-    margin: 7px 0 0 9%;
+    margin: 23px 0 0 9%;
     padding: 3px 0 0 0;
     border: 1px solid transparent;
     background: transparent;
@@ -2051,24 +2060,39 @@ button.disabled {
 
 .dropdown-block-wrapp {
     display: inline-block;
-    /*vertical-align: sub;*/
-    vertical-align: baseline-middle;
-    vertical-align: -webkit-baseline-middle;
+    vertical-align: top;
+    min-height: 74px;
     margin: 0 3% 0 0;
     position: relative;
-    cursor: pointer;
     text-align: left;
+}
+
+.dropdown-block-wrapp.manager {
+    /*padding-top: 4px;*/
+    /*padding-top: 2px;*/
 }
 
 .dropdown-block-wrapp.active {
     z-index: 4;
 }
 
-.header-site .col-2 .inner-col-3 .dropdown-block-wrapp {
+.header-site .col-2 .dropdown-block-wrapp {
     margin: 0 0 0 4%;
-    padding: 0 8px 0 0;
+    padding: 24px 8px 0 0;
 }
 
+.dropdown-header {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*.dropdown-header:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 1px;
+}
+*/
 .dropdown-header p {
     display: inline-block;
     vertical-align: top;
@@ -2081,8 +2105,8 @@ button.disabled {
 }
 
 .dropdown-header i {
-    display: inline-block;
-    vertical-align: baseline;
+/*    display: inline-block;
+    vertical-align: baseline;*/
     margin: 0 10px 0 0;
 }
 
@@ -2094,14 +2118,18 @@ button.disabled {
 }
 
 .dropdown-header a {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    vertical-align: middle;
     position: relative;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal;
     color: #ffffff;
+}
+
+a.dropdown-link {
+    cursor: pointer;
 }
 
 a.dropdown-link .link-txt {
@@ -2150,7 +2178,7 @@ a.dropdown-link .chevron {
     position: absolute;
     top: 50%;
     right: -8px;
-    margin: -6px 0 0 0;
+    margin: -5px 0 0 0;
     opacity: .7;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -2205,7 +2233,7 @@ a.dropdown-link .chevron {
     transition-timing-function: ease;
 }
 
-.dropdown-block-wrapp:hover .chevron {
+a.dropdown-link:hover .chevron {
     opacity: 1;
 }
 
@@ -2223,15 +2251,16 @@ a.dropdown-link .chevron {
 }
 
 .manager a.dropdown-link .chevron {
-    margin: -6px 0 0 0;
+    margin: -5px 0 0 0;
 }
 
 .dropdown-block {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
+    margin-top: -3px;
 }
 
 .dropdown-block.w-284 {
@@ -2323,11 +2352,7 @@ a.dropdown-link .chevron {
     border-radius: 50%;
 }
 
-.count.red {
-    background: #e74c3c;
-}
-
-.count.orange {
+.count.orange-bg {
     background: #f28b1c;
 }
 
@@ -2427,10 +2452,12 @@ p.icon-box .count {
 
 a.user-acc {
     display: block;
+    position: relative;
+    top: -8px;
 }
 
 a.user-acc .chevron {
-    margin: -6px 0 0 0;
+    margin: -5px 0 0 0;
 }
 
 a.user-acc p {
@@ -3020,6 +3047,10 @@ a.user-acc .img-box img {
     display: inline-block;
     vertical-align: middle;
     margin: 5px 0 5px 5%;
+}
+
+.white-block-header .inner-col-2 .nav-2 {
+    margin: 5px 0 0 0;
 }
 
 .white-block-inner {
@@ -3727,6 +3758,11 @@ input.color {
     color: #6c9ab7;
 }
 
+/*.copy_1 {
+    position: relative;
+    top: 3px;
+}*/
+
 /*-- /Tab 5 --*/
 
 /*-- Tab 7 --*/
@@ -4090,7 +4126,7 @@ input.color {
 .additonal-row .fa-plus {
     vertical-align: top;
     position: relative;
-    top: 2px;
+    top: 6px;
     font-size: 12px;
     line-height: 14px;
     color: #37a0e3;
@@ -4425,6 +4461,12 @@ input.color {
     padding: 0 11px;
 }
 
+.nav-2 li .blue-checkbox {
+    position: relative;
+    /*top: 1px;*/
+        top: -2px;
+}
+
 .nav-2 li i {
     display: inline-block;
     vertical-align: top;
@@ -4499,6 +4541,8 @@ input.color {
 
 .inline-nav h3 {
     font-size: 14px;
+    /*line-height: 34px;*/
+    padding-top: 2px;
 }
 
 .nav-3 li {
@@ -4508,13 +4552,15 @@ input.color {
 }
 
 .nav-3 li a {
-    display: initial;
-    vertical-align: top;
+    /*display: initial;*/
+    /*vertical-align: top;*/
 }
 
 .nav-3 li a.active {
     color: #555555;
     border-color: transparent;
+/*    position: relative;
+    top: -1px;*/
 }
 
 .inner-col-1.btns-list a {
@@ -5519,9 +5565,24 @@ label.fs-16 {
     margin: 5px 0 0 0;
 }
 
+.dropdown-block-wrapp.single {
+    min-height: unset;
+    /*outline: 1px solid red;*/
+}
+
 .dropdown-block-wrapp.single .dropdown-block {
     top: 100%;
+    min-width: 260px;
     margin: 3px 0 0 0;
+}
+
+.dropdown-block-wrapp.single_2 .dropdown-block {
+    border-top: 2px solid #38d07c;
+}
+
+.teaser-preview-col-2  a.dropdown-link {
+    position: relative;
+    top: -1px;
 }
 
 .dropdown-block-wrapp.single .inner {
@@ -5532,6 +5593,15 @@ label.fs-16 {
 
 .dropdown-block.w-360 .inner {
     min-width: 360px;
+}
+
+.dropdown-block-wrapp.single_2 .inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dropdown-block-wrapp.single_2 .nav-2 {
+    margin-left: -6px;
 }
 
 .col2right-1.inline-blocks > p,
@@ -5685,7 +5755,7 @@ p.new {
 }
 
 .white-block-header div p {
-    padding-top: 13px;
+    /*padding-top: 13px;*/
 }
 
 .two-cols-templ_2 {
@@ -5712,6 +5782,7 @@ p.new {
 }
 
 .nav_3 li i {
+    margin-top: 3px;
     margin-right: 6px;
 }
 
@@ -5895,10 +5966,10 @@ p.new {
     margin: 0 5px 0 0;
 }
 
-.form-inner-row p a {
+/*.form-inner-row p a {
     position: relative;
     top: 5px;
-}
+}*/
 
 /*-- /Tracker --*/
 
@@ -6154,6 +6225,10 @@ p.new {
 
 }
 
+.input-wrapp_3.date {
+    margin-right: 5px;
+}
+
 .input-wrapp_3.date .search-col-1 {
     min-width: auto;
 }
@@ -6191,10 +6266,11 @@ p.new {
 
 .nav-4-col {
     padding-top: 20px;
+    margin: 0 2.5%;
 }
 
 .nav-4 {
-
+    margin-left: -10px;
 }
 
 .nav-4 li {
@@ -6207,8 +6283,8 @@ p.new {
     margin: 0;
 }
 
-a.blue-link.active {
-    color: #555555;
+.nav-4 li a.active {
+    color: #555555 !important;
     border: 1px solid transparent;
 }
 
@@ -6258,7 +6334,7 @@ a.blue-link.active {
 
 input.datepicker-input {
     width: 115px;
-    height: 35px;
+    height: 36px;
     margin: 0;
     border: 1px solid transparent;
 }
@@ -6434,9 +6510,15 @@ input.datepicker-input:focus {
     border-radius: 50%;
 }
 
-.slide-link .hidden {
+i + .slide-link {
+    position: relative;
+    top: -4px;
+}
+
+.slide-link span {
     display: inline-block;
     vertical-align: top;
+    margin: 4px 0 0 0;
 }
 
 .slide-link .show {
