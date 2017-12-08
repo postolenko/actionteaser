@@ -365,6 +365,16 @@
 
 				});
 
+				popupBox = $(".charts-popup");
+				
+				if( popupBox.height() < $(window).height() ) {
+
+	                popupBox.css({
+	                    "margin-top" : ( $(window).height() - popupBox.height() ) / 2 + "px"
+	                });
+
+	            }
+
 			});
 
 		}
