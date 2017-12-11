@@ -613,3 +613,17 @@
     left: 0; }
 
 /*# sourceMappingURL=chartist.css.map */
+
+
+.ct-label {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    fill: #333333;
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.ct-label.ct-vertical.ct-start {
+    font-size: 12px;
+}
