@@ -27,32 +27,32 @@
 		// 	templateSelection: formatOption
 		// });
 
-		function formatOption (opt) {
+		// function formatOption (opt) {
 
-			if (!opt.id) { return opt.text; }
+		// 	if (!opt.id) { return opt.text; }
 
-				var optimage = $(opt.element).attr('data-img-url');
+		// 		var optimage = $(opt.element).attr('data-img-url');
 
-				if(!optimage) {
+		// 		if(!optimage) {
 
-					return opt.text;
+		// 			return opt.text;
 
-				} else {
+		// 		} else {
 
-				var $opt = $(
-					'<span class="select-tmpl"> \
-					<span class="col col-1"> \
-					<span class="img-box"><img src="'+ optimage +'"></span> \
-					</span>\
-					<span class="col-2">  ' + opt.text + '</span>\
-					</span>'
-				);
+		// 		var $opt = $(
+		// 			'<span class="select-tmpl"> \
+		// 			<span class="col col-1"> \
+		// 			<span class="img-box"><img src="'+ optimage +'"></span> \
+		// 			</span>\
+		// 			<span class="col-2">  ' + opt.text + '</span>\
+		// 			</span>'
+		// 		);
 
-				return $opt;
+		// 		return $opt;
 
-			}
+		// 	}
 
-		};
+		// };
 
 		// --- Календарь  ----
 
@@ -84,7 +84,12 @@
 		if( $(".selectareaimg-popup").length > 0 ) {
 
 			var image = document.getElementById('photo');
-			var cropper = new Cropper(image);
+			var cropper = new Cropper(image, {
+						  crop: function(e) {
+							document.getElementById("img_width").innerHTML = parseInt(e.detail.width);
+							document.getElementById("img_height").innerHTML = parseInt(e.detail.height);
+						  }
+						});
 
 		}
 
