@@ -222,7 +222,7 @@ $(document).ready(function() {
 
                     // }
 
-                    parentBLock.addClass("active");
+                    parentBLock.addClass("active");                    
 
                     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
 
@@ -232,7 +232,7 @@ $(document).ready(function() {
 
                         dropdownBlock.offset({left : (wrapperRightCoord - dropdownBlock.outerWidth()) });
 
-                    } else {
+                    } else if( !parentBLock.hasClass("single") ) {
 
                         var menuItemCenterCoord = parentBLock.offset().left + ( parentBLock.width() / 2 );
 
@@ -245,7 +245,6 @@ $(document).ready(function() {
                         });
 
                     }
-
                 }
 
             }

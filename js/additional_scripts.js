@@ -21,11 +21,11 @@
 		});
 
 
-		$(".select-date").select2({
-			minimumResultsForSearch: Infinity,
-			templateResult: formatOption,
-			templateSelection: formatOption
-		});
+		// $(".select-date").select2({
+		// 	minimumResultsForSearch: Infinity,
+		// 	templateResult: formatOption,
+		// 	templateSelection: formatOption
+		// });
 
 		function formatOption (opt) {
 
@@ -81,19 +81,10 @@
 			}
 		});
 
-		if( $(".selectareaimg-popup").length > 0 ) { 
+		if( $(".selectareaimg-popup").length > 0 ) {
 
-			$('img#photo').imgAreaSelect({
-		        handles: true,
-		        onSelectStart: function () {
-		        	$(".img-size").addClass("active");
-		        },
-				onSelectChange: function (img, selection) {
-					$("#img_width").text(selection.width);
-					$("#img_height").text(selection.height);
-					// console.log('width: ' + selection.width + '; height: ' + selection.height);
-				}
-		    });
+			var image = document.getElementById('photo');
+			var cropper = new Cropper(image);
 
 		}
 
