@@ -406,6 +406,10 @@ textarea:focus {
     text-align: right;
 }
 
+.align-left {
+    text-align: left !important;
+}
+
 .border {
     border-bottom: 1px solid #e7e7e7;
 }
@@ -5550,7 +5554,7 @@ label.fs-16 {
     display: table-cell !important;
     vertical-align: top;
     width: auto;
-    /*text-align: right;*/
+    text-align: right;
 }
 
 .col2right-tpl.vert-al-m .col2right-1,
