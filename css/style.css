@@ -277,7 +277,8 @@ p a {
 p i {
     margin: 0 6px;
     position: relative;
-    top: 2px;
+    /*top: 2px;*/
+    top: 6px;
     /*vertical-align: middle !important;*/
 }
 
@@ -4484,13 +4485,13 @@ input.color {
 }
 
 .nav-2 li .nav2_checkbox {
-    top: 1px;
+    top: 0;
 }
 
 .nav-2 li i {
     display: inline-block;
-    vertical-align: top !important;
-    margin: 2px 5px 0 0;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
 }
 
 .nav-2 li a {
@@ -4511,29 +4512,26 @@ input.color {
 }
 
 .link-p i {
-    margin-top: 6px;
+    margin-top: 1px;
 }
 
 .white-block-header .sub-col {
     display: inline-block;
     vertical-align: middle;
+    /*padding: 2px 0;*/
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .white-block-header .sub-col-1 {
     min-width: 491px;
 }
 
-.white-block-header .sub-col a {
-    display: inline-block;
-    vertical-align: top;
-    margin: 5px 5px 5px 0;
-}
-
 .search-block {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-    margin: 5px 1.5%;
+    margin: 3px 1.5%;
 }
 
 .search-block input {
@@ -4559,10 +4557,10 @@ input.color {
     vertical-align: top;
 }
 
-
 .inline-nav h3 {
+    padding-top: 8px;
     font-size: 14px;
-    line-height: 35px;
+    line-height: 19px;
     font-weight: 500;
 }
 
@@ -4570,11 +4568,6 @@ input.color {
     display: inline-block;
     vertical-align: top;
     padding: 7px 10px;
-}
-
-.nav-3 li a {
-    /*display: initial;*/
-    /*vertical-align: top;*/
 }
 
 .nav-3 li a.active {
@@ -5425,7 +5418,7 @@ label.fs-16 {
     border-bottom: 1px solid rgba(55, 160, 227, .7);
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 16px;
     font-weight: normal;
     color: #37a0e3 !important;
 
@@ -5471,7 +5464,7 @@ label.fs-16 {
 }
 
 .blue-checkbox label i {
-    margin: 0 5px 0 0;
+    margin: 1px 3px 0 0;
 }
 
 .blue-checkbox label span {
@@ -5789,8 +5782,8 @@ p.new {
     vertical-align: middle;
 }
 
-.white-block-header div p {
-    /*padding-top: 13px;*/
+.white-block-header .col  p.p-link {
+    margin-top: 8px;
 }
 
 .two-cols-templ_2 {
@@ -6840,6 +6833,11 @@ i + .slide-link {
     height: auto;
 }
 
+.result-row h3,
+.result-row p {
+    font-weight: bold;
+}
+
 .red {
     color: #e74c3c;
 }
@@ -6848,12 +6846,15 @@ i + .slide-link {
 /*    height: 100px;
     cursor: pointer;*/
     margin: 47px 0 0 0;
-    /*border: 1px solid #c4c4c4;*/
+    height: 45px;
+    overflow: hidden;
 }
 
 .chart-line {
     height: 93px;
     cursor: pointer;
+    position: relative;
+    top: -14px;
 }
 
 /*.chart-line svg {
@@ -6882,6 +6883,12 @@ i + .slide-link {
 
 .chart-line .ct-series-a .ct-line {
     stroke: #6da2e0;
+}
+
+.charts-vals {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
 }
 
 .charts-popup {
