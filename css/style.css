@@ -225,12 +225,20 @@ h1 {
     padding: 3px 0;
 }
 
-h2 {
+/*h2 {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 18px;
     line-height: 40px;
     font-weight: bold;
     color: #343434;
+}*/
+
+h2 {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 39px;
+    font-weight: 500;
+    color: #333333;
 }
 
 h3 {
@@ -1186,7 +1194,7 @@ a.title-link {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
     line-height: 14px;
-    font-weight: normal;
+    font-weight: 500;
     color: #333333;
 
     -webkit-transition-property: all;
@@ -4551,10 +4559,11 @@ input.color {
     vertical-align: top;
 }
 
+
 .inline-nav h3 {
     font-size: 14px;
-    /*line-height: 34px;*/
-    padding-top: 2px;
+    line-height: 35px;
+    font-weight: 500;
 }
 
 .nav-3 li {
@@ -4569,10 +4578,8 @@ input.color {
 }
 
 .nav-3 li a.active {
-    color: #555555;
+    color: #555555 !important;
     border-color: transparent;
-/*    position: relative;
-    top: -1px;*/
 }
 
 .inner-col-1.btns-list a {
@@ -4985,6 +4992,11 @@ input.color {
     display: inline-block;
     vertical-align: top;
     padding: 0 5px 0 0;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 37px;
+    font-weight: normal;
+    color: #555555;
 }
 
 .pagination-block .pagination {
@@ -5492,6 +5504,14 @@ label.fs-16 {
     vertical-align: middle;
 }
 
+.buttons-block h3 {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 46px;
+    font-weight: 500;
+    color: #333333;
+}
+
 .inline-row h3 {
     margin-right: 24px;
 }
@@ -5791,6 +5811,14 @@ p.new {
     padding: 0 0 0 3%;
 }
 
+h2.tracker-h {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #333333;
+}
+
 .nav_3 {
     margin: 6px 0;
     text-align: left;
@@ -6011,16 +6039,21 @@ p.new {
     padding-left: 2%;
 }
 
+.payment-boxes {
+    padding-top: 14px;
+}
+
 .payment-box {
     border: 1px solid #dcdcdc;
     margin: 0 0 9px 0;
-    padding: 5px 0;
+    /*padding: 5px 0;*/
 }
 
 .payment-header {
     display: table;
     width: 100%;
-    padding: 10px 20px;
+    cursor: pointer;
+    padding: 15px 20px 15px 20px;
 }
 
 .header-col-1 {
@@ -6050,7 +6083,7 @@ p.new {
 }
 
 .payment-inputs {
-    padding: 14px 20px 18px 20px;
+    padding: 9px 20px 18px 20px;
 }
 
 .payment-inputs .inputs-1 {
@@ -6110,7 +6143,7 @@ p.new {
 }
 
 .info-row {
-    padding: 13px 20px 12px 20px;
+    padding: 13px 20px 17px 20px;
     border-top: 1px solid #dcdcdc;
 }
 
@@ -6128,8 +6161,70 @@ p.new {
     top: 4px;
 }*/
 
-.payment-table {
+.radio-blocks {
+    margin: 13px -2px;
+}
 
+.radio-blue {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1px;
+    position: relative;
+}
+
+.radio-blue input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.radio-blue label {
+    display: inline-block;
+    vertical-align: top;
+    padding: 4px 11px;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #a1a1a1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #a1a1a1;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .2s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .2s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .2s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.radio-blue input:checked + label {
+    background: #37a0e2;
+    border-color: #37a0e2;
+    color: #ffffff;
+}
+
+.payment-table {
+    margin: 14px 0 0 0;
 }
 
 .payment-table .cell {
@@ -6664,6 +6759,31 @@ i + .slide-link {
     right: 10px;
     margin: -11px 0 0 0;
     border: 1px solid transparent;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .2s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .2s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .2s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.sort-arr.active {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .sort-arr i {

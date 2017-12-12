@@ -971,6 +971,39 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".sliding-btn").click(function() {
+
+            parentBlock = $(this).closest(".sliding_wrapp");
+
+            slidingBlock = parentBlock.find(".sliding-block");
+
+            if(slidingBlock.is(":hidden")) {
+
+                slidingBlock.slideDown(200);
+
+            } else {
+
+                slidingBlock.slideUp(200);
+
+            }
+
+        });
+
+    });
+
+
+    $(function() {
+
+        $(".sort-arr").click(function() {
+
+            $(this).toggleClass("active");
+
+        });
+
+    });
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {

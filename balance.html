@@ -424,7 +424,7 @@
 				<div class="submits-block">
 					
 					<button type="submit" class="green-btn">Продолжить</button>
-					<button type="button" class="blue-btn">Отменить</button>
+					<button type="button" class="blue-btn close-popup">Отменить</button>
 
 				</div>
 
@@ -688,32 +688,82 @@
 
 										<h2>Выберите способ пополнения</h2>
 
-										<div class="payment-box">
+										<div class="payment-boxes">
 
-											<div class="payment-header">
-												<div class="header-col-1">
-													<h2>WebMoney</h2>
-												</div>
-												<div class="header-col-2">
-													<img src="img/webmoney.png" alt="" />
-												</div>
-											</div>
+											<div class="payment-box sliding_wrapp">
 
-											<div class="payment-inputs clearfix">
-												<form>
-													<div class="inputs-1">
-														<div class="inputs-table">
-															<div class="cell-1">
-																<div class="select-block">
-																	<select data-placeholder="WMR">
-																		<option></option>
-																		<option>WMR</option>
-																		<option>WMU</option>
-																	</select>
+												<div class="payment-header sliding-btn">
+													<div class="header-col-1">
+														<h2>WebMoney</h2>
+													</div>
+													<div class="header-col-2">
+														<img src="img/webmoney.png" alt="" />
+													</div>
+												</div>
+
+												<div class="sliding-block">
+
+													<div class="payment-inputs clearfix">
+														<form>
+															<div class="inputs-1">
+																<div class="inputs-table">
+																	<div class="cell-1">
+																		<div class="select-block">
+																			<select data-placeholder="WMR">
+																				<option></option>
+																				<option>WMR</option>
+																				<option>WMU</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="cell-2">
+																		<input type="text" placeholder="300" />
+																		<div class="input-desc">
+																			<p>+100 бонус</p>
+																			<div class="tooltip-block">
+																				<div class="icon-box"></div>
+																				<div class="tooltip">
+																					<p>Открывает попап с одним полем</p>
+																					<p>URL, которое идентично полю</p>
+																					<p>URL в кампании с соответствующими</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
-															<div class="cell-2">
-																<input type="text" placeholder="300" />
+															<div class="inputs-2">
+																<button type="submit" class="green-btn show_popup" data-popup="popup_9">Оплатить</button>
+															</div>
+														</form>
+													</div>
+
+													<div class="info-row">
+														<p>Минимальная сумма для пополнения</p>
+														<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
+													</div>
+
+												</div>
+
+											</div>
+
+											<div class="payment-box sliding_wrapp">
+
+												<div class="payment-header sliding-btn">
+													<div class="header-col-1">
+														<h2>Яндекс.Деньги</h2>
+													</div>
+													<div class="header-col-2">
+														<img src="img/yandex.png" alt="" />
+													</div>
+												</div>
+
+												<div class="sliding-block">
+
+													<div class="payment-inputs clearfix">
+														<form>
+															<div class="inputs-1">
+																<input type="text" placeholder="300">
 																<div class="input-desc">
 																	<p>+100 бонус</p>
 																	<div class="tooltip-block">
@@ -726,99 +776,65 @@
 																	</div>
 																</div>
 															</div>
-														</div>
-													</div>
-													<div class="inputs-2">
-														<button type="submit" class="green-btn">Оплатить</button>
-													</div>
-												</form>
-											</div>
-
-											<div class="info-row">
-												<p>Минимальная сумма для пополнения</p>
-												<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
-											</div>
-
-										</div>
-
-										<div class="payment-box">
-
-											<div class="payment-header">
-												<div class="header-col-1">
-													<h2>Яндекс.Деньги</h2>
-												</div>
-												<div class="header-col-2">
-													<img src="img/yandex.png" alt="" />
-												</div>
-											</div>
-
-											<div class="payment-inputs clearfix">
-												<form>
-													<div class="inputs-1">
-														<input type="text" placeholder="300">
-														<div class="input-desc">
-															<p>+100 бонус</p>
-															<div class="tooltip-block">
-																<div class="icon-box"></div>
-																<div class="tooltip">
-																	<p>Открывает попап с одним полем</p>
-																	<p>URL, которое идентично полю</p>
-																	<p>URL в кампании с соответствующими</p>
-																</div>
+															<div class="inputs-2">
+																<button type="submit" class="green-btn show_popup" data-popup="popup_9">Оплатить</button>
 															</div>
-														</div>
+														</form>
 													</div>
-													<div class="inputs-2">
-														<button type="submit" class="green-btn">Оплатить</button>
+
+													<div class="info-row">
+														<p>Минимальная сумма для пополнения</p>
+														<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
 													</div>
-												</form>
-											</div>
 
-											<div class="info-row">
-												<p>Минимальная сумма для пополнения</p>
-												<p><b>150 RUR</b><span>Курс <b>1 WMZ = 59 RUR</b></span></p>
-											</div>
-
-										</div>
-
-										<div class="payment-box">
-
-											<div class="payment-header">
-												<div class="header-col-1">
-													<h2>Безналичный перевод</h2>
 												</div>
-												<div class="header-col-2">
-													<img src="img/wallet.png" alt="" />
-												</div>
+
 											</div>
 
-											<div class="payment-inputs clearfix">
-												<h3>Сумма:</h3>
-												<form>
-													<div class="inputs-1">
-														<input type="text" placeholder="300">
+											<div class="payment-box sliding_wrapp">
+
+												<div class="payment-header sliding-btn">
+													<div class="header-col-1">
+														<h2>Безналичный перевод</h2>
 													</div>
-													<div class="inputs-2">
-														<button type="submit" class="green-btn">Создать счет</button>
+													<div class="header-col-2">
+														<img src="img/wallet.png" alt="" />
 													</div>
-												</form>
+												</div>
+
+												<div class="sliding-block">
+
+													<div class="payment-inputs clearfix">
+														<h3>Сумма:</h3>
+														<form>
+															<div class="inputs-1">
+																<input type="text" placeholder="300">
+															</div>
+															<div class="inputs-2">
+																<button type="submit" class="green-btn show_popup" data-popup="popup_9">Создать счет</button>
+															</div>
+														</form>
+													</div>
+
+													<div class="info-row">
+														<p>Для оплаты безналичным переводом нужно сформировать и скачать счет для оплаты. Для создания счета нужно заполнить <a href="#" class="blue-link">данные в профиле</a></p>
+													</div>
+
+												</div>
+
 											</div>
 
-											<div class="info-row">
-												<p>Для оплаты безналичным переводом нужно сформировать и скачать счет для оплаты. Для создания счета нужно заполнить <a href="#" class="blue-link">данные в профиле</a></p>
-											</div>
+											<div class="payment-box">
 
-										</div>
-
-										<div class="payment-box">
-
-											<div class="payment-header">
-												<div class="header-col-1">
-													<h2>Промокод</h2>
+												<div class="payment-header">
+													<div class="header-col-1">
+														<h2>Промокод</h2>
+													</div>
+													<div class="header-col-2">
+														<img src="img/promo.png" alt="" />
+													</div>
 												</div>
-												<div class="header-col-2">
-													<img src="img/promo.png" alt="" />
-												</div>
+
 											</div>
 
 										</div>
@@ -828,6 +844,29 @@
 										<h2>История списаний и начислений</h2>
 
 										<!-- Голубые кнопки -->
+
+										<div class="radio-blocks">
+											<div class="radio-blue">
+												<input type="radio" name="radio-balance" id="radio_bal_1" />
+												<label for="radio_bal_1">за сегодня</label>
+											</div>
+											<div class="radio-blue">
+												<input type="radio" name="radio-balance" id="radio_bal_2" />
+												<label for="radio_bal_2">за вчера</label>
+											</div>
+											<div class="radio-blue">
+												<input type="radio" name="radio-balance" id="radio_bal_3" />
+												<label for="radio_bal_3">за 7 дней</label>
+											</div>
+											<div class="radio-blue">
+												<input type="radio" name="radio-balance" id="radio_bal_4" />
+												<label for="radio_bal_4">за 14 дней</label>
+											</div>
+											<div class="radio-blue">
+												<input type="radio" name="radio-balance" id="radio_bal_5" />
+												<label for="radio_bal_5">выбрать промежуток</label>
+											</div>
+										</div>
 
 										<!-- .Голубые кнопки -->
 
