@@ -4512,7 +4512,8 @@ input.color {
 }
 
 .link-p i {
-    margin-top: 1px;
+    top: 1px;
+    vertical-align: middle;
 }
 
 .white-block-header .sub-col {
