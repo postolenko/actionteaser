@@ -106,6 +106,8 @@ $(document).ready(function() {
 
     getRespParams();
 
+    getTablesParams();
+
     $(window).resize(function() {
 
         bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
@@ -1004,6 +1006,17 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".grey-block .close-x").click(function() {
+
+            $(this).closest(".grey-block").fadeOut(250);
+
+        });
+
+    });
+
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
@@ -1057,6 +1070,102 @@ $(document).ready(function() {
             } , 300);
 
         });
+
+    }
+
+    function getTablesParams() {
+
+        var heightsArr = [];
+
+        var maxHeight;
+
+        // $(".trakers-tables").each( function() {
+
+        //     var rowIndex
+        //     var tableRow;
+
+        //     var tableInner = $(this).find(".inner-table");
+
+        //     var innerTableIndex = 0;
+
+        //     tableInner.each(function() {
+
+        //         $(this).attr("data-index" , innerTableIndex);
+
+        //         rowIndex = 0;
+
+        //         tableRow = $(this).find(".table-row");
+
+        //         tableRow.each(function() {
+
+        //             $(this).attr("data-index" , rowIndex);
+
+        //             rowIndex++;
+
+        //         });
+
+        //         innerTableIndex++;
+
+        //     });            
+
+        //     innerTableIndex = 0;
+
+            
+        //     // tableInner.each(function() {
+
+        //     //     rowIndex = 0;
+
+        //     //     tableRow = $(this).find(".table-row");
+
+        //     //     tableRow.each(function() {
+
+        //     //         $(this).css({"height" : "auto"});   
+                    
+        //     //         heightsArr.push( tableInner.eq(innerTableIndex).find(".table-row:eq("+ rowIndex +")").height() );
+
+        //     //         maxHeight = Math.max.apply(null, heightsArr);
+
+        //     //         console.log(maxHeight);
+
+        //     //         tableInner.eq(innerTableIndex).find(".table-row:eq("+ rowIndex +")").height(maxHeight);
+
+        //     //         rowIndex++;
+
+        //     //     });
+
+        //     //     innerTableIndex++;
+
+        //     //     console.log(heightsArr);
+
+        //     // });
+
+
+        // });
+
+
+    // }
+
+        // var innerTable;
+
+        // for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
+
+        //     var innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
+
+        //     for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
+
+        //         heightsArr = [];
+
+        //         var tableRow = innerTable.eq(indexInnerTable).find(".table-row");
+
+        //         for( var indexRow = 0; indexRow <= innerTable.length - 1; indexRow++ ) {
+
+        //             heightsArr.push( tableRow.eq(indexRow).height() );
+
+        //         }
+
+        //     }
+
+        // }
 
     }
 
