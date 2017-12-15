@@ -400,8 +400,6 @@
 					"opacity" : 0
 				});
 
-				console.log("dsdsd");
-
 			});
 
 		}

@@ -1016,6 +1016,28 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".tracker-btn").click(function() {
+            
+            parentBlock = $(this).closest(".trakers-tables");
+
+            parentBlock.toggleClass("active");
+
+            if( parentBlock.hasClass("active") ) {
+
+                $(this).addClass("active");
+
+            } else {
+
+                $(this).removeClass("active");
+
+            }
+
+        });
+
+    });
+
 
     function getRespParams() {
 
@@ -1075,97 +1097,61 @@ $(document).ready(function() {
 
     function getTablesParams() {
 
+        var innerTable;
+        var tableRow;
+        var countTableRow;
+
         var heightsArr = [];
+        var maxHeightsArr = [];
 
-        var maxHeight;
+        for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
 
-        // $(".trakers-tables").each( function() {
+            innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
 
-        //     var rowIndex
-        //     var tableRow;
+            for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-        //     var tableInner = $(this).find(".inner-table");
+                tableRow = innerTable.eq(indexInnerTable).find(".table-row");
 
-        //     var innerTableIndex = 0;
+                countTableRow = tableRow.length - 1;
 
-        //     tableInner.each(function() {
+                heightsArr[indexInnerTable] = [];
 
-        //         $(this).attr("data-index" , innerTableIndex);
+                for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-        //         rowIndex = 0;
+                    heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).height();
 
-        //         tableRow = $(this).find(".table-row");
+                }
 
-        //         tableRow.each(function() {
+            }
 
-        //             $(this).attr("data-index" , rowIndex);
+            for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-        //             rowIndex++;
+                maxHeightsArr[indexRow] = [];
 
-        //         });
+                for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-        //         innerTableIndex++;
+                    maxHeightsArr[indexRow][indexInnerTable] = heightsArr[indexInnerTable][indexRow];
 
-        //     });            
+                }
 
-        //     innerTableIndex = 0;
+            }
 
-            
-        //     // tableInner.each(function() {
+            for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-        //     //     rowIndex = 0;
+                for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-        //     //     tableRow = $(this).find(".table-row");
+                    innerTable.find(".table-row:eq("+ indexRow +")").css({
 
-        //     //     tableRow.each(function() {
+                        "height" : Math.max.apply(null, maxHeightsArr[indexRow] ) + "px"
 
-        //     //         $(this).css({"height" : "auto"});   
-                    
-        //     //         heightsArr.push( tableInner.eq(innerTableIndex).find(".table-row:eq("+ rowIndex +")").height() );
+                    });
 
-        //     //         maxHeight = Math.max.apply(null, heightsArr);
+                }
 
-        //     //         console.log(maxHeight);
-
-        //     //         tableInner.eq(innerTableIndex).find(".table-row:eq("+ rowIndex +")").height(maxHeight);
-
-        //     //         rowIndex++;
-
-        //     //     });
-
-        //     //     innerTableIndex++;
-
-        //     //     console.log(heightsArr);
-
-        //     // });
+            }
 
 
-        // });
-
-
-    // }
-
-        // var innerTable;
-
-        // for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
-
-        //     var innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
-
-        //     for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-        //         heightsArr = [];
-
-        //         var tableRow = innerTable.eq(indexInnerTable).find(".table-row");
-
-        //         for( var indexRow = 0; indexRow <= innerTable.length - 1; indexRow++ ) {
-
-        //             heightsArr.push( tableRow.eq(indexRow).height() );
-
-        //         }
-
-        //     }
-
-        // }
+        }
 
     }
 
