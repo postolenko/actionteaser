@@ -7782,6 +7782,10 @@ i + .slide-link {
     margin-top: 16px;
 }
 
+.advertiser_tables_wrapp {
+    padding-top: 42px;
+}
+
 .advertiser_table .table-row.table-header .cell {
     padding-top: 0;
     padding-bottom: 0;
