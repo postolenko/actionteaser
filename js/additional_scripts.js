@@ -20,40 +20,6 @@
 
 		});
 
-
-		// $(".select-date").select2({
-		// 	minimumResultsForSearch: Infinity,
-		// 	templateResult: formatOption,
-		// 	templateSelection: formatOption
-		// });
-
-		// function formatOption (opt) {
-
-		// 	if (!opt.id) { return opt.text; }
-
-		// 		var optimage = $(opt.element).attr('data-img-url');
-
-		// 		if(!optimage) {
-
-		// 			return opt.text;
-
-		// 		} else {
-
-		// 		var $opt = $(
-		// 			'<span class="select-tmpl"> \
-		// 			<span class="col col-1"> \
-		// 			<span class="img-box"><img src="'+ optimage +'"></span> \
-		// 			</span>\
-		// 			<span class="col-2">  ' + opt.text + '</span>\
-		// 			</span>'
-		// 		);
-
-		// 		return $opt;
-
-		// 	}
-
-		// };
-
 		// --- Календарь  ----
 
 		$('.datepicker-here').data({inline: false});
@@ -388,7 +354,22 @@
 				axisY: {
 				    offset:  30,
 				    labelInterpolationFnc: function(value) {
-				      return value;
+
+				    	// console.log( value );
+
+				    	// for( var indexSybmol = 0 ; indexSybmol <= value.length - 1; indexSybmol++ ) {
+
+				    	// 	if(indexSybmol % 3 == 0) {
+
+				    	// 		// console.log( value[indexSybmol] );
+
+				    	// 		value[indexSybmol] = "," + value[indexSybmol];
+
+				    	// 	}
+
+				    	// }
+
+				      return value + "s";
 				    },
 				    scaleMinSpace: 15
 				  }
@@ -398,6 +379,69 @@
 
 				$(".chart_4").find(".ct-end:even").css({
 					"opacity" : 0
+				});
+
+			});
+
+			chart4.on('created', function(data) {
+
+				chartLineIndex = 0;
+
+				$(".chart_4 .ct-series .ct-point").each(function() {					
+
+					// $(this).each(function() {
+
+						$(this).attr("data-index", chartLineIndex);
+
+						chartLineIndex++;
+
+					// });
+
+				});
+
+				chartLineIndex = 0;
+
+				$(".chart_4 .ct-label.ct-horizontal").each(function() {
+
+					$(this).attr("data-index", chartLineIndex);
+
+					chartLineIndex++;
+
+				});
+
+				$(".chart_4 .ct-series .ct-point").bind({
+					mouseenter: function() {
+
+						parentBlock = $(this).closest(".chart_4");
+
+						chartTooltip = $(".chart_4-tooltip");
+
+						var ctPointVal = $(this).attr("ct:value");
+
+						var ctPointValIndex = $(this).attr("data-index");
+
+						var ctPointDate = parentBlock.find(".ct-label.ct-horizontal[data-index = '"+ ctPointValIndex +"']").text();
+
+						chartTooltip.attr("style" , "display: inline-block;");
+
+						chartTooltip.find(".views").text(ctPointVal);
+
+						chartTooltip.find(".date").text(ctPointDate);
+
+						topCoord = $(this).offset().top - chartTooltip.outerHeight(true) - 10;
+
+						leftCoord = $(this).offset().left - chartTooltip.width() / 2;
+
+						chartTooltip.offset({top : topCoord, left : leftCoord});
+
+					},
+					mouseleave: function() {
+
+						chartTooltip = $(".chart_4-tooltip");
+
+						chartTooltip.attr("style" , "display: none;");
+
+					}
 				});
 
 			});

@@ -85,7 +85,7 @@ $(document).ready(function() {
 
     // ----------------------------
 
-    var questionTolltipLeftCoord;
+
 
     // ----------------------------
 
@@ -623,20 +623,49 @@ $(document).ready(function() {
     $(function() {
 
         // var questionTolltipLeftCoord;
+        var questionTooltipLeftCoord;
+        var questionTooltipTopCoord;
+        // var tooltipIndex = 0;
+        var tooltipName;
+        var addTopOffset = 20;
+
+        // $(".tooltip-block").each(function() {
+
+        //     $(this).attr("data-tooltip", "tooltip_" + tooltipIndex);
+
+        //     $(this).find(".tooltip").attr("data-tooltip-desc", "tooltip_" + tooltipIndex);
+
+        //     tooltipIndex++;
+
+        // });
 
         $( ".tooltip-block").bind({
-            mouseenter: function() {                
+            mouseenter: function() {
 
-                $(this).find(".tooltip").attr("style", "display: block;");
+                tooltipName = $(this).attr("data-tooltip");
 
-                questionTolltipLeftCoord = $(this).offset().left - ( $(this).width() / 2 + $(this).find(".tooltip").width() / 2) ;
+                tooltipDesc = $(".tooltip[data-tooltip-desc = '" + tooltipName + "']");
 
-                $(this).find(".tooltip").offset({left : questionTolltipLeftCoord});
+                tooltipDesc.attr("style", "display: block;");
+
+                questionTooltipTopCoord = $(this).offset().top - tooltipDesc.height() - $(this).find(".icon-box").height() - addTopOffset;
+
+                questionTooltipLeftCoord = $(this).offset().left - ( $(this).width() / 2 + tooltipDesc.width() / 2);
+
+                if( questionTooltipLeftCoord + tooltipDesc.outerWidth() >= $(window).width() ) {
+
+                    questionTooltipLeftCoord = $(window).width() - tooltipDesc.outerWidth();
+
+                }
+
+                tooltipDesc.offset({top: questionTooltipTopCoord, left : questionTooltipLeftCoord});
 
             },
             mouseleave: function() {
 
-                $(this).find(".tooltip").attr("style", "display: none;");
+                tooltipName = $(this).attr("data-tooltip");
+
+                $(".tooltip[data-tooltip-desc = '" + tooltipName + "']").attr("style", "display: none;");
 
             }
         });
@@ -1029,6 +1058,96 @@ $(document).ready(function() {
                 $(this).addClass("active");
 
             } else {
+
+                $(this).removeClass("active");
+
+            }
+
+        });
+
+    });
+
+    $(function() {
+
+        $(".counter-btn").click(function() {
+
+            parentBlock = $(this).closest(".input-counter_wrapp");
+
+            var countVal = parentBlock.find(".counter-input").val();
+
+            if(countVal == "") {
+
+                countVal = 0;
+
+            }
+
+            if( $(this).hasClass("plus-counter") ) {
+
+                countVal++;
+
+            } else if( $(this).hasClass("minus-counter") ) {
+
+                if(countVal <= 0) {
+
+                    countVal = 0;
+
+                } else {
+
+                    countVal--;
+
+                }                
+
+            }
+
+            parentBlock.find(".counter-input").val(countVal);
+
+        });
+
+    });
+
+    $(function() {
+
+        var addTableBtn;
+        var slidingTable;     
+
+        $(".sliding-tables").each(function() {
+
+            addTableBtn = $(this).find(".ad-table-btn");
+            slidingTable = $(this).find(".sliding-table");
+
+            if( $(this).hasClass("active") ) {
+
+                slidingTable.slideDown(200);
+                addTableBtn.addClass("active");
+
+            } else {
+
+                slidingTable.slideUp(200);
+                addTableBtn.removeClass("active");
+
+            }
+
+        });
+
+        $(".ad-table-btn").click(function() {
+
+            parentBlock = $(this).closest(".sliding-tables");
+
+            slidingTable = parentBlock.find(".sliding-table");
+
+            if(slidingTable.is(":hidden")) {
+
+                slidingTable.slideDown(200);
+
+                parentBlock.addClass("active");
+
+                $(this).addClass("active");
+
+            } else {
+
+                slidingTable.slideUp(200);
+
+                parentBlock.removeClass("active");
 
                 $(this).removeClass("active");
 
