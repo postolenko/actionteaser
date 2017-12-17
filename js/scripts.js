@@ -197,39 +197,6 @@ $(document).ready(function() {
 
                     dropdownBlock.fadeIn(200);
 
-                    // if( parentBLock.hasClass("single") ) {
-
-                    //     dropdownBlock.css({
-                    //         // "top" : 100 + "%"
-                    //         // "bottom" : -3 + "px"
-                    //     });
-
-                    //     // dropdownBlock.fade
-
-                    // } else {
-
-                    //     if(parentBLock.closest(".header-site").length > 0) {
-
-                    //         topMenuCoord = $(".header-site").height() - $(this).offset().top - $(".header-site").offset().top - 3;
-                        
-                    //         dropdownBlock.css({
-                    //             // "top" : 100 + "%"
-                    //             // "bottom" : -3 + "px"
-                    //         });
-
-                    //     } else {
-
-                    //         topMenuCoord = 39;
-
-                    //     }
-
-                    //     // dropdownBlock.css({
-                    //     //     "top" : topMenuCoord + "px"
-                    //         // "bottom" : -3 + "px"
-                    //     // });
-
-                    // }
-
                     parentBLock.addClass("active");                    
 
                     rightDropdownCoord = dropdownBlock.offset().left + dropdownBlock.outerWidth();
@@ -502,7 +469,7 @@ $(document).ready(function() {
 
         $(".checkboxes-wrapp input[type='checkbox']").click(function() {
 
-            checkboxBlock = $(this).closest(".checkbox-block");            
+            checkboxBlock = $(this).closest(".checkbox-block");
 
             if( checkboxBlock.next(".checkboxes-inner").length > 0 ) {
 
@@ -534,6 +501,52 @@ $(document).ready(function() {
 
                 }
 
+            } else {
+
+                activeCheckboxes = [];
+
+                $("input[ name = '"+ nameCheckboxes +"']").each(function() {
+
+                    if( !$(this).closest(".checkbox-block").hasClass("parent") ) {
+
+                        if( $(this).is(":checked") ) {
+
+                            activeCheckboxes.push(true);
+
+                        } else {
+
+                            activeCheckboxes.push(false);
+
+                        }
+
+                    }
+
+                });
+
+                for( var checkboxIndex = 0; checkboxIndex <= activeCheckboxes.length - 1; checkboxIndex++) {
+
+                    if( activeCheckboxes[checkboxIndex] == true) {
+
+                        emptyCheckboxes = false;
+
+                        return true;
+
+                    } else {
+
+                        emptyCheckboxes = true;
+
+                    }
+
+                }
+
+                if( emptyCheckboxes == true && 
+                    $(".checkbox-block.parent input[ name = '"+ nameCheckboxes +"']").is(":checked")
+                    ) {
+
+                    $(".checkbox-block.parent input[ name = '"+ nameCheckboxes +"']").click();
+
+                }
+
             }
 
         });
@@ -557,22 +570,10 @@ $(document).ready(function() {
 
     $(function() {
 
-        // var questionTolltipLeftCoord;
         var questionTooltipLeftCoord;
         var questionTooltipTopCoord;
-        // var tooltipIndex = 0;
         var tooltipName;
         var addTopOffset = 20;
-
-        // $(".tooltip-block").each(function() {
-
-        //     $(this).attr("data-tooltip", "tooltip_" + tooltipIndex);
-
-        //     $(this).find(".tooltip").attr("data-tooltip-desc", "tooltip_" + tooltipIndex);
-
-        //     tooltipIndex++;
-
-        // });
 
         $( ".tooltip-block").bind({
             mouseenter: function() {                
@@ -603,9 +604,9 @@ $(document).ready(function() {
 
                 questionTooltipLeftCoord = $(this).offset().left - ( $(this).width() + tooltipDesc.width() ) / 2;
 
-                if( questionTooltipLeftCoord + tooltipDesc.outerWidth() >= $(window).width() ) {
+                if( questionTooltipLeftCoord + tooltipDesc.outerWidth() >= $(document).width() ) {
 
-                    questionTooltipLeftCoord = $(window).width() - tooltipDesc.outerWidth();
+                    questionTooltipLeftCoord = $(document).width() - tooltipDesc.outerWidth();
 
                 }
 
@@ -697,7 +698,7 @@ $(document).ready(function() {
 
             popupBlock.animate({
                 "opacity" : 1
-            }, 400);
+            }, 300);
 
             if( popupBox.height() < $(window).height() ) {
 
@@ -719,7 +720,7 @@ $(document).ready(function() {
 
                         $(this).animate({
                             "opacity" : 0
-                        }, 400);
+                        }, 300);
 
                         setTimeout(function() {
 
@@ -743,7 +744,7 @@ $(document).ready(function() {
 
             popupBlock.animate({
                 "opacity" : 0
-            }, 400);
+            }, 300);
 
             setTimeout(function() {
 
