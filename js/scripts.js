@@ -575,17 +575,33 @@ $(document).ready(function() {
         // });
 
         $( ".tooltip-block").bind({
-            mouseenter: function() {
+            mouseenter: function() {                
 
-                tooltipName = $(this).attr("data-tooltip");
+                if( $(this).attr("data-tooltip") != false ) {
 
-                tooltipDesc = $(".tooltip[data-tooltip-desc = '" + tooltipName + "']");
+                    tooltipName = $(this).attr("data-tooltip");
 
-                tooltipDesc.attr("style", "display: block;");
+                    tooltipDesc = $(".tooltip[data-tooltip-desc = '" + tooltipName + "']");
 
-                questionTooltipTopCoord = $(this).offset().top - tooltipDesc.height() - $(this).find(".icon-box").height() - addTopOffset;
+                } else {
 
-                questionTooltipLeftCoord = $(this).offset().left - ( $(this).width() / 2 + tooltipDesc.width() / 2);
+                    tooltipDesc = $(this).find(".tooltip");
+
+                }
+
+                tooltipDesc.attr("style", "display: inline-block;");
+
+                if( $(this).attr("data-tooltip") != false ) {
+
+                    questionTooltipTopCoord = $(this).offset().top - tooltipDesc.height() - $(this).find(".icon-box").height() - addTopOffset;
+
+                } else {
+
+                    questionTooltipTopCoord = undefined;
+
+                }
+
+                questionTooltipLeftCoord = $(this).offset().left - ( $(this).width() + tooltipDesc.width() ) / 2;
 
                 if( questionTooltipLeftCoord + tooltipDesc.outerWidth() >= $(window).width() ) {
 
