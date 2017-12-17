@@ -771,7 +771,7 @@ $(document).ready(function() {
 
             nameCheckboxes = inputCh.attr("name");
 
-            if( $(this).hasClass("parent") ) {
+            if( $(this).closest(".checkbox-block").hasClass("parent") ) {
 
                 // inputCh = $(this).find("input");
 
@@ -805,63 +805,49 @@ $(document).ready(function() {
 
             } else {
 
-                // if( $("input[ name = '"+ nameCheckboxes +"'].parent").is(":checked") ){
+                activeCheckboxes = [];
 
-                    activeCheckboxes = [];
+                $("input[ name = '"+ nameCheckboxes +"']").each(function() {
 
-                    $("input[ name = '"+ nameCheckboxes +"']").each(function() {
+                    if( !$(this).closest(".checkbox-block").hasClass("parent") ) {
 
-                        if( !$(this).closest(".checkbox-block").hasClass("parent") ) {
+                        if( $(this).is(":checked") ) {
 
-                            if( $(this).is(":checked") ) {
+                            activeCheckboxes.push(true);
 
-                                activeCheckboxes.push(true);
+                        } else {
 
-                            } else {
-
-                                activeCheckboxes.push(false);
-
-                            }
+                            activeCheckboxes.push(false);
 
                         }
 
-                    });
+                    }
 
-                    // activeCheckboxes.some(isPositive);
+                });
 
-                    // function isPositive(number) {
-                    //   return number == false;
-                    // }
+                for( var checkboxIndex = 0; checkboxIndex <= activeCheckboxes.length - 1; checkboxIndex++) {
 
-                    // emptyCheckboxes = activeCheckboxes.some(function(number) {
+                    if( activeCheckboxes[checkboxIndex] == true) {
 
-                    //     return number == false;
+                        emptyCheckboxes = false;
 
-                    // });
+                        return true;
 
-                    // var parentCheckbox = $(".parent input[ name = '"+ nameCheckboxes +"']");
+                    } else {
 
-                    // console.log(nameCheckboxes);
+                        emptyCheckboxes = true;
 
-                    // if( emptyCheckboxes == false && parentCheckbox.is("checked") ) {
+                    }
 
-                    //     parentCheckbox.click();
+                }
 
-                    // } else if( !parentCheckbox.is("checked") ) {
+                if( emptyCheckboxes == true && 
+                    $(".checkbox-block.parent input[ name = '"+ nameCheckboxes +"']").is(":checked")
+                    ) {
 
-                    //     parentCheckbox.click();
+                    $(".checkbox-block.parent input[ name = '"+ nameCheckboxes +"']").click();
 
-                    // }
-
-                    // if( emptyCheckboxes == true ) {
-
-                    //     $("input[ name = '"+ nameCheckboxes +"'].parent").attr("checked", false);
-
-                    // }
-
-                    console.log(emptyCheckboxes);
-
-                // }
+                }
 
             }
 
@@ -1137,29 +1123,6 @@ $(document).ready(function() {
             }
 
         });
-
-    });
-
-
-    $(function() {
-
-        var str = "12345678";
-
-        var valArr = str.split(""); 
-
-        for( var valIndex = -(valArr.length - 1); valIndex < 0; valIndex++ ) {
-
-            if(valIndex % 3 == 0) {
-
-                valArr.splice(valIndex, 0, ",");
-
-            }
-
-        }
-
-        var value = valArr.join("");
-
-        console.log(value);
 
     });
 
