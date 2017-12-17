@@ -4225,8 +4225,8 @@ input.color {
     height: auto;
     width: 250px;
     padding: 14px 19px;
-    /*position: absolute;*/
-    position: fixed;
+    position: absolute;
+    /*position: fixed;*/
     z-index: 10;
     /*bottom: 26px;*/
     /*left: 0;*/

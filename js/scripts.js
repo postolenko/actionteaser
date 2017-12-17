@@ -577,7 +577,7 @@ $(document).ready(function() {
         $( ".tooltip-block").bind({
             mouseenter: function() {                
 
-                if( $(this).attr("data-tooltip") != false ) {
+                if( $(this).attr("data-tooltip") ) {
 
                     tooltipName = $(this).attr("data-tooltip");
 
@@ -609,14 +609,22 @@ $(document).ready(function() {
 
                 }
 
-                tooltipDesc.offset({top: questionTooltipTopCoord, left : questionTooltipLeftCoord});
+                if( $(this).attr("data-tooltip") != false ) {
+
+                    tooltipDesc.offset({top: questionTooltipTopCoord, left : questionTooltipLeftCoord});
+
+                } else {
+
+                    tooltipDesc.offset({left : questionTooltipLeftCoord});
+
+                }
+
+                
 
             },
             mouseleave: function() {
 
-                tooltipName = $(this).attr("data-tooltip");
-
-                $(".tooltip[data-tooltip-desc = '" + tooltipName + "']").attr("style", "display: none;");
+                tooltipDesc.attr("style", "display: none;");
 
             }
         });
