@@ -1245,11 +1245,9 @@ $(document).ready(function() {
 
         if( bodyWidth <= 1280 ) {
 
-            var documentHeight = $("html, body").height() - $(".header-site").offset().top - $(".header-site").outerHeight() -$(".footer").outerHeight();
+            var respSidebarHeight = $(window).height() - $(".header-site").offset().top - $(".header-site").outerHeight() - $(".footer").outerHeight();
 
-            var respSidebarHeight = $(window).height() - $(".header-site").offset().top - $(".header-site").outerHeight() -$(".footer").outerHeight();
-
-            if( documentHeight >= respSidebarHeight ) {
+            if( $("#sidebarmenu").height() > $(".main_content").height() ) {
 
                 $(".sidebar").css({
                     "height" : respSidebarHeight + "px"
