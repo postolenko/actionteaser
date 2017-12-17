@@ -81,6 +81,13 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var questionTooltipLeftCoord;
+    var questionTooltipTopCoord;
+    var tooltipName;
+    var addTopOffset = 20;
+
+    // ----------------------------
+
     var inputCounterSymbols;
     var maxSymbols;
     var inputValTyped;
@@ -107,6 +114,11 @@ $(document).ready(function() {
     var countTableRow;
     var heightsArr = [];
     var maxHeightsArr = [];
+
+    // ----------------------------
+
+    var addTableBtn;
+    var slidingTable;
 
     // ----------------------------
 
@@ -473,92 +485,6 @@ $(document).ready(function() {
 
         });
 
-        // $(".checkboxes-wrapp input[type='checkbox']").click(function() {
-
-        //     parentBlock = $(this).closest(".checkboxes-wrapp");
-
-        //     checkboxBlock = $(this).closest(".checkbox-block");
-
-        //     // if( checkboxBlock.next(".checkboxes-inner").length > 0 ) {
-
-        //     if( checkboxBlock.next(".checkboxes-inner").length > 0 && $(this).is(":checked") ) {
-
-        //         innersCheckboxes = parentBlock.find(".checkboxes-inner");
-
-        //         // if( $(this).is(":checked") ) {
-
-        //             // innersCheckboxes.find("input").each(function() {
-
-        //             //     if( !$(this).is(":checked") ) {
-
-        //             //         $(this).click();
-
-        //             //     }
-
-        //             // });
-
-        //         // }
-
-        //         //  else {
-
-        //         //     innersCheckboxes.find("input[type = 'checkbox']").each(function() {
-
-        //         //         if( $(this).is(":checked") ) {
-
-        //         //             $(this).click();
-
-        //         //         }
-
-        //         //     });
-
-        //         // }
-
-        //     } else {
-
-        //         activeCheckboxes = [];
-
-        //         // parentBlock.find(".checkboxes-inner input[type='checkbox']").each(function() {
-
-        //         //     if( $(this).is(":checked") ) {
-
-        //         //         activeCheckboxes.push(true);
-
-        //         //     } else {
-
-        //         //         activeCheckboxes.push(false);
-
-        //         //     }
-
-        //         // });
-
-        //         // for( var checkboxIndex = 0; checkboxIndex <= activeCheckboxes.length - 1; checkboxIndex++) {
-
-        //         //     if( activeCheckboxes[checkboxIndex] == true) {
-
-        //         //         emptyCheckboxes = false;
-
-        //         //         return true;
-
-        //         //     } else {
-
-        //         //         emptyCheckboxes = true;
-
-        //         //     }
-
-        //         // }
-
-        //         // if( emptyCheckboxes == true && 
-        //         //     parentBlock.find(".checkbox-block.parent input").is(":checked")
-        //         //     ) {
-
-        //         //     parentBlock.find(".checkbox-block.parent input").click();
-
-        //         // }
-
-        //     }
-
-        // });
-
     });
 
 
@@ -578,10 +504,10 @@ $(document).ready(function() {
 
     $(function() {
 
-        var questionTooltipLeftCoord;
-        var questionTooltipTopCoord;
-        var tooltipName;
-        var addTopOffset = 20;
+        // var questionTooltipLeftCoord;
+        // var questionTooltipTopCoord;
+        // var tooltipName;
+        // var addTopOffset = 20;
 
         $( ".tooltip-block").bind({
             mouseenter: function() {                
@@ -1097,8 +1023,8 @@ $(document).ready(function() {
 
     $(function() {
 
-        var addTableBtn;
-        var slidingTable;     
+        // var addTableBtn;
+        // var slidingTable;     
 
         $(".sliding-tables").each(function() {
 

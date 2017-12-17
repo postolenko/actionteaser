@@ -4,10 +4,6 @@
 
 		$(".scroll").mCustomScrollbar();
 
-		$(".scroll-x").mCustomScrollbar({
-			axis:"x"
-		});
-
 	});
 
 	$(document).ready(function() {		
@@ -79,13 +75,8 @@
 			var chartBarName;
 			var valAttrSal;
 			var valAttrImp;
-			// var chartParent;
-			// var chartName;
-			// var chartTooltip;
 			var chartLineParent;
 			var chartLineIndex;
-			// var topCoord;
-			// var leftCoord;
 
 			var chart = new Chartist.Bar('.ct-chart', {
 			  labels: ['RU', 'UA', 'KZ', 'US', 'AZ', 'BY', 'CH', 'Остальные'],

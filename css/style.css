@@ -1335,8 +1335,6 @@ a.blue-link.no-line:hover {
 }
 
 a.title-link {
-    /*display: inline-block;*/
-    vertical-align: top;
     margin: 2px 0;
     border-bottom: 1px solid rgb(195, 195, 195);
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
@@ -1381,8 +1379,6 @@ a.title-link:hover {
 }
 
 a.orange-link {
-    /*display: inline-block;*/
-    vertical-align: top;
     margin: 2px 0;
     border-bottom: 1px solid rgba(242, 139, 28, .3);
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
@@ -1957,10 +1953,7 @@ button.disabled {
 }
 
 .header-site .col {
-    /*padding-top: 4px;*/
     padding-top: 6px;
-    /*padding-top: 9px;*/
-    /*padding-bottom: 0;*/
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -2108,7 +2101,6 @@ button.disabled {
 }
 
 .header-site .col-2 .inner-col {
-    /*padding: 10px 1%;*/
     padding: 0 1%;
 }
 
@@ -2118,7 +2110,6 @@ button.disabled {
 
 .header-site .col-2 .inner-col-2 {
     width: 26%;
-    /*padding-top: 2px;*/
 }
 
 .header-site .col-2 .inner-col-3 {
@@ -2228,13 +2219,7 @@ button.disabled {
     text-align: left;
 }
 
-.dropdown-block-wrapp.manager {
-    /*padding-top: 4px;*/
-    /*padding-top: 2px;*/
-}
-
 .dropdown-block-wrapp.active {
-    /*z-index: 4;*/
     z-index: 9;
 }
 
@@ -2260,8 +2245,6 @@ button.disabled {
 }
 
 .dropdown-header i {
-/*    display: inline-block;
-    vertical-align: baseline;*/
     margin: 0 10px 0 0;
 }
 
@@ -2273,8 +2256,6 @@ button.disabled {
 }
 
 .dropdown-header a {
-/*    display: block;
-    vertical-align: middle;*/
     position: relative;
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 14px;
@@ -3431,7 +3412,6 @@ input.color {
     height: 16px;
     position: absolute;
     top: 15px;
-    /*left: 5px;*/
     left: 0;
     border: 1px solid #dfe2e9;
     background: #ffffff;
@@ -3915,11 +3895,6 @@ input.color {
     color: #6c9ab7;
 }
 
-/*.copy_1 {
-    position: relative;
-    top: 3px;
-}*/
-
 /*-- /Tab 5 --*/
 
 /*-- Tab 7 --*/
@@ -4226,10 +4201,7 @@ input.color {
     width: 250px;
     padding: 14px 19px;
     position: absolute;
-    /*position: fixed;*/
     z-index: 10;
-    /*bottom: 26px;*/
-    /*left: 0;*/
     background: #191b1d;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -4645,8 +4617,6 @@ input.color {
 }
 
 .nav-2 li a {
-/*    display: inline-block !important;
-    vertical-align: top !important;*/
     margin: 0 !important;
 }
 
@@ -4669,7 +4639,6 @@ input.color {
 .white-block-header .sub-col {
     display: inline-block;
     vertical-align: middle;
-    /*padding: 2px 0;*/
     font-size: 14px;
     line-height: 21px;
 }
@@ -5213,14 +5182,6 @@ input.color {
 
 /*-- Company --*/
 
-/*.white-block-header_2 .inner-col-1 {
-    width: 30%;
-}
-
-.white-block-header_2 .inner-col-2 {
-    width: 70%;
-}*/
-
 .white-block-header_2 .inner-col-1 {
     width: 36%;
 }
@@ -5230,9 +5191,7 @@ input.color {
 }
 
 .dropdown-block.companies {
-    /**/
     display: none;
-    /**/
     min-width: 240px;
 }
 
@@ -5318,24 +5277,17 @@ input.color {
     margin-left: 20px;
 }
 
-.inputs-7_wrapp {
-    /*overflow: hidden;*/
-}
-
 .input-wrapp_7 {
     margin: 0 8px 0 0;
 }
 
 .input-wrapp_7 label {
     display: block;
-    /*padding-bottom: 16px;*/
     padding-bottom: 11px;
 }
 
 label.fs-16 {
     font-size: 16px;
-/*    position: relative;
-    top: -1px;*/
 }
 
 .input-wrapp_7 input {
@@ -5556,12 +5508,7 @@ label.fs-16 {
     display: inline-block;
     vertical-align: top;
     position: relative;
-/*    top: -5px;*/
 }
-
-/*.nav-2 .blue-checkbox {
-    top: -5px;
-}*/
 
 .blue-checkbox input {
     display: block;
@@ -5756,7 +5703,6 @@ label.fs-16 {
 
 .dropdown-block-wrapp.single {
     min-height: unset;
-    /*outline: 1px solid red;*/
 }
 
 .dropdown-block-wrapp.single .dropdown-block {
@@ -6008,7 +5954,6 @@ h2.tracker-h {
 
 .tracker-table .cell-1 {
     width: 6%;
-
 }
 
 .tracker-table .cell-2 {
@@ -6163,11 +6108,6 @@ h2.tracker-h {
     margin: 0 5px 0 0;
 }
 
-/*.form-inner-row p a {
-    position: relative;
-    top: 5px;
-}*/
-
 /*-- /Tracker --*/
 
 /*-- Balance --*/
@@ -6200,7 +6140,6 @@ h2.tracker-h {
 .payment-box {
     border: 1px solid #dcdcdc;
     margin: 0 0 9px 0;
-    /*padding: 5px 0;*/
 }
 
 .payment-header {
@@ -6309,11 +6248,6 @@ h2.tracker-h {
 .info-row p span {
     margin-left: 19px;
 }
-
-/*p a {
-    position: relative;
-    top: 4px;
-}*/
 
 .radio-blocks {
     margin: 13px -2px;
@@ -6484,10 +6418,6 @@ h2.tracker-h {
 /*-- /Selection Platform --*/
 
 /*-- Statistic --*/
-
-.nav-2_wrapp {
-
-}
 
 .input-wrapp_3.date {
     margin-right: 5px;
@@ -6661,10 +6591,6 @@ input.datepicker-input:focus {
     cursor: pointer;
 }
 
-.statistic-marks {
-
-}
-
 .statistic-marks h3 {
     margin: 0 0 5px 0;
     padding: 4px 0;
@@ -6791,10 +6717,6 @@ input.datepicker-input:focus {
 .slide-link.hidden .show {
     display: inline-block;
     vertical-align: top;
-}
-
-.statistic-table {
-
 }
 
 .statistic-table .cell {
@@ -6943,10 +6865,6 @@ input.datepicker-input:focus {
     left: 0;
 }
 
-.smallcharts-table {
-
-}
-
 .smallcharts-table .cell-1 {
     width: 17%;
 }
@@ -6999,8 +6917,6 @@ input.datepicker-input:focus {
 }
 
 .chart-line_wrapp {
-/*    height: 100px;
-    cursor: pointer;*/
     margin: 47px 0 0 0;
     height: 45px;
     overflow: hidden;
@@ -7012,14 +6928,6 @@ input.datepicker-input:focus {
     position: relative;
     top: -14px;
 }
-
-/*.chart-line svg {
-    height: 181px;
-}*/
-
-/*.chart-line svg {
-    height: 41px;
-}*/
 
 .chart-line .ct-point {
     stroke-width: 0;
@@ -7146,13 +7054,12 @@ input.datepicker-input:focus {
 }
 
 .company_descripts {
-    /*margin: 0 -3%;*/
     margin: 29px -45px 18px -45px;
 }
 
 .company-descript_tabel {
     display: inline-table;
-    max-width: 310px;
+    max-width: 320px;
     margin: 0 45px;
 }
 
@@ -7404,10 +7311,6 @@ input.datepicker-input:focus {
     top: 0;
     left: 0;
     z-index: 9;
-}
-
-.trakers-tables {
-
 }
 
 .trakers-tables.active .table_main {
@@ -8008,10 +7911,6 @@ input.datepicker-input:focus {
     margin-top: 3px;
 }
 
-.advertiser_table_3 {
-
-}
-
 .advertiser_table_3 .cell-1 {
     width: 19%;
 }
@@ -8034,10 +7933,6 @@ input.datepicker-input:focus {
 
 .advertiser_table_3 .cell-6 {
     width: 14%;
-}
-
-.advertiser_table_4 {
-
 }
 
 .advertiser_table_4 .cell-1 {
@@ -8190,30 +8085,7 @@ input.datepicker-input:focus {
     color: #ff4e00;
 }
 
-.important-block p {
-
-}
-
 /*-- /Advertiser Statistics --*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------------------*/
