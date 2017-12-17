@@ -8158,7 +8158,7 @@ input.datepicker-input:focus {
     display: block;
     width: 90%;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 30px 2% 21px 2%;
     background: #ffffff;
     position: relative;
