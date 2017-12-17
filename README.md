@@ -1,16 +1,11 @@
 # http://postolenko.github.io/actionteaser/index.html
 # http://postolenko.github.io/actionteaser/tabs.html
 # http://postolenko.github.io/actionteaser/add_teaser.html
-# http://postolenko.github.io/actionteaser/add_teaser_popup.html
 # http://postolenko.github.io/actionteaser/company_teasers.html
 # http://postolenko.github.io/actionteaser/company.html
-# http://postolenko.github.io/actionteaser/company_popup_1.html
-# http://postolenko.github.io/actionteaser/company_popup_2.html
-# http://postolenko.github.io/actionteaser/company_popup_3.html
 # http://postolenko.github.io/actionteaser/creative_search.html
 # http://postolenko.github.io/actionteaser/creative_search_notification.html
 # http://postolenko.github.io/actionteaser/tracker.html
-# http://postolenko.github.io/actionteaser/tracker_popup_8.html
 # http://postolenko.github.io/actionteaser/balance.html
 # http://postolenko.github.io/actionteaser/selection_platform.html
 # http://postolenko.github.io/actionteaser/statistic.html
