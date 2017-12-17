@@ -104,7 +104,7 @@ footer {
     order: 3;
     -webkit-order: 3;
     position: relative;
-    z-index: 3;
+    z-index: 5;
 }
 
 .clearfix:after {
@@ -1953,7 +1953,7 @@ button.disabled {
 .header-site {
     background: rgb(52, 73, 94);
     position: relative;
-    z-index: 4;
+    z-index: 5;
 }
 
 .header-site .col {
@@ -2001,16 +2001,16 @@ button.disabled {
     padding-right: 10px;
 }
 
-.header-site.resp-width .col-1 {
+.header-site.resp .col-1 {
     width: 76px;
     padding: 0;
 }
 
-.header-site.resp-width .col-2 {
+.header-site.resp .col-2 {
     padding-left: 76px;
 }
 
-.header-site.resp-width .respmenubtn {
+.header-site.resp .respmenubtn {
     margin-left: 7%;
 }
 
@@ -2094,11 +2094,11 @@ button.disabled {
     transition-timing-function: ease;
 }
 
-.resp-width .logo span {
+.header-site.resp .logo span {
     width: 27px;
 }
 
-.resp-width .logo span img.logo-txt {
+.header-site.resp .logo span img.logo-txt {
     top: -200px;
 }
 
@@ -2235,7 +2235,7 @@ button.disabled {
 
 .dropdown-block-wrapp.active {
     /*z-index: 4;*/
-    z-index: 10;
+    z-index: 9;
 }
 
 .header-site .col-2 .dropdown-block-wrapp {
@@ -2248,13 +2248,6 @@ button.disabled {
     vertical-align: middle;
 }
 
-/*.dropdown-header:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    width: 1px;
-}
-*/
 .dropdown-header p {
     display: inline-block;
     vertical-align: top;
@@ -2726,7 +2719,8 @@ a.user-acc .img-box img {
     background: #34495e;
     position: absolute;
     top: 0;
-    left :0;
+    left: 0;
+    z-index: 4;
     -webkit-transition-property: width;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -2759,6 +2753,7 @@ a.user-acc .img-box img {
 .two-cols-templ .col-1 {
     width: 285px;
     position: relative;
+    z-index: 4;
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -4176,7 +4171,7 @@ input.color {
     height: 16px;
     cursor: pointer;
     position: relative;
-    z-index: 9;
+    z-index: 8;
 }
 
 .additonal-row .tooltip-block {

@@ -347,30 +347,11 @@
 			  	labels: ['2017-10-01', '2017-10-02', '2017-10-03','2017-10-04','2017-10-05','2017-10-06','2017-10-07','2017-10-08','2017-10-09','2017-10-10','2017-10-11','2017-10-12','2017-10-13','2017-10-14','2017-10-15','2017-10-16','2017-10-17','2017-10-18'],
 			  	series: [
 			  		[2000, 3000, 7501, 11000, 15000, 13000, 16000, 11000, 2000, 22500, 6000, 14000, 12000, 27000, 12000, 17000, 22000, 30000]
-			  	]
-			},{
-			 	seriesBarDistance: 50
-			},{
+			  	]},
+			  	{
+			 	seriesBarDistance: 50,
 				axisY: {
-				    offset:  30,
-				    labelInterpolationFnc: function(value) {
-
-				    	// console.log( value );
-
-				    	// for( var indexSybmol = 0 ; indexSybmol <= value.length - 1; indexSybmol++ ) {
-
-				    	// 	if(indexSybmol % 3 == 0) {
-
-				    	// 		// console.log( value[indexSybmol] );
-
-				    	// 		value[indexSybmol] = "," + value[indexSybmol];
-
-				    	// 	}
-
-				    	// }
-
-				      return value + "s";
-				    },
+				    offset: 40,
 				    scaleMinSpace: 15
 				  }
 			});
@@ -385,18 +366,36 @@
 
 			chart4.on('created', function(data) {
 
+				$(".chart_4 .ct-label.ct-vertical").each(function() {
+
+					var valArr = $(this).text().split(""); 
+
+			        for( var valIndex = -(valArr.length - 1); valIndex < 0; valIndex++ ) {
+
+			            if(valIndex % 3 == 0) {
+
+			                valArr.splice(valIndex, 0, ",");
+
+			            }
+
+			        }
+
+			        value = valArr.join("");
+
+			        $(this).text(value);
+
+				});
+
+				// -------------------------------------------------
+
 				chartLineIndex = 0;
 
-				$(".chart_4 .ct-series .ct-point").each(function() {					
+				$(".chart_4 .ct-series .ct-point").each(function() {
 
-					// $(this).each(function() {
+					$(this).attr("data-index", chartLineIndex);
 
-						$(this).attr("data-index", chartLineIndex);
-
-						chartLineIndex++;
-
-					// });
-
+					chartLineIndex++;
+					
 				});
 
 				chartLineIndex = 0;
@@ -417,6 +416,20 @@
 						chartTooltip = $(".chart_4-tooltip");
 
 						var ctPointVal = $(this).attr("ct:value");
+
+						var valArr = ctPointVal.split(""); 
+
+				        for( var valIndex = -(valArr.length - 1); valIndex < 0; valIndex++ ) {
+
+				            if(valIndex % 3 == 0) {
+
+				                valArr.splice(valIndex, 0, ",");
+
+				            }
+
+				        }
+
+				        ctPointVal = valArr.join("");
 
 						var ctPointValIndex = $(this).attr("data-index");
 
