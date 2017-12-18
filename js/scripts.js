@@ -1110,6 +1110,16 @@ $(document).ready(function() {
 
         });
 
+        $(".add-testimonial").click(function() {
+
+            if( $(this).hasClass("hide") ) {
+
+                $(this).removeClass("hide");
+
+            }
+
+        });
+
     });
 
     function getRespParams() {

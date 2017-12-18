@@ -7063,10 +7063,56 @@ input.datepicker-input:focus {
     width: 100%;
     max-width: 532px;
     margin: 2px 2px 2px 0;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: width;
+    -moz-transition-duration: .2s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: width;
+    -ms-transition-duration: .2s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: width;
+    -o-transition-duration: .2s;
+    -o-transition-timing-function: ease;
+
+    transition-property: width;
+    transition-duration: .2s;
+    transition-timing-function: ease;
 }
 
 .add-testimonial button {
     margin: 2px 2px 2px 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .4s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .4s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .4s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .4s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+}
+
+.add-testimonial.hide input {
+    width: 124px;
+}
+
+.add-testimonial.hide button {
+    opacity: 0;
 }
 
 .company_descripts {
