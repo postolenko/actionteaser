@@ -916,12 +916,10 @@ $(document).ready(function() {
     $(function() {
 
         $(".tracker-btn").click(function() {
-            
-            parentBlock = $(this).closest(".trakers-tables");
 
-            parentBlock.toggleClass("active");
+            $(".trakers-tables").toggleClass("active");
 
-            if( parentBlock.hasClass("active") ) {
+            if( $(".trakers-tables").hasClass("active") ) {
 
                 $(this).addClass("active");
 
@@ -933,51 +931,9 @@ $(document).ready(function() {
 
             setTimeout(function() {
 
-                innerTable = parentBlock.find(".inner-table");
+                getTablesParams();
 
-                for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-                    tableRow = innerTable.eq(indexInnerTable).find(".table-row");
-
-                    countTableRow = tableRow.length - 1;
-
-                    heightsArr[indexInnerTable] = [];
-
-                    for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-                        heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).height();
-
-                    }
-
-                }
-
-                for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-                    maxHeightsArr[indexRow] = [];
-
-                    for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-                        maxHeightsArr[indexRow][indexInnerTable] = heightsArr[indexInnerTable][indexRow];
-
-                    }
-
-                }
-
-                for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-                    for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-                        innerTable.find(".table-row:eq("+ indexRow +")").css({
-
-                            "height" : Math.max.apply(null, maxHeightsArr[indexRow] ) + "px"
-
-                        });
-
-                    }
-
-                }
-
-            }, 500);
+            }, 400);
 
         });
 

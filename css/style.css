@@ -7136,6 +7136,7 @@ input.datepicker-input:focus {
 
 .trakers-tables .table_main {
     width: 100%;
+    position: relative;
 }
 
 .table_main .cell-1 {
@@ -7160,6 +7161,7 @@ input.datepicker-input:focus {
 
 .table_main .cell-6 {
     width: 18%;
+    padding-right: 35px;
 }
 
 .trakers-tables .table_sliding {
@@ -7167,8 +7169,7 @@ input.datepicker-input:focus {
 }
 
 .trakers-tables .sliding-block-wrapp {
-    width: 23px;
-    padding-left: 23px;
+    width: 0;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -7191,7 +7192,6 @@ input.datepicker-input:focus {
 }
 
 .table_sliding {
-    position: relative;
     width: 100%;
 }
 
@@ -7202,7 +7202,6 @@ input.datepicker-input:focus {
 
 .table_sliding .cell-1 {
     width: 11%;
-    padding-left: 2%;
 }
 
 .table_sliding .cell-2 {
@@ -7304,12 +7303,12 @@ input.datepicker-input:focus {
     transform: rotate(0);
 }
 
-.sliding-block-wrapp .tracker-btn {
+.trakers-tables .table_main .tracker-btn {
     width: 24px;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 9;
 }
 
@@ -7485,12 +7484,12 @@ input.datepicker-input:focus {
     display: inline-block;
     vertical-align: top;
     width: 38px;
-    height: 38px;
+    height: 33px;
     cursor: pointer;
     background-color: #fafafa;
     background-image: url(../img/counterbtn_sprite.png);
     background-repeat: no-repeat;
-    background-position: 13px 9px;
+    background-position: 13px 8px;
     border: 1px solid transparent;
     -webkit-border-radius: 2px 0 0 2px;
     -moz-border-radius: 2px 0 0 2px;
@@ -7516,12 +7515,12 @@ input.datepicker-input:focus {
     display: inline-block;
     vertical-align: top;
     width: 38px;
-    height: 38px;
+    height: 33px;
     cursor: pointer;
     background-color: #fafafa;
     background-image: url(../img/counterbtn_sprite.png);
     background-repeat: no-repeat;
-    background-position: -26px 9px;
+    background-position: -26px 8px;
     border: 1px solid transparent;
     -webkit-border-radius: 0 2px 2px 0;
     -moz-border-radius: 0 2px 2px 0;
@@ -7550,8 +7549,11 @@ input.datepicker-input:focus {
     background-color: #f5f5f5;
 }
 
-.counter-input {
+input.counter-input {
     width: 108px;
+    height: 33px;
+    margin: 3px 0;
+    line-height: 33px;
 }
 
 .input-counter_wrapp p {
@@ -7559,7 +7561,7 @@ input.datepicker-input:focus {
 }
 
 .filter-submit {
-    padding: 10px 0;
+    padding: 3px 0;
 }
 
 .filter-submit button,
