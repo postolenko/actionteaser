@@ -1077,6 +1077,41 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".add-testimonial").each(function() {
+
+            $(this).css({
+                "display" : "none"
+            });
+
+        });
+
+        $(".add_comment").click(function(e) {
+
+            e.preventDefault();
+
+            var commentFormName = $(this).attr("data-comment-link");
+
+            var commentForm = $(".add-testimonial").filter("[data-formcomment = '"+ commentFormName +"']");
+
+            if( commentForm.is(":hidden") ) {
+
+                $(this).css({
+                    "display" : "none"
+                });
+
+                commentForm.slideDown(200);
+
+            } else {
+
+                commentForm.slideUp(200);
+            }
+
+        });
+
+    });
+
     function getRespParams() {
 
         if(!$(".two-cols-templ").hasClass("flag")) {
