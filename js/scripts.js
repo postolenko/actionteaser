@@ -1093,6 +1093,14 @@ $(document).ready(function() {
 
         });
 
+        $(".input-val_wrapp").each(function() {
+
+            $(this).css({
+                "display" : "none"
+            });
+
+        });
+
         $(".add_comment").click(function(e) {
 
             e.preventDefault();
@@ -1128,7 +1136,7 @@ $(document).ready(function() {
 
             commentVal = $(this).text();
 
-            $(this).slideUp(200);
+            $(this).closest(".input-val_wrapp").slideUp(200);
 
             inputComment.val(commentVal);
             commentForm.slideDown(200);
@@ -1150,10 +1158,7 @@ $(document).ready(function() {
                 commentValInput = $(".input-val[data-comment-txt = '"+ commentFormName +"']");
 
                 commentValInput.text(commentVal);
-
-                commentValInput.css({
-                    "display" : "inline-block"
-                });
+                commentValInput.closest(".input-val_wrapp").slideDown(200);
 
             }
 

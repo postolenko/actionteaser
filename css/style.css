@@ -7084,10 +7084,25 @@ input.datepicker-input:focus {
     line-height: 24px;
     font-weight: 500;
     color: #333333;
-}
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
 
-.add-comment_wrapp .input-val {
-    display: none;
+    -moz-transition-property: all;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 2s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
 }
 
 .company_descripts {
