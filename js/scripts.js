@@ -1079,7 +1079,13 @@ $(document).ready(function() {
 
     $(function() {
 
-        $(".add-testimonial").each(function() {
+        var commentFormName;
+        var commentForm;
+        var commentValInput;
+        var commentVal;
+        var inputComment;
+
+        $(".add-comment").each(function() {
 
             $(this).css({
                 "display" : "none"
@@ -1091,9 +1097,9 @@ $(document).ready(function() {
 
             e.preventDefault();
 
-            var commentFormName = $(this).attr("data-comment-link");
+            commentFormName = $(this).attr("data-comment-link");
 
-            var commentForm = $(".add-testimonial").filter("[data-formcomment = '"+ commentFormName +"']");
+            commentForm = $(".add-comment").filter("[data-formcomment = '"+ commentFormName +"']");
 
             if( commentForm.is(":hidden") ) {
 
@@ -1110,25 +1116,46 @@ $(document).ready(function() {
 
         });
 
-        $(".add-testimonial .txt-input").click(function() {
+        $(".add-comment_wrapp .input-val").click(function() {
 
-            parentBlock = $(this).closest(".add-testimonial");
+            parentBlock = $(this).closest(".add-testimonial_wrapp");
 
-            if( parentBlock.hasClass("hide") ) {
+            commentFormName = $(this).attr("data-comment-txt");
 
-                parentBlock.removeClass("hide");
+            commentForm = $(".add-comment").filter("[data-formcomment = '"+ commentFormName +"']");
 
-            }
+            inputComment = $(".add-comment[data-formcomment ='"+ commentFormName +"'] .txt-input");
+
+            commentVal = $(this).text();
+
+            $(this).slideUp(200);
+
+            inputComment.val(commentVal);
+            commentForm.slideDown(200);
 
         });
 
-        $(".add-testimonial .submit-btn").click(function() {
+        $(".add-comment .submit-btn").click(function() {
 
-            parentBlock = $(this).closest(".add-testimonial");
+            parentBlock = $(this).closest(".add-comment");
+            commentFormName = parentBlock.attr("data-formcomment");            
 
-            parentBlock.addClass("hide");
+            inputComment = $(".add-comment[data-formcomment ='"+ commentFormName +"'] .txt-input");
+            commentVal = inputComment.val();
 
-            console.log("hide");
+            if( commentVal != "" ) {
+
+                parentBlock.slideUp(100);
+
+                commentValInput = $(".input-val[data-comment-txt = '"+ commentFormName +"']");
+
+                commentValInput.text(commentVal);
+
+                commentValInput.css({
+                    "display" : "inline-block"
+                });
+
+            }
 
         });
 

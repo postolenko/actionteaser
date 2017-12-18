@@ -7053,17 +7053,18 @@ input.datepicker-input:focus {
     background-color: #37a0e2;
 }
 
-.add-testimonial {
+.add-comment {
     max-width: 627px;
 }
 
-.add-testimonial .txt-input {
+.add-comment .txt-input {
     display: inline-block;
     vertical-align: top;
     width: 100%;
+    height: auto;
     max-width: 532px;
     margin: 2px 2px 2px 0;
-    -webkit-transition-property: width;
+/*    -webkit-transition-property: width;
     -webkit-transition-duration: .2s;
     -webkit-transition-timing-function: ease;
 
@@ -7081,12 +7082,12 @@ input.datepicker-input:focus {
 
     transition-property: width;
     transition-duration: .2s;
-    transition-timing-function: ease;
+    transition-timing-function: ease;*/
 }
 
-.add-testimonial button {
+.add-comment button {
     margin: 2px 2px 2px 0;
-    -webkit-transition-property: opacity;
+/*    -webkit-transition-property: opacity;
     -webkit-transition-duration: .4s;
     -webkit-transition-timing-function: ease;
 
@@ -7104,19 +7105,39 @@ input.datepicker-input:focus {
 
     transition-property: opacity;
     transition-duration: .4s;
-    transition-timing-function: ease;
+    transition-timing-function: ease;*/
 }
 
-.add-testimonial.hide {
+/*.add-comment.hide {
     cursor: pointer;
 }
 
-.add-testimonial.hide .txt-input {
+.add-comment.hide .txt-input {
     width: 124px;
 }
 
-.add-testimonial.hide button {
+.add-comment.hide button {
     opacity: 0;
+}*/
+
+.input-val {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0;
+    padding: 6px 11px;
+    border: 1px solid #dee1e8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.add-comment_wrapp .input-val {
+    display: none;
 }
 
 .company_descripts {
