@@ -1110,13 +1110,25 @@ $(document).ready(function() {
 
         });
 
-        $(".add-testimonial").click(function() {
+        $(".add-testimonial .txt-input").click(function() {
 
-            if( $(this).hasClass("hide") ) {
+            parentBlock = $(this).closest(".add-testimonial");
 
-                $(this).removeClass("hide");
+            if( parentBlock.hasClass("hide") ) {
+
+                parentBlock.removeClass("hide");
 
             }
+
+        });
+
+        $(".add-testimonial .submit-btn").click(function() {
+
+            parentBlock = $(this).closest(".add-testimonial");
+
+            parentBlock.addClass("hide");
+
+            console.log("hide");
 
         });
 

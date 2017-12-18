@@ -7057,7 +7057,7 @@ input.datepicker-input:focus {
     max-width: 627px;
 }
 
-.add-testimonial input {
+.add-testimonial .txt-input {
     display: inline-block;
     vertical-align: top;
     width: 100%;
@@ -7107,7 +7107,11 @@ input.datepicker-input:focus {
     transition-timing-function: ease;
 }
 
-.add-testimonial.hide input {
+.add-testimonial.hide {
+    cursor: pointer;
+}
+
+.add-testimonial.hide .txt-input {
     width: 124px;
 }
 
