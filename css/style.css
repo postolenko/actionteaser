@@ -3480,7 +3480,9 @@ input.color {
     vertical-align: top;
     position: relative;
     overflow: hidden;
-    max-width: 244px;
+    /*max-width: 244px;*/
+    width: 225px;
+    position: relative;
     margin: 14px 1% 25px 1%;
 }
 
@@ -3493,7 +3495,10 @@ input.color {
     height: 170px;
     overflow: hidden;
     position: relative;
-    background: #ffffff;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 1px solid #dddddd;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -3583,7 +3588,7 @@ input.color {
     -moz-border-radius: 3px;
     border-radius: 3px;
     position: absolute;
-    top: -100%;
+    top: -110%;
     left: 0;
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
