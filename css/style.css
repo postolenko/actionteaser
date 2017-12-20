@@ -3495,7 +3495,7 @@ input.color {
     overflow: hidden;
     position: relative;
     background-color: #ffffff;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #dddddd;
