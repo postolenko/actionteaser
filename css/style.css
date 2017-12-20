@@ -3480,7 +3480,6 @@ input.color {
     vertical-align: top;
     position: relative;
     overflow: hidden;
-    /*max-width: 244px;*/
     width: 225px;
     position: relative;
     margin: 14px 1% 25px 1%;
@@ -3527,7 +3526,7 @@ input.color {
     transition-timing-function: ease;
 }
 
-.thumbnail .inner:hover .img-box {
+.thumbnail:hover .img-box {
     -webkit-box-shadow: 0 0 24px 0 rgba(26, 26, 26, .43);
     -moz-box-shadow: 0 0 24px 0 rgba(26, 26, 26, .43);
     box-shadow: 0 0 24px 0 rgba(26, 26, 26, .43);
@@ -3537,8 +3536,8 @@ input.color {
     display: block;
     width: auto;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
+/*    min-width: 100%;
+    min-height: 100%;*/
     position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
