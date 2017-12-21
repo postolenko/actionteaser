@@ -3486,7 +3486,6 @@ input.color {
 
 .thumbnail .inner {
     display: block;
-    overflow: hidden;
     position: relative;
 }
 
