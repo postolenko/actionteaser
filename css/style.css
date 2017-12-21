@@ -3479,7 +3479,6 @@ input.color {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    overflow: hidden;
     width: 225px;
     position: relative;
     margin: 14px 1% 25px 1%;
@@ -3487,6 +3486,7 @@ input.color {
 
 .thumbnail .inner {
     display: block;
+    overflow: hidden;
     position: relative;
 }
 
@@ -3536,15 +3536,6 @@ input.color {
     display: block;
     width: auto;
     height: auto;
-/*    min-width: 100%;
-    min-height: 100%;*/
-/*    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);*/
 }
 
 .thumbnail p.orange {
