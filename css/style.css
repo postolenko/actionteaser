@@ -6546,7 +6546,7 @@ input.datepicker-input:focus {
 }
 
 .statistic-chart .ct-chart {
-    height: 240px;
+    height: 285px;
 }
 
 .statistic-chart .ct-grid {
@@ -7034,6 +7034,38 @@ input.datepicker-input:focus {
 .chart_3 .ct-series-b .ct-line,
 .chart_3 .ct-series-b .ct-point {
     stroke: #ff4585;
+}
+
+.statistic-table_2_wrapp {
+    padding: 20px 0 8px 0;
+}
+
+.statistic-table_2 {
+    margin: 11px 0 0 0;
+}
+
+.statistic-table_2 .cell-1 {
+    width: 20%;
+}
+
+.statistic-table_2 .cell-2 {
+    width: 16%;
+}
+
+.statistic-table_2 .cell-3 {
+    width: 16%;
+}
+
+.statistic-table_2 .cell-4 {
+    width: 16%;
+}
+
+.statistic-table_2 .cell-5 {
+    width: 16%;
+}
+
+.statistic-table_2 .cell-6 {
+    width: 16%;
 }
 
 /*-- /Statistic --*/
@@ -8756,6 +8788,10 @@ label.brown-2 {
 
 .add-events h3 {
     padding-bottom: 13px;
+}
+
+.add-events .datepiker-range {
+    max-width: 180px;
 }
 
 .add-events textarea {
