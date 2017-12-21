@@ -3586,8 +3586,9 @@ input.color {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    opacity: 0;
     position: absolute;
-    top: -110%;
+    top: 0;
     left: 0;
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
@@ -3611,7 +3612,7 @@ input.color {
 }
 
 .thumbnail:hover .mask {
-    top: 0;
+    opacity: 1;
 }
 
 .thumbnail .mask p {
