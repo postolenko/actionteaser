@@ -6549,10 +6549,6 @@ input.datepicker-input:focus {
     height: 285px;
 }
 
-.statistic-marks .scroll-box {
-    height: 220px;
-}
-
 .statistic-chart .ct-grid {
     stroke: #959595;
     stroke-width: 1px;
