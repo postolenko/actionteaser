@@ -8166,6 +8166,112 @@ input.counter-input {
     color: #ff4e00;
 }
 
+.statistic-table_wrapp > h3 {
+    padding-top: 30px;
+}
+
+.statistic-table_wrapp  > h3 + .statistic-table {
+    margin-top: 10px;
+}
+
+.statistic-table_3 .cell-1 {
+    width: 17%;
+}
+
+.statistic-table_3 .cell-2 {
+    width: 11%;
+}
+
+.statistic-table_3 .cell-3 {
+    width: 10%;
+}
+
+.statistic-table_3 .cell-4 {
+    width: 11%;
+}
+
+.statistic-table_3 .cell-5 {
+    width: 10%;
+}
+
+.statistic-table_3 .cell-6 {
+    width: 10%;
+}
+
+.statistic-table_3 .cell-7 {
+    width: 10%;
+}
+
+.statistic-table_3 .cell-8 {
+    width: 10%;
+}
+
+.statistic-table_3 .cell-9 {
+    width: 11%;
+}
+
+.statistic-table_4 .cell-1 {
+    width: 17%;
+    padding-left: 3%;
+}
+
+.statistic-table_4 .table-row:last-child .cell-1 {
+    width: 17%;
+    padding-left: 2%;
+}
+
+.statistic-table_4 .table-row.table-header .cell-1 {
+    padding-left: 2%;
+}
+
+.statistic-table_4 .cell-2 {
+    width: 16%;
+}
+
+.statistic-table_4 .cell-3 {
+    width: 17%;
+}
+
+.statistic-table_4 .cell-4 {
+    width: 17%;
+}
+
+.statistic-table_4 .cell-5 {
+    width: 17%;
+}
+
+.statistic-table_4 .cell-6 {
+    width: 16%;
+}
+
+.statistic-table_5 .cell-1 {
+    width: 17%;
+}
+
+.statistic-table_5 .cell-2 {
+    width: 14%;
+}
+
+.statistic-table_5 .cell-3 {
+    width: 13%;
+}
+
+.statistic-table_5 .cell-4 {
+    width: 14%;
+}
+
+.statistic-table_5 .cell-5 {
+    width: 14%;
+}
+
+.statistic-table_5 .cell-6 {
+    width: 13%;
+}
+
+.statistic-table_5 .cell-7 {
+    width: 15%;
+}
+
 /*-- /Advertiser Statistics --*/
 
 
