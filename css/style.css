@@ -8215,6 +8215,11 @@ input.counter-input {
     padding-left: 3%;
 }
 
+.statistic-table_4 .table-row-sub .cell-1 {
+    width: 17%;
+    padding-left: 4.5%;
+}
+
 .statistic-table_4 .table-row:last-child .cell-1 {
     width: 17%;
     padding-left: 2%;
