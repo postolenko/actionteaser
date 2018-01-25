@@ -109,6 +109,7 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var tableHeaderWrapp;
     var tableHeader;
     var innerTable;
     var tableRow;
@@ -1337,36 +1338,38 @@ $(document).ready(function() {
 
     function getTableHeaderPosition() {
 
-        // var tableHeader;
-
         if( $(".tables_wrapp").length > 0 ) {
 
-            $(".table-header_wrapp").css({
-                "height" : $(".table-header_wrapp .table-header").height() + "px"
+            $(".tables_wrapp").each( function() {
+
+                tableHeaderWrapp = $(this).find(".table-header_wrapp");
+
+                tableHeader = $(this).find(".table-header");
+
+                if( $(this).offset().top < $(document).scrollTop() && 
+                    ( $(this).offset().top + $(this).height() - $(this).find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
+                    
+                    tableHeaderWrapp .css({
+                        "height" : tableHeader.height() + "px"
+                    });
+
+                    $(this).addClass("scrolling");
+                    tableHeader.css({
+                        "left" : $(this).offset().left + "px",
+                        "width" : $(this).width() + "px"
+                    });
+
+                } else {
+
+                    $(this).removeClass("scrolling");
+                    tableHeader.css({
+                        "left" : 0,
+                        "width" : "auto"
+                    });
+
+                }
+
             });
-
-            parentBlock = $(".table-header_wrapp").closest(".tables_wrapp");
-
-            tableHeader = $(".table-header_wrapp").find(".table-header");
-
-            if( parentBlock.offset().top < $(document).scrollTop() && 
-                ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
-                
-                parentBlock.addClass("scrolling");
-                tableHeader.css({
-                    "left" : parentBlock.offset().left + "px",
-                    "width" : parentBlock.width() + "px"
-                });
-
-            } else {
-
-                parentBlock.removeClass("scrolling");
-                tableHeader.css({
-                    "left" : 0,
-                    "width" : "auto"
-                });
-
-            }
 
         }
 
