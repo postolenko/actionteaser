@@ -3654,6 +3654,7 @@ input.color {
 }
 
 .tabs-links label {
+    max-width: 190px;
     -webkit-flex-grow: 1;
     flex-grow: 1;
     margin: 3px;
@@ -4039,6 +4040,36 @@ input.color {
     font-weight: bold;
     color: #38d07c;
 }
+
+.mobile-thumb {
+    display: block;
+    width: 264px;
+    height: 552px;
+    margin: 23px auto;
+    background-image: url(../img/mobile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mobile-thumb .inner {
+    height: 383px;
+    width: 217px;
+    overflow: hidden;
+    position: relative;
+    top: 60px;
+    left: 23px;
+}
+
+.mobile-thumb .inner img {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 
 /*-- Add Teaser Page --*/
 
