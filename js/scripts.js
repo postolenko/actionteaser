@@ -1082,6 +1082,8 @@ $(document).ready(function() {
 
                 getRespParams();
 
+                getTableHeaderPosition();
+
             }, 400);
 
         });
@@ -1336,27 +1338,43 @@ $(document).ready(function() {
 
     function getTableHeaderPosition() {
 
-        $(".table-header_wrapp").css({
-            "height" : $(".table-header_wrapp .table-header").height() + "px"
-        });
+        // $(".table-header_wrapp").css({
+        //     "height" : $(".table-header_wrapp .table-header").height() + "px"
+        // });
 
-        parentBlock = $(".table-header").closest(".tables_wrapp");
+        parentBlock = $(".table-header_wrapp").closest(".tables_wrapp");
+
+        var tableHeader = $(".table-header_wrapp");
+
+        var cellIndex = 0;
 
         if( parentBlock.offset().top < $(document).scrollTop() && 
             ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
-
+            
             parentBlock.addClass("scrolling");
-            parentBlock.find(".table-header").css({
-                "left" : parentBlock.offset().left + "px",
-                "width" : parentBlock.width() + "px"
+            tableHeader.css({
+                "top" : $(document).scrollTop() - parentBlock.offset().top + "px"
+                // "left" : parentBlock.offset().left + "px",
+                // "width" : parentBlock.width() + "px"
             });
+
+            // tableHeader.find(".company-table_2 .cell").each(function() {
+
+            //     parentBlock.find(".cell:eq("+ cellIndex +")").css({
+            //         "width" : $(this).width() + "px"
+            //     });
+
+            //     cellIndex++;
+
+            // });
 
         } else {
 
             parentBlock.removeClass("scrolling");
-            parentBlock.find(".table-header").css({
-                "left" : 0,
-                "width" : "auto"
+            tableHeader.css({
+                "top" : 0
+                // "left" : 0,
+                // "width" : "auto"
             });
 
         }

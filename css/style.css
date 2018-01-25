@@ -5491,6 +5491,7 @@ label.fs-16 {
 
 .table-header_wrapp {
     margin-bottom: 0;
+    width: 100%;
 }
 
 .table-header_wrapp .table-header {
@@ -5505,11 +5506,9 @@ label.fs-16 {
     border-top: none;
 }
 
-.tables_wrapp.scrolling .table-header {
-    width: 100%;
-    position: fixed;
+.tables_wrapp.scrolling .table-header_wrapp {
+    position: relative;
     top: 0;
-    left: 0;
     z-index: 2;
 }
 
