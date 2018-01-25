@@ -126,6 +126,8 @@ $(document).ready(function() {
 
     getTablesParams();
 
+    getTableHeaderPosition();
+
     $(window).resize(function() {
 
         bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;        
@@ -139,6 +141,8 @@ $(document).ready(function() {
         });
 
         getTablesParams();
+
+        getTableHeaderPosition();
 
         // ---------------
 
@@ -158,6 +162,12 @@ $(document).ready(function() {
             }
 
         });
+
+    });
+
+    $(document).scroll(function() {
+
+        getTableHeaderPosition();
 
     });
 
@@ -1319,6 +1329,39 @@ $(document).ready(function() {
                 }
 
             }
+
+        }
+
+    }
+
+    function getTableHeaderPosition() {
+
+        parentBlock = $(".table-header").closest(".tables_wrapp");
+
+        if( parentBlock.offset().top < $(document).scrollTop() && 
+            ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header").height() ) > $(document).scrollTop()) {
+
+            parentBlock.addClass("scrolling");
+            parentBlock.css({
+                "padding-top" : parentBlock.find(".table-header").height() + "px"
+            });
+            parentBlock.find(".table-header").css({
+                "left" : parentBlock.offset().left + "px",
+                "width" : parentBlock.width() + "px"
+            });
+
+        } else {
+
+            parentBlock.removeClass("scrolling");
+
+            parentBlock.css({
+                "padding-top" : 0
+            });
+
+            parentBlock.find(".table-header").css({
+                "left" : 0,
+                "width" : "auto"
+            });
 
         }
 
