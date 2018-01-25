@@ -1269,6 +1269,27 @@ textarea:focus {
     background-size: 100%;
 }
 
+.check-20 {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/check_20.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.x-20 {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/x_20.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
 /*-- /Icons --*/
 
 /*-- Links --*/
@@ -5383,6 +5404,99 @@ label.fs-16 {
     top: 1px;
 }
 
+.info-boxes_wrapp {
+    margin: 23px 0 56px 0;
+}
+
+.info-box-2 {
+    display: table;
+    width: 100%;
+    margin: 6px 0;
+    background: #cdf8df;
+    padding: 0 24px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.info-box-2 .col-1 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 32px;
+    padding: 19px 5px 19px 0;
+}
+
+.info-box-2 .col-2 {
+    display: table-cell;
+    vertical-align: middle;
+    width: auto;
+    position: relative;
+    padding: 19px 0 19px 5px;
+}
+
+.info-box-2 p {
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    color: #449d6c;
+}
+
+.close-infobox {
+    display: block;
+    width: 13px;
+    height: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin: -7px 0 0 0;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.close-infobox:before {
+    display: block;
+    content: "\2716";
+    font-family: "SF UI Display", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+    color: #449d6c;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+}
+
+.info-box-2.red {
+    background: #ffbfb8;
+}
+
+.info-box-2.red p {
+    color: #c45447;
+}
+
+.info-box-2.red .close-infobox:before {
+    color: #c45447;
+}
+
+.company-table {
+    margin: 24px 0 9px 0;
+}
+
+.company-table .table-row {
+    border-top: 1px solid #dcdcdc;
+}
+
+.company-table .table-header {
+    border-top: none;
+}
+
+.company-table .table-header + .table-row {
+    border-top: none;
+}
+
 .company-table .cell-1 {
     width: 5%;
 }
@@ -5425,6 +5539,10 @@ label.fs-16 {
 
 .company-table .on-off {
     margin: 0;
+}
+
+.company-table + .nav-2_wrapp {
+    margin: 11px 0;
 }
 
 .table-header h3,
@@ -5476,7 +5594,7 @@ label.fs-16 {
 }
 
 .teaser-articles_wrapp {
-    margin: 17px 0 8px 0;
+    margin: 62px 0 8px 0;
 }
 
 .teaser-articles_wrapp > h3 {

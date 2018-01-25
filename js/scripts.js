@@ -894,7 +894,6 @@ $(document).ready(function() {
 
     });
 
-
     $(function() {
 
         $(".sort-arr").click(function() {
@@ -1163,6 +1162,18 @@ $(document).ready(function() {
                 commentValInput.closest(".input-val_wrapp").slideDown(200);
 
             }
+
+        });
+
+    });
+
+    $(function() {
+
+        $(".close-infobox").click(function() {
+
+            parentBlock = $(this).closest(".info-box-2");
+
+            parentBlock.fadeOut(300);
 
         });
 
