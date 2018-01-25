@@ -1336,15 +1336,16 @@ $(document).ready(function() {
 
     function getTableHeaderPosition() {
 
+        $(".table-header_wrapp").css({
+            "height" : $(".table-header_wrapp .table-header").height() + "px"
+        });
+
         parentBlock = $(".table-header").closest(".tables_wrapp");
 
         if( parentBlock.offset().top < $(document).scrollTop() && 
-            ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header").height() ) > $(document).scrollTop()) {
+            ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
 
             parentBlock.addClass("scrolling");
-            parentBlock.css({
-                "padding-top" : parentBlock.find(".table-header").height() + "px"
-            });
             parentBlock.find(".table-header").css({
                 "left" : parentBlock.offset().left + "px",
                 "width" : parentBlock.width() + "px"
@@ -1353,11 +1354,6 @@ $(document).ready(function() {
         } else {
 
             parentBlock.removeClass("scrolling");
-
-            parentBlock.css({
-                "padding-top" : 0
-            });
-
             parentBlock.find(".table-header").css({
                 "left" : 0,
                 "width" : "auto"
