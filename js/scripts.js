@@ -378,7 +378,9 @@ $(document).ready(function() {
 
                 if( $(this).hasClass("active") ) {
 
-                    indexActiveTab = $(this).index();
+                    indexActiveTab = $(this).index(".tab-link");
+
+                    $(this).click();
 
                     return false;
 
