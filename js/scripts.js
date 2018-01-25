@@ -1338,13 +1338,13 @@ $(document).ready(function() {
 
     function getTableHeaderPosition() {
 
-        // $(".table-header_wrapp").css({
-        //     "height" : $(".table-header_wrapp .table-header").height() + "px"
-        // });
+        $(".table-header_wrapp").css({
+            "height" : $(".table-header_wrapp .table-header").height() + "px"
+        });
 
         parentBlock = $(".table-header_wrapp").closest(".tables_wrapp");
 
-        var tableHeader = $(".table-header_wrapp");
+        var tableHeader = $(".table-header_wrapp").find(".table-header");
 
         var cellIndex = 0;
 
@@ -1353,9 +1353,9 @@ $(document).ready(function() {
             
             parentBlock.addClass("scrolling");
             tableHeader.css({
-                "top" : $(document).scrollTop() - parentBlock.offset().top + "px"
-                // "left" : parentBlock.offset().left + "px",
-                // "width" : parentBlock.width() + "px"
+                // "top" : $(document).scrollTop() - parentBlock.offset().top + "px"
+                "left" : parentBlock.offset().left + "px",
+                "width" : parentBlock.width() + "px"
             });
 
             // tableHeader.find(".company-table_2 .cell").each(function() {
@@ -1372,9 +1372,9 @@ $(document).ready(function() {
 
             parentBlock.removeClass("scrolling");
             tableHeader.css({
-                "top" : 0
-                // "left" : 0,
-                // "width" : "auto"
+                // "top" : 0
+                "left" : 0,
+                "width" : "auto"
             });
 
         }
