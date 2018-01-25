@@ -109,6 +109,7 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var tableHeader;
     var innerTable;
     var tableRow;
     var countTableRow;
@@ -1082,8 +1083,6 @@ $(document).ready(function() {
 
                 getRespParams();
 
-                getTableHeaderPosition();
-
             }, 400);
 
         });
@@ -1338,47 +1337,40 @@ $(document).ready(function() {
 
     function getTableHeaderPosition() {
 
-        $(".table-header_wrapp").css({
-            "height" : $(".table-header_wrapp .table-header").height() + "px"
-        });
+        // var tableHeader;
 
-        parentBlock = $(".table-header_wrapp").closest(".tables_wrapp");
+        if( $(".tables_wrapp").length > 0 ) {
 
-        var tableHeader = $(".table-header_wrapp").find(".table-header");
-
-        var cellIndex = 0;
-
-        if( parentBlock.offset().top < $(document).scrollTop() && 
-            ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
-            
-            parentBlock.addClass("scrolling");
-            tableHeader.css({
-                // "top" : $(document).scrollTop() - parentBlock.offset().top + "px"
-                "left" : parentBlock.offset().left + "px",
-                "width" : parentBlock.width() + "px"
+            $(".table-header_wrapp").css({
+                "height" : $(".table-header_wrapp .table-header").height() + "px"
             });
 
-            // tableHeader.find(".company-table_2 .cell").each(function() {
+            parentBlock = $(".table-header_wrapp").closest(".tables_wrapp");
 
-            //     parentBlock.find(".cell:eq("+ cellIndex +")").css({
-            //         "width" : $(this).width() + "px"
-            //     });
+            tableHeader = $(".table-header_wrapp").find(".table-header");
 
-            //     cellIndex++;
+            if( parentBlock.offset().top < $(document).scrollTop() && 
+                ( parentBlock.offset().top + parentBlock.height() - parentBlock.find(".table-header_wrapp").outerHeight(true) ) > $(document).scrollTop()) {
+                
+                parentBlock.addClass("scrolling");
+                tableHeader.css({
+                    "left" : parentBlock.offset().left + "px",
+                    "width" : parentBlock.width() + "px"
+                });
 
-            // });
+            } else {
 
-        } else {
+                parentBlock.removeClass("scrolling");
+                tableHeader.css({
+                    "left" : 0,
+                    "width" : "auto"
+                });
 
-            parentBlock.removeClass("scrolling");
-            tableHeader.css({
-                // "top" : 0
-                "left" : 0,
-                "width" : "auto"
-            });
+            }
 
         }
 
     }
+
 
 });

@@ -5507,21 +5507,27 @@ label.fs-16 {
 }
 
 .tables_wrapp.scrolling .table-header {
-    /*position: relative;*/
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 2;
 }
 
-.table-header_wrapp .table-header {
-    display: block !important;
-    font-size: 0;
-    line-height: 0;
+.company-table .table-row {
+    display: flex !important;
+    display: -webkit-flex !important;
 }
 
-.table-header_wrapp .table-header .cell {
-    display: inline-block !important;
-    vertical-align: top;
+.company-table .cell {
+    display: unset !important;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    border-left: none;
+    border-right: 1px solid #dcdcdc;
+}
+
+.table-header_wrapp .table-header .cell:nth-child(1) {
+    border-left: 1px solid #dcdcdc;
 }
 
 .table-header_wrapp .table-header {
@@ -5542,6 +5548,7 @@ label.fs-16 {
 
 .company-table .cell-1 {
     width: 6%;
+    border-left: 1px solid #dcdcdc;
 }
 
 .company-table .cell-2 {
