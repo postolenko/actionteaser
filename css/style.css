@@ -4064,8 +4064,8 @@ input.color {
 
 .mobile-thumb {
     display: block;
-    width: 264px;
-    height: 552px;
+    width: 300px;
+    height: 627px;
     margin: 23px auto;
     background-image: url(../img/mobile.png);
     background-size: 100%;
@@ -4074,18 +4074,19 @@ input.color {
 }
 
 .mobile-thumb .inner {
-    height: 383px;
-    width: 217px;
+    height: 436px;
+    width: 243px;
     overflow: hidden;
     position: relative;
-    top: 60px;
-    left: 23px;
+    top: 68px;
+    left: 28px;
 }
 
 .mobile-thumb .inner img {
     display: block;
     width: auto;
     height: auto;
+    min-width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
