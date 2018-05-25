@@ -8193,27 +8193,27 @@ input.counter-input {
 }
 
 .advertiser_table_3 .cell-1 {
-    width: 19%;
+    width: 20%;
 }
 
 .advertiser_table_3 .cell-2 {
-    width: 21%;
-}
-
-.advertiser_table_3 .cell-3 {
     width: 16%;
 }
 
+.advertiser_table_3 .cell-3 {
+    width: 14%;
+}
+
 .advertiser_table_3 .cell-4 {
-    width: 15%;
+    width: 14%;
 }
 
 .advertiser_table_3 .cell-5 {
-    width: 15%;
+    width: 18%;
 }
 
 .advertiser_table_3 .cell-6 {
-    width: 14%;
+    width: 18%;
 }
 
 .advertiser_table_4 .cell-1 {
