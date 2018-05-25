@@ -1300,7 +1300,7 @@ $(document).ready(function() {
 
                 for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-                    heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).height();
+                    heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).outerHeight();
 
                 }
 
