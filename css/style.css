@@ -7391,10 +7391,18 @@ input.datepicker-input:focus {
     overflow: hidden;
 }
 
+.traker_table_wrapp {
+    margin: 36px 0 29px 0;
+    border-right: 1px solid #dcdcdc;
+}
+
+.traker_table_wrapp_2 {
+    margin-top: 16px;
+}
+
 .traker-table {
     display: table;
     width: 100%;
-    margin: 36px 0 29px 0;
     position: relative;
     border-collapse: collapse;
     border-bottom: 1px solid #dcdcdc;
@@ -7475,12 +7483,11 @@ input.datepicker-input:focus {
 
 .traker-table .cell-6 {
     width: 9%;
-    padding-right: 27px;
+    padding-right: 24px !important;
 }
 
 .traker-table .cell-7 {
-    width: 7%;
-    padding-left: 18px !important;
+    width: 7%;    
 }
 
 .traker-table .cell-8 {
@@ -7515,8 +7522,69 @@ input.datepicker-input:focus {
     width: 6%;
 }
 
-.traker-table_2 {
-    margin-top: 16px;
+.traker-table_3 .cell-1 {
+    width: 7%;
+}
+
+.traker-table_3 .cell-2 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-3 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-4 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-5 {
+    width: 8%;
+}
+
+.traker-table_3 .cell-6 {
+    width: 8%;
+}
+
+.traker-table_3 .cell-7 {
+    width: 7%;
+    padding-right: 24px !important;
+}
+
+.traker-table_3 .cell-8 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-9 {
+    width: 5%;
+}
+
+.traker-table_3 .cell-10 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-11 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-12 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-13 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-14 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-15 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-16 {
+    width: 6%;
 }
 
 .traker-table_2 .cell-1 p {
@@ -7569,9 +7637,9 @@ input.datepicker-input:focus {
     line-height: 15px;
     font-weight: normal;
     color: #ffffff;
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -7590,9 +7658,9 @@ input.datepicker-input:focus {
 }
 
 .tracker-btn.active span:after {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .traker-table .tracker-btn {
@@ -7600,8 +7668,8 @@ input.datepicker-input:focus {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 44%;
-    margin: 0 0 0 -22px;
+    /*left: 44%;*/
+    margin: 0 0 0 -24px;
     z-index: 9;
 }
 

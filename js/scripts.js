@@ -1,3 +1,9 @@
+var trackerTableName;
+var trackerTableWrapp;
+var rightCoord;
+var multippleVal;
+var trakerBtn;
+
 $(window).load(function() {
 
     $("select").each(function() {
@@ -24,6 +30,24 @@ $(window).load(function() {
 
             $(this).find(".menu-dropdown").css({
                 "display" : "none"
+            });
+
+        }
+
+    });
+
+    // --------------------------
+
+    $(".traker-table").each(function() {
+
+        trakerBtn = $(this).find(".tracker-btn");
+
+        if( $(this).find(".right_coord").length > 0 ) {
+
+            rightCoord = $(this).find(".right_coord").position().left + $(this).find(".right_coord").outerWidth();
+
+            trakerBtn.css({
+                "left" : rightCoord / $(this).width() * 100 + "%"
             });
 
         }
@@ -928,12 +952,43 @@ $(document).ready(function() {
 
     $(function() {
 
+        // var trackerTableName;
+        // var trackerTableWrapp;
+        // var rightCoord;
+        // var multippleVal;
+        // var trakerBtn;
+
         $(".tracker-btn").click(function() {
 
-            $(".traker-table").toggleClass("active");
-            $(this).toggleClass("active");
+            parentBlock = $(this).closest(".traker-table");
+
+            trackerTableName = $(this).closest(".traker-table").attr("data-traker");
+
+            trackerTableWrapp = parentBlock.closest(".traker_table_wrapp");
+
+            rightCoord = parentBlock.find(".right_coord").position().left + parentBlock.find(".right_coord").outerWidth();
+
+            if(parentBlock.width() > trackerTableWrapp.width() ) {
+
+                multippleVal = 100;
+
+                $(this).removeClass("active");
+
+            } else {
+
+                multippleVal = Math.ceil( parentBlock.width() / rightCoord * 100 );
+
+                $(this).addClass("active");
+
+            }
+
+            $(".traker-table[data-traker = '"+ trackerTableName +"']").css({
+                "width" : multippleVal + "%"
+            });
 
         });
+
+
 
     });
 
