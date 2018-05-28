@@ -7396,6 +7396,7 @@ input.datepicker-input:focus {
     width: 100%;
     margin: 36px 0 29px 0;
     position: relative;
+    border-collapse: collapse;
     border-bottom: 1px solid #dcdcdc;
     -webkit-transition-property: width;
     -webkit-transition-duration: .4s;
@@ -7419,7 +7420,11 @@ input.datepicker-input:focus {
 }
 
 .traker-table.active {
-    width: 227%;
+    width: 226.5%;
+}
+
+.table-header.hidden-row {
+    background-color: #e7f2f8;
 }
 
 .traker-table .table-row.table-header .cell {
@@ -7432,6 +7437,7 @@ input.datepicker-input:focus {
     display: table-cell;
     vertical-align: top;
     padding: 4px 6px;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .traker-table .table-row.table-header .cell > div {
@@ -7507,6 +7513,11 @@ input.datepicker-input:focus {
 
 .traker-table .cell-15 {
     width: 6%;
+}
+
+.traker-table_2 .cell-1 p {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .blue_bg {
@@ -8046,10 +8057,6 @@ input.counter-input {
     margin-right: 9px; 
 }
 
-.multipple-tables {
-    /*width: 50%;*/
-}
-
 .sliding-tables .advertiser_table {
     margin-top: 0;
 }
@@ -8084,7 +8091,8 @@ input.counter-input {
 }
 
 .advertiser_table_2 .table-row {
-    display: table;
+    /*display: table;*/
+    display: table-row;
     width: 100%;
 }
 
@@ -8200,7 +8208,7 @@ input.counter-input {
     margin-top: 3px;
 }
 
-.advertiser_table_3 .cell-1 {
+/*.advertiser_table_3 .cell-1 {
     width: 20%;
 }
 
@@ -8223,6 +8231,11 @@ input.counter-input {
 .advertiser_table_3 .cell-6 {
     width: 18%;
 }
+
+.advertiser_table_3 .cell-1 p {
+    display: inline-block;
+    vertical-align: top;
+}*/
 
 .advertiser_table_4 .cell-1 {
     width: 5%;

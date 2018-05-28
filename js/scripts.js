@@ -119,8 +119,8 @@ $(document).ready(function() {
 
     // ----------------------------
 
-    var addTableBtn;
-    var slidingTable;
+    var rowsGroupName;
+    var rowsGroup;
 
     // ----------------------------
 
@@ -977,23 +977,18 @@ $(document).ready(function() {
 
     $(function() {
 
-        // var addTableBtn;
-        // var slidingTable;     
+        $(".traker-table .ad-table-btn").each(function() {
 
-        $(".sliding-tables").each(function() {
-
-            addTableBtn = $(this).find(".ad-table-btn");
-            slidingTable = $(this).find(".sliding-table");
+            rowsGroupName = $(this).attr("data-showrows");
+            rowsGroup = $(this).closest(".traker-table").find(".table-row[data-hidderows = '"+ rowsGroupName +"']");
 
             if( $(this).hasClass("active") ) {
 
-                slidingTable.slideDown(200);
-                addTableBtn.addClass("active");
+                rowsGroup.css({"display" : "table-row"});
 
             } else {
 
-                slidingTable.slideUp(200);
-                addTableBtn.removeClass("active");
+                rowsGroup.css({"display" : "none"});
 
             }
 
@@ -1001,27 +996,41 @@ $(document).ready(function() {
 
         $(".ad-table-btn").click(function() {
 
-            parentBlock = $(this).closest(".sliding-tables");
+            rowsGroupName = $(this).attr("data-showrows");
 
-            slidingTable = parentBlock.find(".sliding-table");
+            rowsGroup = $(this).closest(".traker-table").find(".table-row[data-hidderows = '"+ rowsGroupName +"']");
 
-            if(slidingTable.is(":hidden")) {
+            if( $(this).hasClass("active") ) {
 
-                slidingTable.slideDown(200);
-
-                parentBlock.addClass("active");
-
-                $(this).addClass("active");
+                rowsGroup.css({"display" : "none"});
+                $(this).removeClass("active");
 
             } else {
 
-                slidingTable.slideUp(200);
-
-                parentBlock.removeClass("active");
-
-                $(this).removeClass("active");
+                rowsGroup.css({"display" : "table-row"});
+                $(this).addClass("active");
 
             }
+
+            // slidingTable = parentBlock.find(".traker-table [data-hidderows = '"+ rowsGroupName +"']");
+
+            // if(slidingTable.is(":hidden")) {
+
+            //     slidingTable.slideDown(200);
+
+            //     parentBlock.addClass("active");
+
+            //     $(this).addClass("active");
+
+            // } else {
+
+            //     slidingTable.slideUp(200);
+
+            //     parentBlock.removeClass("active");
+
+            //     $(this).removeClass("active");
+
+            // }
 
         });
 
@@ -1262,64 +1271,64 @@ $(document).ready(function() {
         return number == true;
     }
 
-    function getTablesParams() {
+    // function getTablesParams() {
 
-        // var innerTable;
-        // var tableRow;
-        // var countTableRow;
+    //     // var innerTable;
+    //     // var tableRow;
+    //     // var countTableRow;
 
-        // var heightsArr = [];
-        // var maxHeightsArr = [];
+    //     // var heightsArr = [];
+    //     // var maxHeightsArr = [];
 
-        for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
+    //     for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
 
-            innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
+    //         innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
 
-            for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
+    //         for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-                tableRow = innerTable.eq(indexInnerTable).find(".table-row");
+    //             tableRow = innerTable.eq(indexInnerTable).find(".table-row");
 
-                countTableRow = tableRow.length - 1;
+    //             countTableRow = tableRow.length - 1;
 
-                heightsArr[indexInnerTable] = [];
+    //             heightsArr[indexInnerTable] = [];
 
-                for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
+    //             for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-                    heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).outerHeight();
+    //                 heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).outerHeight();
 
-                }
+    //             }
 
-            }
+    //         }
 
-            for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
+    //         for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-                maxHeightsArr[indexRow] = [];
+    //             maxHeightsArr[indexRow] = [];
 
-                for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
+    //             for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-                    maxHeightsArr[indexRow][indexInnerTable] = heightsArr[indexInnerTable][indexRow];
+    //                 maxHeightsArr[indexRow][indexInnerTable] = heightsArr[indexInnerTable][indexRow];
 
-                }
+    //             }
 
-            }
+    //         }
 
-            for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
+    //         for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
 
-                for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
+    //             for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
 
-                    innerTable.find(".table-row:eq("+ indexRow +")").css({
+    //                 innerTable.find(".table-row:eq("+ indexRow +")").css({
 
-                        "height" : Math.max.apply(null, maxHeightsArr[indexRow] ) + "px"
+    //                     "height" : Math.max.apply(null, maxHeightsArr[indexRow] ) + "px"
 
-                    });
+    //                 });
 
-                }
+    //             }
 
-            }
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
     function getTableHeaderPosition() {
 
