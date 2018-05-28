@@ -7022,8 +7022,8 @@ input.datepicker-input:focus {
     background: none;
     position: absolute;
     top: 50%;
-    right: 10px;
-    margin: -11px 0 0 0;
+    right: 3px;
+    margin: -12px 0 0 0;
     border: 1px solid transparent;
     -webkit-transition-property: all;
     -webkit-transition-duration: .2s;
@@ -7515,6 +7515,10 @@ input.datepicker-input:focus {
     width: 6%;
 }
 
+.traker-table_2 {
+    margin-top: 16px;
+}
+
 .traker-table_2 .cell-1 p {
     display: inline-block;
     vertical-align: top;
@@ -7565,9 +7569,9 @@ input.datepicker-input:focus {
     line-height: 15px;
     font-weight: normal;
     color: #ffffff;
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg);
     -webkit-transition-property: all;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -7586,9 +7590,9 @@ input.datepicker-input:focus {
 }
 
 .tracker-btn.active span:after {
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
 }
 
 .traker-table .tracker-btn {
@@ -7599,40 +7603,6 @@ input.datepicker-input:focus {
     left: 44%;
     margin: 0 0 0 -22px;
     z-index: 9;
-}
-
-.trakers-tables.active .table_main {
-    width: 50%;
-}
-
-.trakers-tables.active .sliding-block-wrapp {
-    width: 50%;
-}
-
-.trakers-tables.noslide .table_main {
-    width: 50%;
-}
-
-.trakers-tables.noslide .sliding-block-wrapp {
-    width: 50%;
-    padding-left: 0;
-}
-
-.trakers-tables.noslide .table_sliding .cell-1 {
-    padding-left: 1%
-}
-
-.trakers-tables .inner-table .cell {
-    vertical-align: middle;
-}
-
-.trakers-tables .inner-table .table-row.table-header .cell {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.trakers-tables .inner-table .table-row .cell > div {
-    margin: 15px 0;
 }
 
 .nav-3 .dropdown-block-wrapp {
