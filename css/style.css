@@ -7394,7 +7394,7 @@ input.datepicker-input:focus {
 .traker-table {
     display: table;
     width: 100%;
-    margin: 48px 0 29px 0;
+    margin: 36px 0 29px 0;
     position: relative;
     border-bottom: 1px solid #dcdcdc;
     -webkit-transition-property: width;
