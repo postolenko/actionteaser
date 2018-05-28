@@ -11,3 +11,4 @@
 # http://postolenko.github.io/actionteaser/statistic.html
 # http://postolenko.github.io/actionteaser/statistic_small_chart.html
 # http://postolenko.github.io/actionteaser/advertiser_statistics.html
+# http://postolenko.github.io/actionteaser/advertiser_statistics_2.html

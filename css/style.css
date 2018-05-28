@@ -7023,7 +7023,7 @@ input.datepicker-input:focus {
     position: absolute;
     top: 50%;
     right: 3px;
-    margin: -12px 0 0 0;
+    margin: -14px 0 0 0;
     border: 1px solid transparent;
     -webkit-transition-property: all;
     -webkit-transition-duration: .2s;
@@ -7522,8 +7522,12 @@ input.datepicker-input:focus {
     width: 6%;
 }
 
+.traker-table_3 .cell {
+    vertical-align: middle !important;
+}
+
 .traker-table_3 .cell-1 {
-    width: 7%;
+    width: 13%;
 }
 
 .traker-table_3 .cell-2 {
@@ -7535,19 +7539,19 @@ input.datepicker-input:focus {
 }
 
 .traker-table_3 .cell-4 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-5 {
-    width: 8%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-6 {
-    width: 8%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-7 {
-    width: 7%;
+    width: 10%;
     padding-right: 24px !important;
 }
 
@@ -7556,7 +7560,7 @@ input.datepicker-input:focus {
 }
 
 .traker-table_3 .cell-9 {
-    width: 5%;
+    width: 8%;
 }
 
 .traker-table_3 .cell-10 {
@@ -7564,28 +7568,44 @@ input.datepicker-input:focus {
 }
 
 .traker-table_3 .cell-11 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-12 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-13 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-14 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-15 {
-    width: 6%;
+    width: 5%;
 }
 
 .traker-table_3 .cell-16 {
-    width: 6%;
+    width: 5%;
 }
+
+.traker-table_3 .input-wrapp_4 {
+    position: relative;
+}
+
+.traker-table_3 .input-wrapp_4 .red-tr {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    margin-top: -5px;
+}
+
+.traker-table_3 .input-wrapp_4 .select-block {
+    width: 70px;
+}
+
 
 .traker-table_2 .cell-1 p {
     display: inline-block;
@@ -8124,57 +8144,6 @@ input.counter-input {
     margin: 0 0 2px 0;
 }
 
-.advertiser_table_2 {
-    margin-top: 0;
-}
-
-.advertiser_table_2 .table-row {
-    /*display: table;*/
-    display: table-row;
-    width: 100%;
-}
-
-.advertiser_table_2 .cell {
-    vertical-align: middle;
-}
-
-.advertiser_table_2 .cell-1 {
-    width: 18%;
-}
-
-.advertiser_table_2 .cell-2 {
-    width: 15%;
-}
-
-.advertiser_table_2 .cell-3 {
-    width: 12%;
-}
-
-.advertiser_table_2 .cell-4 {
-    width: 11%;
-}
-
-.advertiser_table_2 .cell-5 {
-    width: 11%;
-}
-
-.advertiser_table_2 .cell-6 {
-    width: 16%;
-}
-
-.advertiser_table_2 .cell-7 {
-    width: 17%;
-    min-width: 110px;
-}
-
-.advertiser_table_2 .table-row .cell-7 > div {
-    margin: 5px 0;
-}
-
-.advertiser_table_2 .input-wrapp_4 {
-    padding: 0;
-}
-
 .ad-table-btn {
     display: inline-block;
     vertical-align: top;
@@ -8219,7 +8188,7 @@ input.counter-input {
 }
 
 .cell-inner div.checkbox-block {
-    margin-right: 14px;
+    margin-right: 9px;
 }
 
 .cell-inner a {
