@@ -126,7 +126,7 @@ $(document).ready(function() {
 
     getRespParams();
 
-    getTablesParams();
+    // getTablesParams();
 
     getTableHeaderPosition();
 
@@ -142,7 +142,7 @@ $(document).ready(function() {
             "height" : "auto"
         });
 
-        getTablesParams();
+        // getTablesParams();
 
         getTableHeaderPosition();
 
@@ -930,23 +930,8 @@ $(document).ready(function() {
 
         $(".tracker-btn").click(function() {
 
-            $(".trakers-tables").toggleClass("active");
-
-            if( $(".trakers-tables").hasClass("active") ) {
-
-                $(this).addClass("active");
-
-            } else {
-
-                $(this).removeClass("active");
-
-            }
-
-            setTimeout(function() {
-
-                getTablesParams();
-
-            }, 400);
+            $(".traker-table").toggleClass("active");
+            $(this).toggleClass("active");
 
         });
 
