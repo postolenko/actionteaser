@@ -8189,9 +8189,14 @@ input.counter-input {
     display: block;
 }
 
+.cell-inner:after {
+    content: "";
+}
+
 .cell-inner .ad-table-btn {
     margin-top: 4px;
     margin-right: 4px;
+    float: right;
 }
 
 .cell-inner div.checkbox-block {
