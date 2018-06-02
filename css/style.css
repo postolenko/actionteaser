@@ -225,14 +225,6 @@ h1 {
     padding: 3px 0;
 }
 
-/*h2 {
-    font-family: "SF UI Display", Arial, Verdana, sans-serif;
-    font-size: 18px;
-    line-height: 40px;
-    font-weight: bold;
-    color: #343434;
-}*/
-
 h2 {
     font-family: "SF UI Display", Arial, Verdana, sans-serif;
     font-size: 16px;
@@ -7629,6 +7621,71 @@ input.datepicker-input:focus {
     right: 5px;
 }
 
+.traker-table_4 .cell-1 {
+    width: 5%;
+}
+
+.traker-table_4 .cell-2 {
+    width: 15%;
+}
+
+.traker-table_4 .cell-3 {
+    width: 7%;
+}
+
+.traker-table_4 .cell-4 {
+    width: 5%;
+}
+
+.traker-table_4 .cell-5 {
+    width: 5%;
+}
+
+.traker-table_4 .cell-6 {
+    width: 4%;
+}
+
+.traker-table_4 .cell-7 {
+    width: 8%;
+    padding-right: 24px !important;
+}
+
+.traker-table_4 .cell-8 {
+    width: 5%;
+}
+
+.traker-table_4 .cell-9 {
+    width: 6%;
+}
+
+.traker-table_3 .cell-10 {
+    width: 6%;
+}
+
+.traker-table_4 .cell-11 {
+    width: 6%;
+}
+
+.traker-table_4 .cell-12 {
+    width: 6%;
+}
+
+.traker-table_4 .cell-13 {
+    width: 6%;
+}
+
+.traker-table_4 .cell-14 {
+    width: 6%;
+}
+
+.traker-table_4 .cell-15 {
+    width: 5%;
+}
+
+.traker-table_4 .cell-16 {
+    width: 5%;
+}
+
 .tracker-btn {
     display: block;
     white-space: nowrap;
@@ -7695,7 +7752,6 @@ input.datepicker-input:focus {
     height: 100%;
     position: absolute;
     top: 0;
-    /*left: 44%;*/
     margin: 0 0 0 -24px;
     z-index: 9;
 }
@@ -8230,64 +8286,6 @@ input.counter-input {
 
 .advertiser_table + .advertiser_table {
     margin-top: 3px;
-}
-
-/*.advertiser_table_3 .cell-1 {
-    width: 20%;
-}
-
-.advertiser_table_3 .cell-2 {
-    width: 16%;
-}
-
-.advertiser_table_3 .cell-3 {
-    width: 14%;
-}
-
-.advertiser_table_3 .cell-4 {
-    width: 14%;
-}
-
-.advertiser_table_3 .cell-5 {
-    width: 18%;
-}
-
-.advertiser_table_3 .cell-6 {
-    width: 18%;
-}
-
-.advertiser_table_3 .cell-1 p {
-    display: inline-block;
-    vertical-align: top;
-}*/
-
-.advertiser_table_4 .cell-1 {
-    width: 5%;
-    text-align: center;
-}
-
-.advertiser_table_4 .cell-2 {
-    width: 32%;
-}
-
-.advertiser_table_4 .cell-3 {
-    width: 12%;
-}
-
-.advertiser_table_4 .cell-4 {
-    width: 13%;
-}
-
-.advertiser_table_4 .cell-5 {
-    width: 11%;
-}
-
-.advertiser_table_4 .cell-6 {
-    width: 12%;
-}
-
-.advertiser_table_4 .cell-7 {
-    width: 15%;
 }
 
 .thumb_3 {

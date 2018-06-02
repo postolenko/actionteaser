@@ -150,8 +150,6 @@ $(document).ready(function() {
 
     getRespParams();
 
-    // getTablesParams();
-
     getTableHeaderPosition();
 
     $(window).resize(function() {
@@ -165,8 +163,6 @@ $(document).ready(function() {
         $(".trakers-tables").find(".table-row").css({
             "height" : "auto"
         });
-
-        // getTablesParams();
 
         getTableHeaderPosition();
 
@@ -817,9 +813,6 @@ $(document).ready(function() {
 
                 });
 
-                // console.log( activeCheckboxes.every(isPositive) );
-                // console.log( activeCheckboxes.some(isPositive) );
-
                 if( activeCheckboxes.every(isPositive) == false && 
                     $(".checkbox-block.parent input[ name = '"+ nameCheckboxes +"']").is(":checked")
                     ) {
@@ -1067,26 +1060,6 @@ $(document).ready(function() {
 
             }
 
-            // slidingTable = parentBlock.find(".traker-table [data-hidderows = '"+ rowsGroupName +"']");
-
-            // if(slidingTable.is(":hidden")) {
-
-            //     slidingTable.slideDown(200);
-
-            //     parentBlock.addClass("active");
-
-            //     $(this).addClass("active");
-
-            // } else {
-
-            //     slidingTable.slideUp(200);
-
-            //     parentBlock.removeClass("active");
-
-            //     $(this).removeClass("active");
-
-            // }
-
         });
 
     });
@@ -1325,65 +1298,6 @@ $(document).ready(function() {
     function isPositive(number) {
         return number == true;
     }
-
-    // function getTablesParams() {
-
-    //     // var innerTable;
-    //     // var tableRow;
-    //     // var countTableRow;
-
-    //     // var heightsArr = [];
-    //     // var maxHeightsArr = [];
-
-    //     for( var indexTablesTrakers = 0; indexTablesTrakers <= $(".trakers-tables").length - 1; indexTablesTrakers++ ) {
-
-    //         innerTable = $(".trakers-tables").eq(indexTablesTrakers).find(".inner-table");
-
-    //         for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-    //             tableRow = innerTable.eq(indexInnerTable).find(".table-row");
-
-    //             countTableRow = tableRow.length - 1;
-
-    //             heightsArr[indexInnerTable] = [];
-
-    //             for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-    //                 heightsArr[indexInnerTable][indexRow] = innerTable.eq(indexInnerTable).find(".table-row").eq(indexRow).outerHeight();
-
-    //             }
-
-    //         }
-
-    //         for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-    //             maxHeightsArr[indexRow] = [];
-
-    //             for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-    //                 maxHeightsArr[indexRow][indexInnerTable] = heightsArr[indexInnerTable][indexRow];
-
-    //             }
-
-    //         }
-
-    //         for( var indexInnerTable = 0; indexInnerTable <= innerTable.length - 1; indexInnerTable++ ) {
-
-    //             for( var indexRow = 0; indexRow <= countTableRow; indexRow++ ) {
-
-    //                 innerTable.find(".table-row:eq("+ indexRow +")").css({
-
-    //                     "height" : Math.max.apply(null, maxHeightsArr[indexRow] ) + "px"
-
-    //                 });
-
-    //             }
-
-    //         }
-
-    //     }
-
-    // }
 
     function getTableHeaderPosition() {
 
