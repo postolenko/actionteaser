@@ -7398,7 +7398,7 @@ input.datepicker-input:focus {
     position: relative;
     border-collapse: collapse;
     border-bottom: 1px solid #dcdcdc;
-/*    -webkit-transition-property: width;
+    -webkit-transition-property: width;
     -webkit-transition-duration: .4s;
     -webkit-transition-timing-function: ease;
 
@@ -7416,7 +7416,7 @@ input.datepicker-input:focus {
 
     transition-property: width;
     transition-duration: .4s;
-    transition-timing-function: ease;*/
+    transition-timing-function: ease;
 }
 
 .traker-table.active {
