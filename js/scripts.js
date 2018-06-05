@@ -1001,6 +1001,10 @@ $(document).ready(function() {
                             "width" : multippleVal + widthInterval + "%"
                         });
 
+                        trakerBtn.css({
+                            "left": 100 + "%"
+                        });
+
                     }
 
                 }, 500);
