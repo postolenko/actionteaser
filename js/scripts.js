@@ -991,7 +991,7 @@ $(document).ready(function() {
 
                 setTimeout(function() {
 
-                    rightCoord = Math.ceil( parentBlock.find(".right_coord").next(".cell").position().left );
+                    rightCoord = parentBlock.find(".right_coord").next(".cell").position().left;
 
                     if( rightCoord < trackerTableWrapp.width() ) {
 
