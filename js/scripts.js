@@ -140,6 +140,8 @@ $(document).ready(function() {
     var countTableRow;
     var heightsArr = [];
     var maxHeightsArr = [];
+    var trakerTable;
+    var widthInterval;
 
     // ----------------------------
 
@@ -950,16 +952,22 @@ $(document).ready(function() {
         // var rightCoord;
         // var multippleVal;
         // var trakerBtn;
+        // var trakerTable;
+        // var widthInterval;
 
         $(".tracker-btn").click(function() {
 
             parentBlock = $(this).closest(".traker-table");
 
+            trakerBtn = $(this);
+
             trackerTableName = $(this).closest(".traker-table").attr("data-traker");
 
             trackerTableWrapp = parentBlock.closest(".traker_table_wrapp");
 
-            rightCoord = parentBlock.find(".right_coord").position().left + parentBlock.find(".right_coord").outerWidth();
+            trakerTable = $(".traker-table[data-traker = '"+ trackerTableName +"']");
+
+            rightCoord = parentBlock.find(".right_coord").next(".cell").position().left;
 
             if(parentBlock.width() > trackerTableWrapp.width() ) {
 
@@ -967,21 +975,40 @@ $(document).ready(function() {
 
                 $(this).removeClass("active");
 
+                trakerTable.css({
+                    "width" : multippleVal + "%"
+                });
+
             } else {
 
-                multippleVal = Math.ceil( parentBlock.width() / rightCoord * 100 );
+                multippleVal = trackerTableWrapp.width() / rightCoord * 100;
 
                 $(this).addClass("active");
 
-            }
+                trakerTable.css({
+                    "width" : multippleVal + "%"
+                });
 
-            $(".traker-table[data-traker = '"+ trackerTableName +"']").css({
-                "width" : multippleVal + "%"
-            });
+                setTimeout(function() {
+
+                    rightCoord = Math.ceil( parentBlock.find(".right_coord").next(".cell").position().left );
+
+                    if( rightCoord < trackerTableWrapp.width() ) {
+
+                        widthInterval = parentBlock.width() / 100 / ( trackerTableWrapp.width() - rightCoord );
+
+                        trakerTable.css({
+                            "width" : multippleVal + widthInterval + "%"
+                        });
+
+                    }
+
+                }, 500);
+
+            }
+            
 
         });
-
-
 
     });
 
