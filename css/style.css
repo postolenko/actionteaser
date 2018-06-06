@@ -7386,6 +7386,7 @@ input.datepicker-input:focus {
 .traker_table_wrapp {
     margin: 36px 0 29px 0;
     border-right: 1px solid #dcdcdc;
+    position: relative;
 }
 
 .traker_table_wrapp_2 {
@@ -7747,13 +7748,33 @@ input.datepicker-input:focus {
     transform: rotate(-180deg);
 }
 
-.traker-table .tracker-btn {
+.traker_table_wrapp .tracker-btn {
     width: 24px;
     height: 100%;
     position: absolute;
     top: 0;
     margin: 0 0 0 -24px;
     z-index: 9;
+    -webkit-transition-property: left;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-property: left;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+    -ms-transition-property: left;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+    -o-transition-property: left;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+    transition-property: left;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.traker_table_wrapp .tracker-btn.active {
+    left: 100% !important;
+    margin: 0 0 0 -24px;
 }
 
 .nav-3 .dropdown-block-wrapp {

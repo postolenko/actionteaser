@@ -40,7 +40,9 @@ $(window).load(function() {
 
     $(".traker-table").each(function() {
 
-        trakerBtn = $(this).find(".tracker-btn");
+        parentBlock = $(this).closest(".traker_table_wrapp");
+
+        trakerBtn = parentBlock.find(".tracker-btn");
 
         if( $(this).find(".right_coord").length > 0 ) {
 
@@ -135,13 +137,12 @@ $(document).ready(function() {
 
     var tableHeaderWrapp;
     var tableHeader;
-    var innerTable;
-    var tableRow;
-    var countTableRow;
-    var heightsArr = [];
-    var maxHeightsArr = [];
+    
     var trakerTable;
-    var widthInterval;
+    var trakerBtn;
+    var rightCoord;
+    var multippleVal;
+    var trakerBtn;
 
     // ----------------------------
 
@@ -953,23 +954,18 @@ $(document).ready(function() {
         // var multippleVal;
         // var trakerBtn;
         // var trakerTable;
-        // var widthInterval;
 
         $(".tracker-btn").click(function() {
 
-            parentBlock = $(this).closest(".traker-table");
+            parentBlock = $(this).closest(".traker_table_wrapp");
 
-            trakerBtn = $(this);
-
-            trackerTableName = $(this).closest(".traker-table").attr("data-traker");
-
-            trackerTableWrapp = parentBlock.closest(".traker_table_wrapp");
+            trackerTableName = parentBlock.find(".traker-table").attr("data-traker");
 
             trakerTable = $(".traker-table[data-traker = '"+ trackerTableName +"']");
 
-            rightCoord = parentBlock.find(".right_coord").next(".cell").position().left;
+            rightCoord = trakerTable.find(".right_coord").next(".cell").position().left;
 
-            if(parentBlock.width() > trackerTableWrapp.width() ) {
+            if(trakerTable.width() > parentBlock.width() ) {
 
                 multippleVal = 100;
 
@@ -981,7 +977,7 @@ $(document).ready(function() {
 
             } else {
 
-                multippleVal = trackerTableWrapp.width() / rightCoord * 100;
+                multippleVal = parentBlock.width() / rightCoord * 100;
 
                 $(this).addClass("active");
 
@@ -991,19 +987,15 @@ $(document).ready(function() {
 
                 setTimeout(function() {
 
-                    rightCoord = parentBlock.find(".right_coord").next(".cell").position().left;
+                    rightCoord = trakerTable.find(".right_coord").next(".cell").position().left;
 
-                    if( rightCoord < trackerTableWrapp.width() ) {
+                    if( rightCoord < parentBlock.width() ) {
 
-                        widthInterval = parentBlock.width() / 100 / ( trackerTableWrapp.width() - rightCoord );
+                        widthInterval = trakerTable.width() / 100 / ( parentBlock.width() - rightCoord );
 
                         trakerTable.css({
                             "width" : multippleVal + widthInterval + "%"
                         });
-
-                        // trakerBtn.css({
-                        //     "left": 100 + "%"
-                        // });
 
                     }
 
